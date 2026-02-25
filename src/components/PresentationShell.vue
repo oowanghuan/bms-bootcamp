@@ -88,7 +88,7 @@ function handleExportFeedback() {
 }
 
 // Get translated slide data
-const translatedSlide = computed(() => getSlideData(currentSlide.value))
+const translatedSlide = computed(() => currentSlide.value ? getSlideData(currentSlide.value) : getSlideData(rawSlides.value[0]))
 
 // Get translated section groups for navigation
 const translatedSectionGroups = computed(() => {

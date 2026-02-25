@@ -20,7 +20,7 @@ const expandedSections = ref<Set<string>>(new Set())
 
 // Expand the first section by default
 const sections = Object.keys(props.sectionGroups)
-if (sections.length > 0) {
+if (sections.length > 0 && sections[0] !== undefined) {
   expandedSections.value.add(sections[0])
 }
 
