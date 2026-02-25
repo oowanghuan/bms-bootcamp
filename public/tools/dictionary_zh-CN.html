@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>骨肉魂架构字典 (CN)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans SC', sans-serif; background-color: #f8fafc; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        @media print {
+            body { background-color: white; }
+            #sidebar, #print-actions { display: none !important; }
+            #main-content { margin-left: 0 !important; width: 100% !important; padding: 0 !important; }
+            .print-container { box-shadow: none !important; border: none !important; margin: 0 auto !important; max-width: 210mm !important; }
+            .page-break { page-break-after: always; }
+            body.print-all-mode .tab-content { display: block !important; page-break-after: always; margin-bottom: 0 !important; }
+            body.print-all-mode .tab-content:last-child { page-break-after: auto; }
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+    </style>
+</head>
+<body class="h-screen overflow-hidden flex flex-col md:flex-row text-slate-800">
+
+    <div class="md:hidden bg-slate-900 text-white p-4 shadow-md z-20 flex justify-between items-center">
+        <h1 class="font-bold text-lg">架构字典 (CN)</h1>
+        <button onclick="document.getElementById('sidebar').classList.toggle('hidden')" class="p-2 bg-slate-800 rounded">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </div>
+
+    <nav id="sidebar" class="hidden md:flex flex-col w-full md:w-64 bg-slate-900 text-slate-300 h-full flex-shrink-0 z-10 shadow-xl overflow-y-auto">
+        <div class="p-6">
+            <h1 class="text-xl font-black text-white tracking-tight leading-tight">骨肉魂 Bootcamp<br><span class="text-blue-400 text-sm font-semibold">架构字典 v1.2</span></h1>
+        </div>
+        <div class="flex-grow pb-6">
+            <div class="px-4 mb-2 text-xs font-bold text-slate-500 uppercase tracking-widest">核心定义 (Definitions)</div>
+            <ul class="space-y-1 px-3">
+                <li><button onclick="switchTab('cs-skel', this)" class="nav-btn w-full text-left px-4 py-2.5 rounded-lg font-medium transition-colors hover:bg-slate-800 hover:text-white active bg-blue-600 text-white shadow-sm flex items-center gap-2"><span class="text-lg">🦴</span> 01 Section 速查表</button></li>
+                <li><button onclick="switchTab('cs-strat', this)" class="nav-btn w-full text-left px-4 py-2.5 rounded-lg font-medium transition-colors hover:bg-slate-800 hover:text-white flex items-center gap-2"><span class="text-lg">🌲</span> 02 Strategy 速查表</button></li>
+                <li><button onclick="switchTab('cs-soul', this)" class="nav-btn w-full text-left px-4 py-2.5 rounded-lg font-medium transition-colors hover:bg-slate-800 hover:text-white flex items-center gap-2"><span class="text-lg">👻</span> 03 Soul 灵魂层定义</button></li>
+                <li><button onclick="switchTab('cs-meat', this)" class="nav-btn w-full text-left px-4 py-2.5 rounded-lg font-medium transition-colors hover:bg-slate-800 hover:text-white flex items-center gap-2"><span class="text-lg">🥩</span> 04 Meat 速查表</button></li>
+            </ul>
+        </div>
+        <div class="p-4 border-t border-slate-800 text-center text-xs text-slate-500">已包含 Soul 定义<br>完整版字典</div>
+    </nav>
+
+    <main id="main-content" class="flex-grow overflow-y-auto p-4 md:p-8 bg-slate-100/50 relative">
+
+        <!-- 01 Section -->
+        <div id="cs-skel" class="tab-content active print-container w-full max-w-[210mm] mx-auto bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+            <header class="bg-blue-600 text-white p-6 border-b border-blue-700">
+                <h2 class="text-2xl font-bold flex items-center gap-2">🦴 01 Section 速查表</h2>
+            </header>
+            <div class="p-8">
+                <h3 class="font-bold text-lg mb-4 text-blue-900 border-b pb-2">1. 核心段落定义 (7 Section Types, 8 维度含 Section 顺序)</h3>
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-blue-600 block">H (Hook) 注意力捕获</strong><span class="text-xs text-slate-500">打断自动滑动，争夺认知带宽（必需）</span></div>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-blue-600 block">Br (Bridge) 关联建立</strong><span class="text-xs text-slate-500">建立语境与个人相关性（可省略）</span></div>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-amber-600 block">P (Problem) 张力建立</strong><span class="text-xs text-slate-500">暴露现状与理想差距（强烈建议）</span></div>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-emerald-600 block">Re (Resolution) 张力释放</strong><span class="text-xs text-slate-500">缓解张力，展示改善路径（极高建议）</span></div>
+                    <div class="bg-indigo-50 p-3 rounded border border-indigo-100"><strong class="text-indigo-600 block">Rv (Reversal) 认知改写</strong><span class="text-xs text-slate-500">推翻既有认知，消除潜在抗拒</span></div>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-rose-600 block">V (Value) 决策稳定</strong><span class="text-xs text-slate-500">产品/服务的核心价值（强烈建议）</span></div>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-purple-600 block">C (CTA) 行为触发</strong><span class="text-xs text-slate-500">将选择倾向转化为行动（必需）</span></div>
+                </div>
+
+                <h3 class="font-bold text-lg mb-4 text-blue-900 border-b pb-2">2. 常见 Skeleton 组合 (8 种)</h3>
+                <table class="w-full text-sm text-left border-collapse border border-slate-200">
+                    <thead class="bg-blue-50 text-slate-700"><tr><th class="border p-2">类型</th><th class="border p-2">结构流</th><th class="border p-2">Tier</th><th class="border p-2">时长比例参考</th><th class="border p-2">适用场景</th></tr></thead>
+                    <tbody>
+                        <tr><td class="border p-2 font-bold">HPVC</td><td class="border p-2 font-mono text-xs">H → P → V → C</td><td class="border p-2 text-center font-bold text-green-700">A</td><td class="border p-2 text-xs">15%/25%/45%/15%</td><td class="border p-2">标准四段，常规种草</td></tr>
+                        <tr><td class="border p-2 font-bold">HBVC</td><td class="border p-2 font-mono text-xs">H → Br → V → C</td><td class="border p-2 text-center font-bold text-green-700">A</td><td class="border p-2 text-xs">15%/20%/50%/15%</td><td class="border p-2">带桥接的快速种草</td></tr>
+                        <tr><td class="border p-2 font-bold">HRVC</td><td class="border p-2 font-mono text-xs">H → Re → V → C</td><td class="border p-2 text-center font-bold text-green-700">A</td><td class="border p-2 text-xs">15%/25%/45%/15%</td><td class="border p-2">带解决方案的直接种草</td></tr>
+                        <tr class="bg-blue-50/30"><td class="border p-2 font-bold">HPRVC</td><td class="border p-2 font-mono text-xs">H → P → Rv → V → C</td><td class="border p-2 text-center font-bold text-blue-700">B</td><td class="border p-2 text-xs">10%/20%/20%/35%/15%</td><td class="border p-2 font-bold">万能五段，适合种草、产品介绍</td></tr>
+                        <tr><td class="border p-2 font-bold">HPBVC</td><td class="border p-2 font-mono text-xs">H → P → Br → V → C</td><td class="border p-2 text-center font-bold text-blue-700">B</td><td class="border p-2 text-xs">10%/20%/15%/40%/15%</td><td class="border p-2">问题后桥接，强化相关性</td></tr>
+                        <tr><td class="border p-2 font-bold">HBrPVC</td><td class="border p-2 font-mono text-xs">H → Br → P → V → C</td><td class="border p-2 text-center font-bold text-blue-700">B</td><td class="border p-2 text-xs">10%/15%/20%/40%/15%</td><td class="border p-2">先桥接再问题，建立信任</td></tr>
+                        <tr><td class="border p-2 font-bold">HBrRVC</td><td class="border p-2 font-mono text-xs">H → Br → Rv → V → C</td><td class="border p-2 text-center font-bold text-blue-700">B</td><td class="border p-2 text-xs">10%/15%/25%/35%/15%</td><td class="border p-2">桥接加认知改写，突破固有认知</td></tr>
+                        <tr><td class="border p-2 font-bold">HBrPReVC</td><td class="border p-2 font-mono text-xs">H → Br → P → Re → V → C</td><td class="border p-2 text-center font-bold text-amber-700">C</td><td class="border p-2 text-xs">8%/12%/18%/17%/30%/15%</td><td class="border p-2">完整六段，深度内容论述</td></tr>
+                    </tbody>
+                </table>
+                <p class="text-xs text-slate-400 mt-2">Tier A = 4段以内（短平快）; Tier B = 5段（标准说服）; Tier C = 6段+（深度论述）</p>
+            </div>
+        </div>
+
+        <!-- 02 Strategy -->
+        <div id="cs-strat" class="tab-content print-container w-full max-w-[210mm] mx-auto bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+            <header class="bg-emerald-600 text-white p-6 border-b border-emerald-700">
+                <h2 class="text-2xl font-bold flex items-center gap-2">🌲 02 Strategy 速查表</h2>
+            </header>
+            <div class="p-8">
+                <table class="w-full text-xs text-left border-collapse border border-slate-200">
+                    <thead class="bg-slate-100 text-slate-700">
+                        <tr><th class="border p-2 w-14">L0</th><th class="border p-2 w-20">L1 策略</th><th class="border p-2">描述</th><th class="border p-2">心理机制</th><th class="border p-2">关键句式</th><th class="border p-2 w-20">L2</th><th class="border p-2">L2 说明</th></tr>
+                    </thead>
+                    <tbody>
+                        <!-- HEAD -->
+                        <tr><td rowspan="13" class="border p-2 font-bold bg-slate-50 text-center align-middle">HEAD<br>(认知与信任)</td><td rowspan="3" class="border p-2 font-bold align-middle">EXPLAIN<br><span class="font-normal text-slate-500">机制解释</span></td><td rowspan="3" class="border p-2 align-middle">解释原理机制，让用户理解为什么有效</td><td rowspan="3" class="border p-2 align-middle text-emerald-700">理性逻辑 →<br>道理讲通了</td><td rowspan="3" class="border p-2 align-middle italic text-slate-500">"我来告诉你为什么有效"</td><td class="border p-2 font-mono">Logic</td><td class="border p-2">逻辑推理、因果解释</td></tr>
+                        <tr><td class="border p-2 font-mono">Data</td><td class="border p-2">数据佐证、实验结果</td></tr>
+                        <tr><td class="border p-2 font-mono">Transparency</td><td class="border p-2">配方透明、成分公开</td></tr>
+                        <tr><td rowspan="3" class="border p-2 font-bold align-middle">PROOF<br><span class="font-normal text-slate-500">真实见证</span></td><td rowspan="3" class="border p-2 align-middle">展示真实效果和用户见证，用事实说话</td><td rowspan="3" class="border p-2 align-middle text-emerald-700">社会认同 →<br>大家都说好</td><td rowspan="3" class="border p-2 align-middle italic text-slate-500">"这么多人都说好"</td><td class="border p-2 font-mono">UGC</td><td class="border p-2">用户见证、真实反馈</td></tr>
+                        <tr><td class="border p-2 font-mono">Before_After</td><td class="border p-2">前后对比、效果展示</td></tr>
+                        <tr><td class="border p-2 font-mono">Sales_Data</td><td class="border p-2">销量数据、好评数量</td></tr>
+                        <tr><td rowspan="4" class="border p-2 font-bold align-middle">AUTHORITY<br><span class="font-normal text-slate-500">权威背书</span></td><td rowspan="4" class="border p-2 align-middle">借助专家、机构、认证建立信任</td><td rowspan="4" class="border p-2 align-middle text-emerald-700">专业背书 →<br>专家认证</td><td rowspan="4" class="border p-2 align-middle italic text-slate-500">"专家都认证了"</td><td class="border p-2 font-mono">Expert</td><td class="border p-2">专家推荐、医生背书</td></tr>
+                        <tr><td class="border p-2 font-mono">Certification</td><td class="border p-2">认证证书、检测报告</td></tr>
+                        <tr><td class="border p-2 font-mono">Media</td><td class="border p-2">媒体报道、奖项荣誉</td></tr>
+                        <tr><td class="border p-2 font-mono">Guarantee</td><td class="border p-2">承诺保障、退款保证</td></tr>
+                        <tr><td rowspan="3" class="border p-2 font-bold align-middle">CONTRAST<br><span class="font-normal text-slate-500">对比反差</span></td><td rowspan="3" class="border p-2 align-middle">利用对比反差制造认知冲击</td><td rowspan="3" class="border p-2 align-middle text-emerald-700">参照判断 →<br>有比较才有鉴别</td><td rowspan="3" class="border p-2 align-middle italic text-slate-500">"对比一下就知道了"</td><td class="border p-2 font-mono">AB</td><td class="border p-2">A/B产品对比</td></tr>
+                        <tr><td class="border p-2 font-mono">Shocking</td><td class="border p-2">反差冲击、意外效果</td></tr>
+                        <tr><td class="border p-2 font-mono">Value_Stack</td><td class="border p-2">价值堆叠、超值感</td></tr>
+                        <!-- HEART -->
+                        <tr><td rowspan="7" class="border p-2 font-bold bg-slate-50 text-center align-middle">HEART<br>(情绪与共鸣)</td><td rowspan="3" class="border p-2 font-bold align-middle">PAIN<br><span class="font-normal text-slate-500">痛点共鸣</span></td><td rowspan="3" class="border p-2 align-middle">引发痛点共鸣，让用户感同身受</td><td rowspan="3" class="border p-2 align-middle text-emerald-700">感同身受 →<br>我也是这样</td><td rowspan="3" class="border p-2 align-middle italic text-slate-500">"你是不是也有这个问题"</td><td class="border p-2 font-mono">Scene</td><td class="border p-2">场景共鸣、情境代入</td></tr>
+                        <tr><td class="border p-2 font-mono">Daily</td><td class="border p-2">日常困扰、常见问题</td></tr>
+                        <tr><td class="border p-2 font-mono">Loss</td><td class="border p-2">损失厌恶、错过代价</td></tr>
+                        <tr><td rowspan="2" class="border p-2 font-bold align-middle">FEAR<br><span class="font-normal text-slate-500">恐惧诉求</span></td><td rowspan="2" class="border p-2 align-middle">唤起风险意识，激发预防行动</td><td rowspan="2" class="border p-2 align-middle text-emerald-700">损失厌恶 →<br>害怕后果</td><td rowspan="2" class="border p-2 align-middle italic text-slate-500">"如果不这样做会很糟糕"</td><td class="border p-2 font-mono">Consequence</td><td class="border p-2">后果警示、不用的代价</td></tr>
+                        <tr><td class="border p-2 font-mono">Miss_Out</td><td class="border p-2">错过恐惧 FOMO</td></tr>
+                        <tr><td rowspan="2" class="border p-2 font-bold align-middle">STORY<br><span class="font-normal text-slate-500">故事叙事</span></td><td rowspan="2" class="border p-2 align-middle">通过故事叙事，建立情感连接</td><td rowspan="2" class="border p-2 align-middle text-emerald-700">情感代入 →<br>被角色打动</td><td rowspan="2" class="border p-2 align-middle italic text-slate-500">"听我讲个故事"</td><td class="border p-2 font-mono">Origin</td><td class="border p-2">品牌故事、创始人故事</td></tr>
+                        <tr><td class="border p-2 font-mono">User</td><td class="border p-2">用户故事、真实经历</td></tr>
+                        <!-- EYES -->
+                        <tr><td rowspan="2" class="border p-2 font-bold bg-slate-50 text-center align-middle">EYES<br>(视觉与体验)</td><td rowspan="2" class="border p-2 font-bold align-middle">DEMO<br><span class="font-normal text-slate-500">展示演示</span></td><td rowspan="2" class="border p-2 align-middle">直接展示产品使用和效果</td><td rowspan="2" class="border p-2 align-middle text-emerald-700">眼见为实 →<br>看到效果</td><td rowspan="2" class="border p-2 align-middle italic text-slate-500">"你看，就是这样用的"</td><td class="border p-2 font-mono">Step</td><td class="border p-2">分步演示、使用教程</td></tr>
+                        <tr><td class="border p-2 font-mono">Multi_Angle</td><td class="border p-2">多角度展示、全方位呈现</td></tr>
+                        <!-- HAND -->
+                        <tr><td rowspan="4" class="border p-2 font-bold bg-slate-50 text-center align-middle">HAND<br>(吸引与行动)</td><td rowspan="2" class="border p-2 font-bold align-middle">SUSPENSE<br><span class="font-normal text-slate-500">悬念反问</span></td><td rowspan="2" class="border p-2 align-middle">通过悬念或反问引发好奇心</td><td rowspan="2" class="border p-2 align-middle text-emerald-700">信息缺口 →<br>想知道答案</td><td rowspan="2" class="border p-2 align-middle italic text-slate-500">"为什么会这样？千万别划走"</td><td class="border p-2 font-mono">Question</td><td class="border p-2">反问开场、引发好奇</td></tr>
+                        <tr><td class="border p-2 font-mono">Reveal</td><td class="border p-2">揭秘反转、答案揭晓</td></tr>
+                        <tr><td rowspan="2" class="border p-2 font-bold align-middle">URGENCY<br><span class="font-normal text-slate-500">稀缺紧迫</span></td><td rowspan="2" class="border p-2 align-middle">制造稀缺感和紧迫感，促进行动</td><td rowspan="2" class="border p-2 align-middle text-emerald-700">时间/数量压力 →<br>现在就要行动</td><td rowspan="2" class="border p-2 align-middle italic text-slate-500">"现在不买就没了"</td><td class="border p-2 font-mono">Time</td><td class="border p-2">限时促销、倒计时</td></tr>
+                        <tr><td class="border p-2 font-mono">Stock</td><td class="border p-2">限量库存、售罄预警</td></tr>
+                    </tbody>
+                </table>
+                <div class="mt-4 p-3 bg-emerald-50 border border-emerald-200 rounded text-xs text-slate-600">
+                    <strong class="text-emerald-800">兼容性矩阵提示：</strong> 并非所有 L1 策略都适用于每个 Section。例如 URGENCY 通常仅在 C (CTA) 段使用，PAIN 通常在 P (Problem) 段使用。完整的 Section x L1 兼容性矩阵请参考 SSOT 配置文件中的 <code class="bg-white px-1 rounded">strategy_section_compatibility</code> 字段。
+                </div>
+            </div>
+        </div>
+
+        <!-- 03 Soul -->
+        <div id="cs-soul" class="tab-content print-container w-full max-w-[210mm] mx-auto bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+            <header class="bg-purple-600 text-white p-6 border-b border-purple-700">
+                <h2 class="text-2xl font-bold flex items-center gap-2">👻 03 Soul 灵魂层定义</h2>
+            </header>
+            <div class="p-8">
+                <div class="space-y-8">
+                    <!-- 1. Target Audience -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-purple-900 border-b border-purple-100 pb-2">1. Target Audience (目标受众)</h3>
+                        <table class="w-full text-sm border-collapse border border-slate-200">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-28">字段</th><th class="border p-2 w-24">类型</th><th class="border p-2">说明</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono text-xs">age_range</td><td class="border p-2 text-xs">string</td><td class="border p-2 text-slate-600">年龄区间，如 "18-25"、"30-45"</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">gender</td><td class="border p-2 text-xs">enum</td><td class="border p-2 text-slate-600">male / female / all</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">pain_points</td><td class="border p-2 text-xs">string[]</td><td class="border p-2 text-slate-600">核心痛点列表</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">consumption_level</td><td class="border p-2 text-xs">enum</td><td class="border p-2 text-slate-600">low / medium / high / premium</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- 2. Trigger Scenario -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-purple-900 border-b border-purple-100 pb-2">2. Trigger Scenario (触发场景)</h3>
+                        <table class="w-full text-sm border-collapse border border-slate-200">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-28">字段</th><th class="border p-2 w-24">类型</th><th class="border p-2">说明</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono text-xs">description</td><td class="border p-2 text-xs">string</td><td class="border p-2 text-slate-600">场景描述，如 "下班回家刷手机"、"周末逛商场"</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">timing</td><td class="border p-2 text-xs">string</td><td class="border p-2 text-slate-600">时间节点，如 "睡前"、"通勤中"、"饭后"</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">user_state</td><td class="border p-2 text-xs">string</td><td class="border p-2 text-slate-600">用户状态，如 "无聊放松"、"焦虑纠结"、"主动搜索"</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- 3. Reward Type -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-purple-900 border-b border-purple-100 pb-2">3. Reward Type (奖励类型 7 枚举)</h3>
+                        <div class="grid grid-cols-4 gap-3 text-sm">
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">beauty</strong><span class="text-slate-600 text-xs">变美</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">money</strong><span class="text-slate-600 text-xs">省钱/赚钱</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">time</strong><span class="text-slate-600 text-xs">省时</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">safety</strong><span class="text-slate-600 text-xs">安全感</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">control</strong><span class="text-slate-600 text-xs">掌控感</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">confidence</strong><span class="text-slate-600 text-xs">自信</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">health</strong><span class="text-slate-600 text-xs">健康</span></div>
+                        </div>
+                    </section>
+
+                    <!-- 4. Conflict Type -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-purple-900 border-b border-purple-100 pb-2">4. Conflict Type (冲突类型 5 枚举)</h3>
+                        <div class="grid grid-cols-3 gap-3 text-sm">
+                            <div class="bg-amber-50 p-3 rounded border border-amber-100 text-center"><strong class="text-amber-700 block">internal</strong><span class="text-slate-600 text-xs">内心矛盾</span></div>
+                            <div class="bg-amber-50 p-3 rounded border border-amber-100 text-center"><strong class="text-amber-700 block">external</strong><span class="text-slate-600 text-xs">外部障碍</span></div>
+                            <div class="bg-amber-50 p-3 rounded border border-amber-100 text-center"><strong class="text-amber-700 block">comparison</strong><span class="text-slate-600 text-xs">社会比较</span></div>
+                            <div class="bg-amber-50 p-3 rounded border border-amber-100 text-center"><strong class="text-amber-700 block">cost</strong><span class="text-slate-600 text-xs">成本顾虑</span></div>
+                            <div class="bg-amber-50 p-3 rounded border border-amber-100 text-center"><strong class="text-amber-700 block">misconception</strong><span class="text-slate-600 text-xs">认知误区</span></div>
+                        </div>
+                    </section>
+
+                    <!-- 5. Emotion Arc -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-purple-900 border-b border-purple-100 pb-2">5. Emotion Arc (情感弧线 — 节点数组)</h3>
+                        <p class="text-sm text-slate-600 mb-3">每个 Section 对应一个情绪节点，标注该段的情绪标签与强度值（0-10）。整条弧线由节点数组 <code class="bg-slate-100 px-1 rounded text-xs">nodes[]</code> 组成。</p>
+                        <table class="w-full text-sm border-collapse border border-slate-200">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-20">字段</th><th class="border p-2 w-28">类型</th><th class="border p-2">说明</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono text-xs">section</td><td class="border p-2 text-xs">enum (H/Br/P/Re/Rv/V/C)</td><td class="border p-2 text-slate-600">所属段落</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">emotion</td><td class="border p-2 text-xs">string</td><td class="border p-2 text-slate-600">该段主要情绪标签（如 curiosity, anxiety, relief, desire, urgency）</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">intensity</td><td class="border p-2 text-xs">number 0-10</td><td class="border p-2 text-slate-600">情绪强度值，0 = 平静，10 = 极端</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-xs text-slate-400 mt-2">示例：<code class="bg-slate-100 px-1 rounded">[{section:"H", emotion:"curiosity", intensity:7}, {section:"P", emotion:"anxiety", intensity:8}, {section:"V", emotion:"desire", intensity:9}, {section:"C", emotion:"urgency", intensity:6}]</code></p>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- 04 Meat -->
+        <div id="cs-meat" class="tab-content print-container w-full max-w-[210mm] mx-auto bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+            <header class="bg-rose-600 text-white p-6 border-b border-rose-700">
+                <h2 class="text-2xl font-bold flex items-center gap-2">🥩 04 Meat 速查表</h2>
+            </header>
+            <div class="p-8">
+                <p class="text-sm text-slate-600 mb-6">4 个分组、11 个字段 — 从基础格式到增强元素，层叠定义视频的视觉表现。</p>
+                <div class="space-y-8">
+
+                    <!-- ===== 分组一：格式约束 ===== -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-rose-900 border-b border-rose-100 pb-2">分组一：格式约束 (Format) — 3 字段</h3>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">1.1 出镜方式 <code class="bg-slate-100 px-1 rounded text-xs">talent_framing</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-24">Code</th><th class="border p-2 w-20">中文名</th><th class="border p-2">描述</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">product_only</td><td class="border p-2">纯产品</td><td class="border p-2">无人出镜，仅展示产品本体；适合产品特写、ASMR 开箱、成分展示</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">hands_demo</td><td class="border p-2">手部演示</td><td class="border p-2">手部出镜操作产品，不露脸；适合教程步骤、上妆演示</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">body_no_face</td><td class="border p-2">身体不露脸</td><td class="border p-2">身体可见但不展示面部；适合穿搭展示、身材对比</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">talking_head</td><td class="border p-2">口播</td><td class="border p-2">面部出镜，对镜讲解；人设感强，适合测评、种草、知识分享</td></tr>
+                                <tr><td class="border p-2 text-center">5</td><td class="border p-2 font-mono">full_body</td><td class="border p-2">全身出镜</td><td class="border p-2">全身入镜，动作表演；适合穿搭、健身、生活 vlog</td></tr>
+                                <tr><td class="border p-2 text-center">6</td><td class="border p-2 font-mono">skit</td><td class="border p-2">情景剧</td><td class="border p-2">多人演绎，剧情表演；传播潜力大，适合搞笑段子、反转剧情</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">1.2 时长范围 <code class="bg-slate-100 px-1 rounded text-xs">duration_range</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-28">子字段</th><th class="border p-2 w-20">类型</th><th class="border p-2">描述</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono">min_seconds</td><td class="border p-2">number</td><td class="border p-2">最短时长（秒）— 低于此时长信息无法完整传递</td></tr>
+                                <tr><td class="border p-2 font-mono">max_seconds</td><td class="border p-2">number</td><td class="border p-2">最长时长（秒）— 超过此时长完播率会显著下降</td></tr>
+                                <tr><td class="border p-2 font-mono">target_seconds</td><td class="border p-2">number</td><td class="border p-2">目标时长（秒）— 最理想的时长，平衡信息量和完播率</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">1.3 画面比例 <code class="bg-slate-100 px-1 rounded text-xs">aspect_ratio</code></h4>
+                        <div class="grid grid-cols-3 gap-2 text-xs mb-2">
+                            <div class="bg-slate-50 p-2 rounded border text-center"><strong class="block font-mono">9:16</strong><span class="text-slate-500">竖版 — 抖音/快手/Reels</span></div>
+                            <div class="bg-slate-50 p-2 rounded border text-center"><strong class="block font-mono">16:9</strong><span class="text-slate-500">横版 — YouTube/B站</span></div>
+                            <div class="bg-slate-50 p-2 rounded border text-center"><strong class="block font-mono">1:1</strong><span class="text-slate-500">方形 — 信息流/商品展示</span></div>
+                        </div>
+                    </section>
+
+                    <!-- ===== 分组二：视听风格 ===== -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-rose-900 border-b border-rose-100 pb-2">分组二：视听风格 (Audiovisual) — 4 字段</h3>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">2.1 语音类型 <code class="bg-slate-100 px-1 rounded text-xs">voice_type</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-20">Code</th><th class="border p-2 w-24">中文名</th><th class="border p-2">描述</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">human</td><td class="border p-2">真人口播/配音</td><td class="border p-2">信任感最强，适合需要人设和情感传递的内容</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">ai_tts</td><td class="border p-2">AI 配音</td><td class="border p-2">制作效率高、可批量生成，适合信息密集型内容</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">none</td><td class="border p-2">无语音</td><td class="border p-2">纯视觉 + 文字，适合 ASMR、产品展示、纯视觉冲击类</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">2.2 镜头语法 <code class="bg-slate-100 px-1 rounded text-xs">shot_grammar</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-28">子字段</th><th class="border p-2 w-20">类型</th><th class="border p-2">描述</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono">section_constraints</td><td class="border p-2">object</td><td class="border p-2">每个 Section 段落的镜头数量约束：min_shots / max_shots / min_duration_ratio</td></tr>
+                                <tr><td class="border p-2 font-mono">rules</td><td class="border p-2">string[]</td><td class="border p-2">构图规则列表，如 "三分法" / "黄金比例" / "中心对称"</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">2.3 运镜 <code class="bg-slate-100 px-1 rounded text-xs">camera_movement</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-16">Code</th><th class="border p-2 w-16">中文名</th><th class="border p-2">描述</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">static</td><td class="border p-2">固定</td><td class="border p-2">镜头锁定不动；稳定感强，适合口播、产品特写</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">push</td><td class="border p-2">推</td><td class="border p-2">向前推进，聚焦细节；制造紧迫感和关注度</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">pull</td><td class="border p-2">拉</td><td class="border p-2">向后拉远，展示全貌；制造空间感和揭示感</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">pan</td><td class="border p-2">横摇</td><td class="border p-2">水平方向左右移动；适合展示宽幅场景、对比展示</td></tr>
+                                <tr><td class="border p-2 text-center">5</td><td class="border p-2 font-mono">tilt</td><td class="border p-2">竖摇</td><td class="border p-2">垂直方向上下移动；适合展示纵向物体（全身穿搭）</td></tr>
+                                <tr><td class="border p-2 text-center">6</td><td class="border p-2 font-mono">track</td><td class="border p-2">移/跟</td><td class="border p-2">跟随主体运动；动态感最强，营造沉浸式体验</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">2.4 字幕形式 <code class="bg-slate-100 px-1 rounded text-xs">subtitle_form</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-2">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-20">Code</th><th class="border p-2 w-20">中文名</th><th class="border p-2">描述</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">punchline</td><td class="border p-2">金句型</td><td class="border p-2">大字居中，强调核心金句；适合卖点提炼、痛点放大</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">steps</td><td class="border p-2">步骤型</td><td class="border p-2">1.2.3. 步骤编号，教程感；适合使用方法、操作流程</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">label</td><td class="border p-2">标签型</td><td class="border p-2">小字标注，辅助说明；不抢画面，适合产品名称、成分标注</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">data_card</td><td class="border p-2">数据卡片型</td><td class="border p-2">数据可视化呈现；适合实验数据、销量、对比百分比</td></tr>
+                                <tr><td class="border p-2 text-center">5</td><td class="border p-2 font-mono">minimal</td><td class="border p-2">极简</td><td class="border p-2">几乎无字幕，画面优先；适合视觉冲击类、ASMR</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- ===== 分组三：节奏 & 剪辑 ===== -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-rose-900 border-b border-rose-100 pb-2">分组三：节奏 & 剪辑 (Rhythm) — 2 字段</h3>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">3.1 节奏 <code class="bg-slate-100 px-1 rounded text-xs">pacing</code></h4>
+                        <p class="text-xs text-slate-500 mb-2"><strong>level</strong> — 节奏等级：</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-3">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-16">值</th><th class="border p-2 w-16">中文名</th><th class="border p-2">描述</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">low</td><td class="border p-2">慢节奏</td><td class="border p-2">长镜头为主，沉浸感强；适合故事叙事、品牌调性、ASMR</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">medium</td><td class="border p-2">中节奏</td><td class="border p-2">均衡节奏，适中切换；大多数场景的安全选择</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">high</td><td class="border p-2">快节奏</td><td class="border p-2">快速剪辑，信息密度高；适合促销带货、快速种草</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-xs text-slate-500 mb-2"><strong>shot_duration</strong> — 每镜时长约束：</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-16">参数</th><th class="border p-2 w-16">中文名</th><th class="border p-2">描述</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono">min</td><td class="border p-2">最短秒数</td><td class="border p-2">单镜头最短秒数 — 低于此观众来不及接收信息</td></tr>
+                                <tr><td class="border p-2 font-mono">max</td><td class="border p-2">最长秒数</td><td class="border p-2">单镜头最长秒数 — 超过此画面会显得拖沓</td></tr>
+                                <tr><td class="border p-2 font-mono">avg</td><td class="border p-2">平均秒数</td><td class="border p-2">整条视频镜头时长的期望均值，剪辑的核心参考</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">3.2 剪辑模式 <code class="bg-slate-100 px-1 rounded text-xs">editing_pattern</code></h4>
+                        <p class="text-xs text-slate-500 mb-2"><strong>style</strong> — 剪辑风格文字描述（如 "快速跳切+节奏卡点" / "平稳叙事型剪辑"）</p>
+                        <p class="text-xs text-slate-500 mb-2"><strong>transitions</strong> — 允许使用的转场方式：</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-2">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-20">值</th><th class="border p-2 w-16">中文名</th><th class="border p-2">描述</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">hard_cut</td><td class="border p-2">硬切</td><td class="border p-2">镜头直接切换；节奏感强，信息传递效率高</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">dissolve</td><td class="border p-2">溶解</td><td class="border p-2">前后画面渐变过渡；柔和自然，适合情绪转换</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">effects</td><td class="border p-2">特效转场</td><td class="border p-2">缩放、旋转、闪白等；视觉冲击力强，不宜过多</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- ===== 分组四：增强元素 ===== -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-rose-900 border-b border-rose-100 pb-2">分组四：增强元素 (Enhance) — 2 字段</h3>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">4.1 屏幕元素 <code class="bg-slate-100 px-1 rounded text-xs">screen_elements</code></h4>
+                        <p class="text-xs text-slate-500 mb-2"><strong>allowed_types</strong> — 允许使用的元素类型：</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-3">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-24">值</th><th class="border p-2 w-16">中文名</th><th class="border p-2">描述</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">花字</td><td class="border p-2">花字</td><td class="border p-2">加粗强调文字；突出关键卖点、金句、数据</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">emoji</td><td class="border p-2">Emoji</td><td class="border p-2">emoji 装饰；增加趣味性和亲和力</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">data_callout</td><td class="border p-2">数据标注</td><td class="border p-2">百分比、数字、图表等数据可视化，增强说服力</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">arrow</td><td class="border p-2">箭头</td><td class="border p-2">引导观众视线聚焦到画面特定区域</td></tr>
+                                <tr><td class="border p-2 text-center">5</td><td class="border p-2 font-mono">sticker</td><td class="border p-2">贴纸</td><td class="border p-2">装饰性元素，增加画面丰富度</td></tr>
+                                <tr><td class="border p-2 text-center">6</td><td class="border p-2 font-mono">broll_insert</td><td class="border p-2">B-roll</td><td class="border p-2">补充画面素材插入，丰富视觉层次和叙事节奏</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="grid grid-cols-2 gap-2 text-xs mb-4">
+                            <div class="bg-rose-50 p-2 rounded border border-rose-100"><strong class="text-rose-700">hook_required</strong> — HOOK 段是否必须添加屏幕元素（花字/视觉元素提升前 1-2 秒停留率）</div>
+                            <div class="bg-rose-50 p-2 rounded border border-rose-100"><strong class="text-rose-700">cta_required</strong> — CTA 段是否必须添加屏幕元素（箭头/按钮提示降低操作犹豫）</div>
+                            <div class="bg-slate-50 p-2 rounded border border-slate-200"><strong>max_text_length</strong> — 单条花字最大字数（控制简洁度）</div>
+                            <div class="bg-slate-50 p-2 rounded border border-slate-200"><strong>rules</strong> — 额外规则，如 "每段最多2个花字" / "B-roll 不超过总时长20%"</div>
+                        </div>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">4.2 音效指导 <code class="bg-slate-100 px-1 rounded text-xs">audio_guidance</code></h4>
+                        <p class="text-xs text-slate-500 mb-2"><strong>bgm_style</strong> — BGM 风格：</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-3">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-20">值</th><th class="border p-2 w-16">中文名</th><th class="border p-2">描述</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">upbeat</td><td class="border p-2">欢快</td><td class="border p-2">节奏明快；适合快节奏种草、促销带货</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">emotional</td><td class="border p-2">情感</td><td class="border p-2">抒情感人；适合故事叙事、品牌片、用户见证</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">minimal</td><td class="border p-2">极简</td><td class="border p-2">低调背景；不抢注意力，适合口播为主的内容</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">none</td><td class="border p-2">无 BGM</td><td class="border p-2">不使用背景音乐；适合 ASMR、追求最大化真实感</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-xs text-slate-500 mb-2"><strong>sfx_density</strong> — 音效使用密度：</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-3">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-16">值</th><th class="border p-2 w-16">中文名</th><th class="border p-2">描述</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">high</td><td class="border p-2">高密度</td><td class="border p-2">几乎每个镜头切换都有音效；适合快节奏、高能量</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">medium</td><td class="border p-2">中密度</td><td class="border p-2">关键节点加音效；重要转折和强调处点缀</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">low</td><td class="border p-2">低密度</td><td class="border p-2">偶尔点缀；只在最关键时刻使用，保持整体克制</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">none</td><td class="border p-2">无音效</td><td class="border p-2">不使用任何音效；适合纯口播、ASMR</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-xs text-slate-500"><strong>sfx_guidelines</strong> — 额外音效规则列表（如 "HOOK 段必须有注意力提示音" / "转场使用 whoosh 音效"）</p>
+                    </section>
+
+                </div>
+
+                <!-- 边界说明 -->
+                <div class="mt-6 p-3 bg-rose-50 border border-rose-200 rounded text-xs text-slate-600">
+                    <strong class="text-rose-800">Meat Profile 不包含的内容：</strong> 妆发服（取决于具体演员和产品调性）、拍摄场景（取决于实际拍摄资源）、产品信息（属于具体选题的业务数据）。简言之：Meat 定义"用什么风格拍"，而非"拍什么"。
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div id="print-actions" class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+        <button onclick="window.print()" class="bg-white border text-slate-700 px-4 py-3 rounded-xl shadow-lg font-semibold text-sm">打印当前页</button>
+        <button onclick="document.body.classList.add('print-all-mode'); setTimeout(()=>{window.print(); window.onafterprint=()=>{document.body.classList.remove('print-all-mode')}},100)" class="bg-blue-600 text-white px-4 py-3 rounded-xl shadow-lg font-bold text-sm">导出全部 (成册)</button>
+    </div>
+
+    <script>
+        function switchTab(id, btn) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            document.querySelectorAll('.nav-btn').forEach(b => { b.classList.remove('bg-blue-600','text-white','shadow-sm'); b.classList.add('hover:bg-slate-800'); });
+            if(id.startsWith('m')) { btn.classList.add('bg-blue-600','text-white'); btn.classList.remove('hover:bg-slate-800'); }
+            else { btn.classList.add('bg-slate-700','text-white'); btn.classList.remove('hover:bg-slate-800'); }
+            if(window.innerWidth<768) document.getElementById('sidebar').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

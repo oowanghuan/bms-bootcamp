@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMS Architecture Dictionary (EN)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        @media print {
+            body { background-color: white; }
+            #sidebar, #print-actions { display: none !important; }
+            #main-content { margin-left: 0 !important; width: 100% !important; padding: 0 !important; }
+            .print-container { box-shadow: none !important; border: none !important; margin: 0 auto !important; max-width: 210mm !important; }
+            .page-break { page-break-after: always; }
+            body.print-all-mode .tab-content { display: block !important; page-break-after: always; margin-bottom: 0 !important; }
+            body.print-all-mode .tab-content:last-child { page-break-after: auto; }
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+    </style>
+</head>
+<body class="h-screen overflow-hidden flex flex-col md:flex-row text-slate-800">
+
+    <div class="md:hidden bg-slate-900 text-white p-4 shadow-md z-20 flex justify-between items-center">
+        <h1 class="font-bold text-lg">Architecture Dictionary (EN)</h1>
+        <button onclick="document.getElementById('sidebar').classList.toggle('hidden')" class="p-2 bg-slate-800 rounded">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </div>
+
+    <nav id="sidebar" class="hidden md:flex flex-col w-full md:w-64 bg-slate-900 text-slate-300 h-full flex-shrink-0 z-10 shadow-xl overflow-y-auto">
+        <div class="p-6">
+            <h1 class="text-xl font-black text-white tracking-tight leading-tight">BMS Bootcamp<br><span class="text-blue-400 text-sm font-semibold">Architecture Dictionary v1.2</span></h1>
+        </div>
+        <div class="flex-grow pb-6">
+            <div class="px-4 mb-2 text-xs font-bold text-slate-500 uppercase tracking-widest">Core Definitions</div>
+            <ul class="space-y-1 px-3">
+                <li><button onclick="switchTab('cs-skel', this)" class="nav-btn w-full text-left px-4 py-2.5 rounded-lg font-medium transition-colors hover:bg-slate-800 hover:text-white active bg-blue-600 text-white shadow-sm flex items-center gap-2"><span class="text-lg">🦴</span> 01 Section Cheat Sheet</button></li>
+                <li><button onclick="switchTab('cs-strat', this)" class="nav-btn w-full text-left px-4 py-2.5 rounded-lg font-medium transition-colors hover:bg-slate-800 hover:text-white flex items-center gap-2"><span class="text-lg">🌲</span> 02 Strategy Cheat Sheet</button></li>
+                <li><button onclick="switchTab('cs-soul', this)" class="nav-btn w-full text-left px-4 py-2.5 rounded-lg font-medium transition-colors hover:bg-slate-800 hover:text-white flex items-center gap-2"><span class="text-lg">👻</span> 03 Soul Layer Definitions</button></li>
+                <li><button onclick="switchTab('cs-meat', this)" class="nav-btn w-full text-left px-4 py-2.5 rounded-lg font-medium transition-colors hover:bg-slate-800 hover:text-white flex items-center gap-2"><span class="text-lg">🥩</span> 04 Meat Cheat Sheet</button></li>
+            </ul>
+        </div>
+        <div class="p-4 border-t border-slate-800 text-center text-xs text-slate-500">Includes Soul Definitions<br>Complete Dictionary</div>
+    </nav>
+
+    <main id="main-content" class="flex-grow overflow-y-auto p-4 md:p-8 bg-slate-100/50 relative">
+
+        <!-- 01 Section -->
+        <div id="cs-skel" class="tab-content active print-container w-full max-w-[210mm] mx-auto bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+            <header class="bg-blue-600 text-white p-6 border-b border-blue-700">
+                <h2 class="text-2xl font-bold flex items-center gap-2">🦴 01 Section Cheat Sheet</h2>
+            </header>
+            <div class="p-8">
+                <h3 class="font-bold text-lg mb-4 text-blue-900 border-b pb-2">1. Core Section Definitions (7 Section Types, 8 Dimensions incl. Section Order)</h3>
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-blue-600 block">H (Hook) Attention Capture</strong><span class="text-xs text-slate-500">Interrupt auto-scrolling, compete for cognitive bandwidth (Required)</span></div>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-blue-600 block">Br (Bridge) Relevance Building</strong><span class="text-xs text-slate-500">Establish context and personal relevance (Optional)</span></div>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-amber-600 block">P (Problem) Tension Building</strong><span class="text-xs text-slate-500">Expose the gap between current state and ideal (Strongly recommended)</span></div>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-emerald-600 block">Re (Resolution) Tension Release</strong><span class="text-xs text-slate-500">Relieve tension, show improvement path (Highly recommended)</span></div>
+                    <div class="bg-indigo-50 p-3 rounded border border-indigo-100"><strong class="text-indigo-600 block">Rv (Reversal) Cognitive Rewrite</strong><span class="text-xs text-slate-500">Overturn existing beliefs, eliminate potential resistance</span></div>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-rose-600 block">V (Value) Decision Stabilization</strong><span class="text-xs text-slate-500">Core value of product/service (Strongly recommended)</span></div>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-purple-600 block">C (CTA) Action Trigger</strong><span class="text-xs text-slate-500">Convert preference into action (Required)</span></div>
+                </div>
+
+                <h3 class="font-bold text-lg mb-4 text-blue-900 border-b pb-2">2. Common Skeleton Combinations (8 Types)</h3>
+                <table class="w-full text-sm text-left border-collapse border border-slate-200">
+                    <thead class="bg-blue-50 text-slate-700"><tr><th class="border p-2">Type</th><th class="border p-2">Structure Flow</th><th class="border p-2">Tier</th><th class="border p-2">Duration Ratio Reference</th><th class="border p-2">Use Case</th></tr></thead>
+                    <tbody>
+                        <tr><td class="border p-2 font-bold">HPVC</td><td class="border p-2 font-mono text-xs">H → P → V → C</td><td class="border p-2 text-center font-bold text-green-700">A</td><td class="border p-2 text-xs">15%/25%/45%/15%</td><td class="border p-2">Standard 4-part, regular seeding</td></tr>
+                        <tr><td class="border p-2 font-bold">HBVC</td><td class="border p-2 font-mono text-xs">H → Br → V → C</td><td class="border p-2 text-center font-bold text-green-700">A</td><td class="border p-2 text-xs">15%/20%/50%/15%</td><td class="border p-2">Quick seeding with bridge</td></tr>
+                        <tr><td class="border p-2 font-bold">HRVC</td><td class="border p-2 font-mono text-xs">H → Re → V → C</td><td class="border p-2 text-center font-bold text-green-700">A</td><td class="border p-2 text-xs">15%/25%/45%/15%</td><td class="border p-2">Direct seeding with resolution</td></tr>
+                        <tr class="bg-blue-50/30"><td class="border p-2 font-bold">HPRVC</td><td class="border p-2 font-mono text-xs">H → P → Rv → V → C</td><td class="border p-2 text-center font-bold text-blue-700">B</td><td class="border p-2 text-xs">10%/20%/20%/35%/15%</td><td class="border p-2 font-bold">Universal 5-part, ideal for seeding & product intro</td></tr>
+                        <tr><td class="border p-2 font-bold">HPBVC</td><td class="border p-2 font-mono text-xs">H → P → Br → V → C</td><td class="border p-2 text-center font-bold text-blue-700">B</td><td class="border p-2 text-xs">10%/20%/15%/40%/15%</td><td class="border p-2">Bridge after problem, reinforce relevance</td></tr>
+                        <tr><td class="border p-2 font-bold">HBrPVC</td><td class="border p-2 font-mono text-xs">H → Br → P → V → C</td><td class="border p-2 text-center font-bold text-blue-700">B</td><td class="border p-2 text-xs">10%/15%/20%/40%/15%</td><td class="border p-2">Bridge first then problem, build trust</td></tr>
+                        <tr><td class="border p-2 font-bold">HBrRVC</td><td class="border p-2 font-mono text-xs">H → Br → Rv → V → C</td><td class="border p-2 text-center font-bold text-blue-700">B</td><td class="border p-2 text-xs">10%/15%/25%/35%/15%</td><td class="border p-2">Bridge + cognitive rewrite, break fixed beliefs</td></tr>
+                        <tr><td class="border p-2 font-bold">HBrPReVC</td><td class="border p-2 font-mono text-xs">H → Br → P → Re → V → C</td><td class="border p-2 text-center font-bold text-amber-700">C</td><td class="border p-2 text-xs">8%/12%/18%/17%/30%/15%</td><td class="border p-2">Full 6-part, deep content narrative</td></tr>
+                    </tbody>
+                </table>
+                <p class="text-xs text-slate-400 mt-2">Tier A = 4 sections or fewer (short & fast); Tier B = 5 sections (standard persuasion); Tier C = 6+ sections (deep narrative)</p>
+            </div>
+        </div>
+
+        <!-- 02 Strategy -->
+        <div id="cs-strat" class="tab-content print-container w-full max-w-[210mm] mx-auto bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+            <header class="bg-emerald-600 text-white p-6 border-b border-emerald-700">
+                <h2 class="text-2xl font-bold flex items-center gap-2">🌲 02 Strategy Cheat Sheet</h2>
+            </header>
+            <div class="p-8">
+                <table class="w-full text-xs text-left border-collapse border border-slate-200">
+                    <thead class="bg-slate-100 text-slate-700">
+                        <tr><th class="border p-2 w-14">L0</th><th class="border p-2 w-20">L1 Strategy</th><th class="border p-2">Description</th><th class="border p-2">Psychological Mechanism</th><th class="border p-2">Key Phrase</th><th class="border p-2 w-20">L2</th><th class="border p-2">L2 Description</th></tr>
+                    </thead>
+                    <tbody>
+                        <!-- HEAD -->
+                        <tr><td rowspan="13" class="border p-2 font-bold bg-slate-50 text-center align-middle">HEAD<br>(Cognition & Trust)</td><td rowspan="3" class="border p-2 font-bold align-middle">EXPLAIN<br><span class="font-normal text-slate-500">Mechanism Explanation</span></td><td rowspan="3" class="border p-2 align-middle">Explain the underlying mechanism so users understand why it works</td><td rowspan="3" class="border p-2 align-middle text-emerald-700">Rational Logic →<br>Makes sense now</td><td rowspan="3" class="border p-2 align-middle italic text-slate-500">"Let me tell you why it works"</td><td class="border p-2 font-mono">Logic</td><td class="border p-2">Logical reasoning, cause-effect explanation</td></tr>
+                        <tr><td class="border p-2 font-mono">Data</td><td class="border p-2">Data evidence, experimental results</td></tr>
+                        <tr><td class="border p-2 font-mono">Transparency</td><td class="border p-2">Formula transparency, ingredient disclosure</td></tr>
+                        <tr><td rowspan="3" class="border p-2 font-bold align-middle">PROOF<br><span class="font-normal text-slate-500">Real Testimonials</span></td><td rowspan="3" class="border p-2 align-middle">Show real results and user testimonials, let facts speak</td><td rowspan="3" class="border p-2 align-middle text-emerald-700">Social Proof →<br>Everyone says it's good</td><td rowspan="3" class="border p-2 align-middle italic text-slate-500">"So many people love it"</td><td class="border p-2 font-mono">UGC</td><td class="border p-2">User testimonials, real feedback</td></tr>
+                        <tr><td class="border p-2 font-mono">Before_After</td><td class="border p-2">Before/after comparison, results showcase</td></tr>
+                        <tr><td class="border p-2 font-mono">Sales_Data</td><td class="border p-2">Sales figures, positive review counts</td></tr>
+                        <tr><td rowspan="4" class="border p-2 font-bold align-middle">AUTHORITY<br><span class="font-normal text-slate-500">Authority Endorsement</span></td><td rowspan="4" class="border p-2 align-middle">Leverage experts, institutions, certifications to build trust</td><td rowspan="4" class="border p-2 align-middle text-emerald-700">Professional Endorsement →<br>Expert certified</td><td rowspan="4" class="border p-2 align-middle italic text-slate-500">"Experts have certified it"</td><td class="border p-2 font-mono">Expert</td><td class="border p-2">Expert recommendation, doctor endorsement</td></tr>
+                        <tr><td class="border p-2 font-mono">Certification</td><td class="border p-2">Certification certificates, test reports</td></tr>
+                        <tr><td class="border p-2 font-mono">Media</td><td class="border p-2">Media coverage, awards & honors</td></tr>
+                        <tr><td class="border p-2 font-mono">Guarantee</td><td class="border p-2">Commitment guarantee, money-back guarantee</td></tr>
+                        <tr><td rowspan="3" class="border p-2 font-bold align-middle">CONTRAST<br><span class="font-normal text-slate-500">Contrast Effect</span></td><td rowspan="3" class="border p-2 align-middle">Use contrast to create cognitive impact</td><td rowspan="3" class="border p-2 align-middle text-emerald-700">Reference Judgment →<br>Comparison reveals truth</td><td rowspan="3" class="border p-2 align-middle italic text-slate-500">"Just compare and you'll see"</td><td class="border p-2 font-mono">AB</td><td class="border p-2">A/B product comparison</td></tr>
+                        <tr><td class="border p-2 font-mono">Shocking</td><td class="border p-2">Shocking contrast, unexpected results</td></tr>
+                        <tr><td class="border p-2 font-mono">Value_Stack</td><td class="border p-2">Value stacking, perception of great value</td></tr>
+                        <!-- HEART -->
+                        <tr><td rowspan="7" class="border p-2 font-bold bg-slate-50 text-center align-middle">HEART<br>(Emotion & Resonance)</td><td rowspan="3" class="border p-2 font-bold align-middle">PAIN<br><span class="font-normal text-slate-500">Pain Point Resonance</span></td><td rowspan="3" class="border p-2 align-middle">Trigger pain point resonance, make users feel understood</td><td rowspan="3" class="border p-2 align-middle text-emerald-700">Empathy →<br>I feel the same way</td><td rowspan="3" class="border p-2 align-middle italic text-slate-500">"Do you also have this problem?"</td><td class="border p-2 font-mono">Scene</td><td class="border p-2">Scenario resonance, situational immersion</td></tr>
+                        <tr><td class="border p-2 font-mono">Daily</td><td class="border p-2">Daily frustrations, common problems</td></tr>
+                        <tr><td class="border p-2 font-mono">Loss</td><td class="border p-2">Loss aversion, cost of missing out</td></tr>
+                        <tr><td rowspan="2" class="border p-2 font-bold align-middle">FEAR<br><span class="font-normal text-slate-500">Fear Appeal</span></td><td rowspan="2" class="border p-2 align-middle">Arouse risk awareness, motivate preventive action</td><td rowspan="2" class="border p-2 align-middle text-emerald-700">Loss Aversion →<br>Fear of consequences</td><td rowspan="2" class="border p-2 align-middle italic text-slate-500">"If you don't do this, it'll be bad"</td><td class="border p-2 font-mono">Consequence</td><td class="border p-2">Consequence warning, cost of inaction</td></tr>
+                        <tr><td class="border p-2 font-mono">Miss_Out</td><td class="border p-2">Fear of missing out (FOMO)</td></tr>
+                        <tr><td rowspan="2" class="border p-2 font-bold align-middle">STORY<br><span class="font-normal text-slate-500">Storytelling</span></td><td rowspan="2" class="border p-2 align-middle">Build emotional connection through storytelling</td><td rowspan="2" class="border p-2 align-middle text-emerald-700">Emotional Immersion →<br>Moved by the character</td><td rowspan="2" class="border p-2 align-middle italic text-slate-500">"Let me tell you a story"</td><td class="border p-2 font-mono">Origin</td><td class="border p-2">Brand story, founder story</td></tr>
+                        <tr><td class="border p-2 font-mono">User</td><td class="border p-2">User story, real experience</td></tr>
+                        <!-- EYES -->
+                        <tr><td rowspan="2" class="border p-2 font-bold bg-slate-50 text-center align-middle">EYES<br>(Visual & Experience)</td><td rowspan="2" class="border p-2 font-bold align-middle">DEMO<br><span class="font-normal text-slate-500">Demonstration</span></td><td rowspan="2" class="border p-2 align-middle">Directly demonstrate product usage and results</td><td rowspan="2" class="border p-2 align-middle text-emerald-700">Seeing is Believing →<br>See the results</td><td rowspan="2" class="border p-2 align-middle italic text-slate-500">"Look, this is how you use it"</td><td class="border p-2 font-mono">Step</td><td class="border p-2">Step-by-step demo, usage tutorial</td></tr>
+                        <tr><td class="border p-2 font-mono">Multi_Angle</td><td class="border p-2">Multi-angle display, all-around presentation</td></tr>
+                        <!-- HAND -->
+                        <tr><td rowspan="4" class="border p-2 font-bold bg-slate-50 text-center align-middle">HAND<br>(Attraction & Action)</td><td rowspan="2" class="border p-2 font-bold align-middle">SUSPENSE<br><span class="font-normal text-slate-500">Suspense & Question</span></td><td rowspan="2" class="border p-2 align-middle">Spark curiosity through suspense or rhetorical questions</td><td rowspan="2" class="border p-2 align-middle text-emerald-700">Information Gap →<br>Want to know the answer</td><td rowspan="2" class="border p-2 align-middle italic text-slate-500">"Why is this? Don't scroll away!"</td><td class="border p-2 font-mono">Question</td><td class="border p-2">Rhetorical opening, spark curiosity</td></tr>
+                        <tr><td class="border p-2 font-mono">Reveal</td><td class="border p-2">Reveal twist, answer unveiled</td></tr>
+                        <tr><td rowspan="2" class="border p-2 font-bold align-middle">URGENCY<br><span class="font-normal text-slate-500">Scarcity & Urgency</span></td><td rowspan="2" class="border p-2 align-middle">Create scarcity and urgency to drive action</td><td rowspan="2" class="border p-2 align-middle text-emerald-700">Time/Quantity Pressure →<br>Act now</td><td rowspan="2" class="border p-2 align-middle italic text-slate-500">"Buy now or miss out"</td><td class="border p-2 font-mono">Time</td><td class="border p-2">Limited-time promotion, countdown</td></tr>
+                        <tr><td class="border p-2 font-mono">Stock</td><td class="border p-2">Limited stock, sell-out warning</td></tr>
+                    </tbody>
+                </table>
+                <div class="mt-4 p-3 bg-emerald-50 border border-emerald-200 rounded text-xs text-slate-600">
+                    <strong class="text-emerald-800">Compatibility Matrix Note:</strong> Not all L1 strategies apply to every Section. For example, URGENCY is typically only used in C (CTA) sections, PAIN is typically used in P (Problem) sections. For the full Section x L1 compatibility matrix, refer to the <code class="bg-white px-1 rounded">strategy_section_compatibility</code> field in the SSOT configuration file.
+                </div>
+            </div>
+        </div>
+
+        <!-- 03 Soul -->
+        <div id="cs-soul" class="tab-content print-container w-full max-w-[210mm] mx-auto bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+            <header class="bg-purple-600 text-white p-6 border-b border-purple-700">
+                <h2 class="text-2xl font-bold flex items-center gap-2">👻 03 Soul Layer Definitions</h2>
+            </header>
+            <div class="p-8">
+                <div class="space-y-8">
+                    <!-- 1. Target Audience -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-purple-900 border-b border-purple-100 pb-2">1. Target Audience</h3>
+                        <table class="w-full text-sm border-collapse border border-slate-200">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-28">Field</th><th class="border p-2 w-24">Type</th><th class="border p-2">Description</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono text-xs">age_range</td><td class="border p-2 text-xs">string</td><td class="border p-2 text-slate-600">Age range, e.g. "18-25", "30-45"</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">gender</td><td class="border p-2 text-xs">enum</td><td class="border p-2 text-slate-600">male / female / all</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">pain_points</td><td class="border p-2 text-xs">string[]</td><td class="border p-2 text-slate-600">List of core pain points</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">consumption_level</td><td class="border p-2 text-xs">enum</td><td class="border p-2 text-slate-600">low / medium / high / premium</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- 2. Trigger Scenario -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-purple-900 border-b border-purple-100 pb-2">2. Trigger Scenario</h3>
+                        <table class="w-full text-sm border-collapse border border-slate-200">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-28">Field</th><th class="border p-2 w-24">Type</th><th class="border p-2">Description</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono text-xs">description</td><td class="border p-2 text-xs">string</td><td class="border p-2 text-slate-600">Scenario description, e.g. "scrolling phone after work", "weekend mall shopping"</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">timing</td><td class="border p-2 text-xs">string</td><td class="border p-2 text-slate-600">Time point, e.g. "before bed", "during commute", "after meals"</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">user_state</td><td class="border p-2 text-xs">string</td><td class="border p-2 text-slate-600">User state, e.g. "bored & relaxed", "anxious & indecisive", "actively searching"</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- 3. Reward Type -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-purple-900 border-b border-purple-100 pb-2">3. Reward Type (7 Enums)</h3>
+                        <div class="grid grid-cols-4 gap-3 text-sm">
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">beauty</strong><span class="text-slate-600 text-xs">Look better</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">money</strong><span class="text-slate-600 text-xs">Save/earn money</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">time</strong><span class="text-slate-600 text-xs">Save time</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">safety</strong><span class="text-slate-600 text-xs">Sense of safety</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">control</strong><span class="text-slate-600 text-xs">Sense of control</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">confidence</strong><span class="text-slate-600 text-xs">Confidence</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">health</strong><span class="text-slate-600 text-xs">Health</span></div>
+                        </div>
+                    </section>
+
+                    <!-- 4. Conflict Type -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-purple-900 border-b border-purple-100 pb-2">4. Conflict Type (5 Enums)</h3>
+                        <div class="grid grid-cols-3 gap-3 text-sm">
+                            <div class="bg-amber-50 p-3 rounded border border-amber-100 text-center"><strong class="text-amber-700 block">internal</strong><span class="text-slate-600 text-xs">Inner conflict</span></div>
+                            <div class="bg-amber-50 p-3 rounded border border-amber-100 text-center"><strong class="text-amber-700 block">external</strong><span class="text-slate-600 text-xs">External obstacle</span></div>
+                            <div class="bg-amber-50 p-3 rounded border border-amber-100 text-center"><strong class="text-amber-700 block">comparison</strong><span class="text-slate-600 text-xs">Social comparison</span></div>
+                            <div class="bg-amber-50 p-3 rounded border border-amber-100 text-center"><strong class="text-amber-700 block">cost</strong><span class="text-slate-600 text-xs">Cost concern</span></div>
+                            <div class="bg-amber-50 p-3 rounded border border-amber-100 text-center"><strong class="text-amber-700 block">misconception</strong><span class="text-slate-600 text-xs">Cognitive misconception</span></div>
+                        </div>
+                    </section>
+
+                    <!-- 5. Emotion Arc -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-purple-900 border-b border-purple-100 pb-2">5. Emotion Arc (Node Array)</h3>
+                        <p class="text-sm text-slate-600 mb-3">Each Section corresponds to an emotion node, annotating the emotion label and intensity value (0-10) for that section. The full arc is composed of a node array <code class="bg-slate-100 px-1 rounded text-xs">nodes[]</code>.</p>
+                        <table class="w-full text-sm border-collapse border border-slate-200">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-20">Field</th><th class="border p-2 w-28">Type</th><th class="border p-2">Description</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono text-xs">section</td><td class="border p-2 text-xs">enum (H/Br/P/Re/Rv/V/C)</td><td class="border p-2 text-slate-600">Section it belongs to</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">emotion</td><td class="border p-2 text-xs">string</td><td class="border p-2 text-slate-600">Primary emotion label for the section (e.g. curiosity, anxiety, relief, desire, urgency)</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">intensity</td><td class="border p-2 text-xs">number 0-10</td><td class="border p-2 text-slate-600">Emotion intensity, 0 = calm, 10 = extreme</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-xs text-slate-400 mt-2">Example: <code class="bg-slate-100 px-1 rounded">[{section:"H", emotion:"curiosity", intensity:7}, {section:"P", emotion:"anxiety", intensity:8}, {section:"V", emotion:"desire", intensity:9}, {section:"C", emotion:"urgency", intensity:6}]</code></p>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- 04 Meat -->
+        <div id="cs-meat" class="tab-content print-container w-full max-w-[210mm] mx-auto bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+            <header class="bg-rose-600 text-white p-6 border-b border-rose-700">
+                <h2 class="text-2xl font-bold flex items-center gap-2">🥩 04 Meat Cheat Sheet</h2>
+            </header>
+            <div class="p-8">
+                <p class="text-sm text-slate-600 mb-6">4 groups, 11 fields — from basic format to enhancement elements, layered definitions of video visual presentation.</p>
+                <div class="space-y-8">
+
+                    <!-- ===== Group 1: Format Constraints ===== -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-rose-900 border-b border-rose-100 pb-2">Group 1: Format Constraints — 3 Fields</h3>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">1.1 Talent Framing <code class="bg-slate-100 px-1 rounded text-xs">talent_framing</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-24">Code</th><th class="border p-2 w-20">Name</th><th class="border p-2">Description</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">product_only</td><td class="border p-2">Product Only</td><td class="border p-2">No person on screen, only product; suitable for product close-ups, ASMR unboxing, ingredient display</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">hands_demo</td><td class="border p-2">Hands Demo</td><td class="border p-2">Hands visible operating product, no face; suitable for tutorial steps, makeup demo</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">body_no_face</td><td class="border p-2">Body No Face</td><td class="border p-2">Body visible but face not shown; suitable for outfit display, body comparison</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">talking_head</td><td class="border p-2">Talking Head</td><td class="border p-2">Face on screen, speaking to camera; strong persona, suitable for reviews, seeding, knowledge sharing</td></tr>
+                                <tr><td class="border p-2 text-center">5</td><td class="border p-2 font-mono">full_body</td><td class="border p-2">Full Body</td><td class="border p-2">Full body in frame, physical performance; suitable for outfits, fitness, lifestyle vlog</td></tr>
+                                <tr><td class="border p-2 text-center">6</td><td class="border p-2 font-mono">skit</td><td class="border p-2">Skit</td><td class="border p-2">Multi-person scripted performance; high viral potential, suitable for comedy skits, plot twists</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">1.2 Duration Range <code class="bg-slate-100 px-1 rounded text-xs">duration_range</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-28">Sub-field</th><th class="border p-2 w-20">Type</th><th class="border p-2">Description</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono">min_seconds</td><td class="border p-2">number</td><td class="border p-2">Minimum duration (seconds) — below this, information cannot be fully delivered</td></tr>
+                                <tr><td class="border p-2 font-mono">max_seconds</td><td class="border p-2">number</td><td class="border p-2">Maximum duration (seconds) — beyond this, completion rate drops significantly</td></tr>
+                                <tr><td class="border p-2 font-mono">target_seconds</td><td class="border p-2">number</td><td class="border p-2">Target duration (seconds) — ideal length, balancing information and completion rate</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">1.3 Aspect Ratio <code class="bg-slate-100 px-1 rounded text-xs">aspect_ratio</code></h4>
+                        <div class="grid grid-cols-3 gap-2 text-xs mb-2">
+                            <div class="bg-slate-50 p-2 rounded border text-center"><strong class="block font-mono">9:16</strong><span class="text-slate-500">Vertical — TikTok/Douyin/Reels</span></div>
+                            <div class="bg-slate-50 p-2 rounded border text-center"><strong class="block font-mono">16:9</strong><span class="text-slate-500">Horizontal — YouTube/Bilibili</span></div>
+                            <div class="bg-slate-50 p-2 rounded border text-center"><strong class="block font-mono">1:1</strong><span class="text-slate-500">Square — Feed/Product display</span></div>
+                        </div>
+                    </section>
+
+                    <!-- ===== Group 2: Audiovisual Style ===== -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-rose-900 border-b border-rose-100 pb-2">Group 2: Audiovisual Style — 4 Fields</h3>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">2.1 Voice Type <code class="bg-slate-100 px-1 rounded text-xs">voice_type</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-20">Code</th><th class="border p-2 w-24">Name</th><th class="border p-2">Description</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">human</td><td class="border p-2">Human Voice</td><td class="border p-2">Strongest trust factor; suitable for persona-driven and emotional content</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">ai_tts</td><td class="border p-2">AI TTS</td><td class="border p-2">High production efficiency, scalable; suitable for information-dense content</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">none</td><td class="border p-2">No Voice</td><td class="border p-2">Pure visual + text; suitable for ASMR, product display, visual impact content</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">2.2 Shot Grammar <code class="bg-slate-100 px-1 rounded text-xs">shot_grammar</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-28">Sub-field</th><th class="border p-2 w-20">Type</th><th class="border p-2">Description</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono">section_constraints</td><td class="border p-2">object</td><td class="border p-2">Shot count constraints per Section: min_shots / max_shots / min_duration_ratio</td></tr>
+                                <tr><td class="border p-2 font-mono">rules</td><td class="border p-2">string[]</td><td class="border p-2">Composition rules, e.g. "rule of thirds" / "golden ratio" / "center symmetry"</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">2.3 Camera Movement <code class="bg-slate-100 px-1 rounded text-xs">camera_movement</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-16">Code</th><th class="border p-2 w-16">Name</th><th class="border p-2">Description</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">static</td><td class="border p-2">Static</td><td class="border p-2">Camera locked; strong stability, suitable for talking head, product close-up</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">push</td><td class="border p-2">Push In</td><td class="border p-2">Move forward, focus on details; creates urgency and attention</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">pull</td><td class="border p-2">Pull Out</td><td class="border p-2">Move backward, reveal full picture; creates space and reveal effect</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">pan</td><td class="border p-2">Pan</td><td class="border p-2">Horizontal left-right movement; suitable for wide scenes, comparison display</td></tr>
+                                <tr><td class="border p-2 text-center">5</td><td class="border p-2 font-mono">tilt</td><td class="border p-2">Tilt</td><td class="border p-2">Vertical up-down movement; suitable for vertical objects (full-body outfits)</td></tr>
+                                <tr><td class="border p-2 text-center">6</td><td class="border p-2 font-mono">track</td><td class="border p-2">Track</td><td class="border p-2">Follow subject movement; strongest dynamic feel, creates immersive experience</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">2.4 Subtitle Form <code class="bg-slate-100 px-1 rounded text-xs">subtitle_form</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-2">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-20">Code</th><th class="border p-2 w-20">Name</th><th class="border p-2">Description</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">punchline</td><td class="border p-2">Punchline</td><td class="border p-2">Large centered text, emphasize key phrases; suitable for selling point highlights, pain point amplification</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">steps</td><td class="border p-2">Steps</td><td class="border p-2">1.2.3. numbered steps, tutorial feel; suitable for usage methods, process flows</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">label</td><td class="border p-2">Label</td><td class="border p-2">Small text annotations, supplementary info; non-intrusive, suitable for product names, ingredient labels</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">data_card</td><td class="border p-2">Data Card</td><td class="border p-2">Data visualization; suitable for experimental data, sales figures, comparison percentages</td></tr>
+                                <tr><td class="border p-2 text-center">5</td><td class="border p-2 font-mono">minimal</td><td class="border p-2">Minimal</td><td class="border p-2">Almost no subtitles, visuals first; suitable for visual impact, ASMR</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- ===== Group 3: Rhythm & Editing ===== -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-rose-900 border-b border-rose-100 pb-2">Group 3: Rhythm & Editing — 2 Fields</h3>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">3.1 Pacing <code class="bg-slate-100 px-1 rounded text-xs">pacing</code></h4>
+                        <p class="text-xs text-slate-500 mb-2"><strong>level</strong> — Pacing level:</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-3">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-16">Value</th><th class="border p-2 w-16">Name</th><th class="border p-2">Description</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">low</td><td class="border p-2">Slow</td><td class="border p-2">Dominated by long takes, strong immersion; suitable for storytelling, brand tone, ASMR</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">medium</td><td class="border p-2">Medium</td><td class="border p-2">Balanced pacing, moderate transitions; safe choice for most scenarios</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">high</td><td class="border p-2">Fast</td><td class="border p-2">Rapid cuts, high information density; suitable for promotions, quick seeding</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-xs text-slate-500 mb-2"><strong>shot_duration</strong> — Per-shot duration constraints:</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-16">Parameter</th><th class="border p-2 w-16">Name</th><th class="border p-2">Description</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono">min</td><td class="border p-2">Min seconds</td><td class="border p-2">Minimum seconds per shot — below this, viewers can't absorb the information</td></tr>
+                                <tr><td class="border p-2 font-mono">max</td><td class="border p-2">Max seconds</td><td class="border p-2">Maximum seconds per shot — beyond this, the shot feels sluggish</td></tr>
+                                <tr><td class="border p-2 font-mono">avg</td><td class="border p-2">Avg seconds</td><td class="border p-2">Expected average shot duration across the video, core editing reference</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">3.2 Editing Pattern <code class="bg-slate-100 px-1 rounded text-xs">editing_pattern</code></h4>
+                        <p class="text-xs text-slate-500 mb-2"><strong>style</strong> — Editing style description (e.g. "rapid jump cuts + beat sync" / "smooth narrative editing")</p>
+                        <p class="text-xs text-slate-500 mb-2"><strong>transitions</strong> — Allowed transition types:</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-2">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-20">Value</th><th class="border p-2 w-16">Name</th><th class="border p-2">Description</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">hard_cut</td><td class="border p-2">Hard Cut</td><td class="border p-2">Direct shot transition; strong rhythm, high information delivery efficiency</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">dissolve</td><td class="border p-2">Dissolve</td><td class="border p-2">Gradual blend between shots; soft and natural, suitable for mood transitions</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">effects</td><td class="border p-2">Effects</td><td class="border p-2">Zoom, rotate, flash white, etc.; strong visual impact, use sparingly</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- ===== Group 4: Enhancement Elements ===== -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-rose-900 border-b border-rose-100 pb-2">Group 4: Enhancement Elements — 2 Fields</h3>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">4.1 Screen Elements <code class="bg-slate-100 px-1 rounded text-xs">screen_elements</code></h4>
+                        <p class="text-xs text-slate-500 mb-2"><strong>allowed_types</strong> — Allowed element types:</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-3">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-24">Value</th><th class="border p-2 w-16">Name</th><th class="border p-2">Description</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">text_overlay</td><td class="border p-2">Text Overlay</td><td class="border p-2">Bold emphasis text; highlight key selling points, catchphrases, data</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">emoji</td><td class="border p-2">Emoji</td><td class="border p-2">Emoji decorations; add fun and approachability</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">data_callout</td><td class="border p-2">Data Callout</td><td class="border p-2">Percentages, numbers, charts — data visualization for stronger persuasion</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">arrow</td><td class="border p-2">Arrow</td><td class="border p-2">Guide viewer attention to specific area of the frame</td></tr>
+                                <tr><td class="border p-2 text-center">5</td><td class="border p-2 font-mono">sticker</td><td class="border p-2">Sticker</td><td class="border p-2">Decorative elements, enrich visual richness</td></tr>
+                                <tr><td class="border p-2 text-center">6</td><td class="border p-2 font-mono">broll_insert</td><td class="border p-2">B-roll</td><td class="border p-2">Supplementary footage inserts, enrich visual layers and narrative rhythm</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="grid grid-cols-2 gap-2 text-xs mb-4">
+                            <div class="bg-rose-50 p-2 rounded border border-rose-100"><strong class="text-rose-700">hook_required</strong> — Whether HOOK section must include screen elements (text overlay/visual elements improve first 1-2 sec retention)</div>
+                            <div class="bg-rose-50 p-2 rounded border border-rose-100"><strong class="text-rose-700">cta_required</strong> — Whether CTA section must include screen elements (arrows/button prompts reduce action hesitation)</div>
+                            <div class="bg-slate-50 p-2 rounded border border-slate-200"><strong>max_text_length</strong> — Max characters per text overlay (controls conciseness)</div>
+                            <div class="bg-slate-50 p-2 rounded border border-slate-200"><strong>rules</strong> — Additional rules, e.g. "max 2 text overlays per section" / "B-roll must not exceed 20% of total duration"</div>
+                        </div>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">4.2 Audio Guidance <code class="bg-slate-100 px-1 rounded text-xs">audio_guidance</code></h4>
+                        <p class="text-xs text-slate-500 mb-2"><strong>bgm_style</strong> — BGM style:</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-3">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-20">Value</th><th class="border p-2 w-16">Name</th><th class="border p-2">Description</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">upbeat</td><td class="border p-2">Upbeat</td><td class="border p-2">Bright tempo; suitable for fast-paced seeding, promotional selling</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">emotional</td><td class="border p-2">Emotional</td><td class="border p-2">Sentimental and touching; suitable for storytelling, brand films, user testimonials</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">minimal</td><td class="border p-2">Minimal</td><td class="border p-2">Low-key background; non-intrusive, suitable for voice-driven content</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">none</td><td class="border p-2">No BGM</td><td class="border p-2">No background music; suitable for ASMR, maximizing authenticity</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-xs text-slate-500 mb-2"><strong>sfx_density</strong> — Sound effects density:</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-3">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-16">Value</th><th class="border p-2 w-16">Name</th><th class="border p-2">Description</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">high</td><td class="border p-2">High</td><td class="border p-2">SFX on almost every shot transition; suitable for fast-paced, high-energy content</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">medium</td><td class="border p-2">Medium</td><td class="border p-2">SFX at key moments; accent at important transitions and emphasis points</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">low</td><td class="border p-2">Low</td><td class="border p-2">Occasional accent; only at most critical moments, maintains restraint</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">none</td><td class="border p-2">None</td><td class="border p-2">No sound effects; suitable for pure voice-over, ASMR</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-xs text-slate-500"><strong>sfx_guidelines</strong> — Additional SFX rules (e.g. "HOOK section must have attention-grabbing sound" / "use whoosh SFX for transitions")</p>
+                    </section>
+
+                </div>
+
+                <!-- Boundary note -->
+                <div class="mt-6 p-3 bg-rose-50 border border-rose-200 rounded text-xs text-slate-600">
+                    <strong class="text-rose-800">What Meat Profile does NOT include:</strong> Hair/makeup/wardrobe (depends on specific talent and product tone), shooting location (depends on actual production resources), product information (belongs to specific topic business data). In short: Meat defines "what style to shoot in", not "what to shoot".
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div id="print-actions" class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+        <button onclick="window.print()" class="bg-white border text-slate-700 px-4 py-3 rounded-xl shadow-lg font-semibold text-sm">Print Current Page</button>
+        <button onclick="document.body.classList.add('print-all-mode'); setTimeout(()=>{window.print(); window.onafterprint=()=>{document.body.classList.remove('print-all-mode')}},100)" class="bg-blue-600 text-white px-4 py-3 rounded-xl shadow-lg font-bold text-sm">Export All (Booklet)</button>
+    </div>
+
+    <script>
+        function switchTab(id, btn) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            document.querySelectorAll('.nav-btn').forEach(b => { b.classList.remove('bg-blue-600','text-white','shadow-sm'); b.classList.add('hover:bg-slate-800'); });
+            if(id.startsWith('m')) { btn.classList.add('bg-blue-600','text-white'); btn.classList.remove('hover:bg-slate-800'); }
+            else { btn.classList.add('bg-slate-700','text-white'); btn.classList.remove('hover:bg-slate-800'); }
+            if(window.innerWidth<768) document.getElementById('sidebar').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

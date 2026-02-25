@@ -1,0 +1,179 @@
+{
+  "slides": {
+    "M06-1-title": {
+      "section": "1️⃣ Tinjauan Kerangka",
+      "title": "M06 Latihan Komprehensif & Aplikasi Nyata",
+      "subtitle": "Menganalisis, Mendesain, dan Mendiskusikan Konten dengan Bahasa Kerangka",
+      "description": "Hari 2 Siang | 90 Menit",
+      "notes": "Sesi latihan komprehensif penutup pelatihan. Tugas inti: menganalisis video dengan kerangka BMS + merancang rencana konten secara berkelompok."
+    },
+    "M06-1-review": {
+      "section": "1️⃣ Tinjauan Kerangka",
+      "title": "Tinjauan Arsitektur Tiga Lapis Tulang-Daging-Jiwa",
+      "studentContent": "<div class=\"grid-3\"><div class=\"card\" style=\"border-left: 4px solid #FFB74D;\"><h3 style=\"color:#FFB74D;\">🦴 Lapisan Bone (Tulang)</h3><p><strong>Mendefinisikan Struktur Video</strong></p><ul style=\"font-size:13px;margin-top:8px;\"><li><strong>Section</strong> — Blok bangunan, setiap bagian memiliki fungsi psikologis tertentu</li><li><strong>Skeleton</strong> — Kerangka struktur, cara Section dikombinasikan</li><li><strong>Strategy</strong> — Teknik persuasi, sistem tiga tingkat L0/L1/L2</li></ul></div><div class=\"card\" style=\"border-left: 4px solid #BA68C8;\"><h3 style=\"color:#BA68C8;\">👻 Lapisan Soul (Jiwa)</h3><p><strong>Menjelaskan Mengapa Berhasil</strong></p><ul style=\"font-size:13px;margin-top:8px;\"><li>Target Audiens target_audience</li><li>Skenario Pemicu trigger_scenario</li><li>Tipe Konflik conflict_type</li><li>Tipe Reward reward_type</li><li>Alur Emosi emotion_arc</li></ul></div><div class=\"card\" style=\"border-left: 4px solid #81C784;\"><h3 style=\"color:#81C784;\">🥩 Lapisan Meat (Daging)</h3><p><strong>Menentukan Cara Penyajian</strong></p><ul style=\"font-size:13px;margin-top:8px;\"><li>Gaya Visual visual_style</li><li>Kontrol Pacing pacing</li><li>Desain Suara voice_type</li><li>Elemen Visual text_overlay</li></ul></div></div><div class=\"highlight-box\" style=\"margin-top:20px;text-align:center;\"><strong>Ketiga lapisan bekerja bersama — tidak ada yang boleh terlewat.</strong></div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Skrip Presenter</div><div class=\"script-content\">Selamat datang kembali. Selanjutnya adalah sesi praktik langsung terpenting dari pelatihan dua hari ini — latihan komprehensif.<br><br>Kita sudah selesai mempelajari ketiga lapisan Tulang-Daging-Jiwa. Sekarang saatnya menguji apa yang telah dipelajari — kita akan melakukan hal sebaliknya: membedah video yang sudah ada dan mengidentifikasi Bone, Meat, dan Soul-nya.<br><br>Mari kita mulai dengan tinjauan cepat arsitektur tiga lapis.</div></div>",
+      "notes": "Tinjauan cepat tiga lapis untuk mengaktifkan ingatan — bukan kuliah ulang. Jangan terlalu lama."
+    },
+    "M06-1-goal": {
+      "section": "1️⃣ Tinjauan Kerangka",
+      "title": "Tujuan Inti Modul Ini",
+      "studentContent": "<div class=\"comparison-box\"><div class=\"comparison-before\"><div class=\"comparison-label\">❌ Gaya Diskusi Sebelumnya</div><ul style=\"margin-top:12px;font-size:16px;list-style:none;padding:0;\"><li style=\"padding:6px 0;\">\"Yang ini lumayan bagus\"</li><li style=\"padding:6px 0;\">\"Yang ini tidak berhasil\"</li><li style=\"padding:6px 0;\">\"Rasanya kurang menarik\"</li></ul></div><div class=\"comparison-after\"><div class=\"comparison-label\">✅ Diskusi dengan Bahasa Kerangka</div><ul style=\"margin-top:12px;font-size:15px;list-style:none;padding:0;\"><li style=\"padding:6px 0;\">\"Skeleton-nya HPVC, bagian HOOK menggunakan strategi SUSPENSE\"</li><li style=\"padding:6px 0;\">\"conflict_type di lapisan Soul kurang jelas\"</li><li style=\"padding:6px 0;\">\"Pacing di Meat sebaiknya disesuaikan ke high\"</li></ul></div></div><div class=\"highlight-box\" style=\"margin-top:20px;text-align:center;font-size:20px;\"><strong>Menganalisis konten, mendesain konten, dan mendiskusikan konten dengan bahasa kerangka</strong><br><span style=\"font-size:14px;color:var(--text-secondary);\">Bukan sekadar mengisi formulir, tapi benar-benar menginternalisasi cara berpikir ini</span></div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Skrip Presenter</div><div class=\"script-content\">Sebelumnya, ketika melihat sebuah video, Anda mungkin hanya bilang \"ini bagus\" atau \"ini tidak berhasil.\" Tapi sekarang berbeda — Anda seharusnya bisa mengatakan \"Skeleton-nya HPVC, bagian HOOK menggunakan strategi SUSPENSE, tapi conflict_type di lapisan Soul kurang jelas.\"<br><br>Itulah mendiskusikan masalah dengan bahasa kerangka. Dalam modul ini, tujuan inti kita adalah — <strong>Menganalisis konten, mendesain konten, dan mendiskusikan konten dengan bahasa kerangka</strong>.</div></div>",
+      "notes": "Tekankan bahwa 'berdiskusi dengan bahasa kerangka' adalah tujuan inti modul ini — bukan sekadar mengisi formulir."
+    },
+    "M06-2-title": {
+      "section": "2️⃣ Analisis Video",
+      "title": "Part 2",
+      "subtitle": "Pemutaran Video + Analisis Mandiri",
+      "description": "⏱ 0:10 - 0:20 | 10 Menit",
+      "notes": "Putar video latihan yang sudah dipilih; peserta mengisi formulir analisis secara mandiri."
+    },
+    "M06-2-rules": {
+      "section": "2️⃣ Analisis Video",
+      "title": "Aturan Analisis",
+      "studentContent": "<div class=\"highlight-box\" style=\"font-size:20px;\"><strong>Latihan Analisis Video</strong></div><div style=\"margin-top:20px;\"><div class=\"card\" style=\"margin-bottom:16px;border-left:4px solid var(--accent);\"><h3>📋 Langkah Analisis</h3><ol style=\"font-size:16px;margin-top:12px;padding-left:20px;\"><li style=\"margin-bottom:8px;\">Tonton pertama: <strong>Cukup tonton</strong>, rasakan keseluruhan</li><li style=\"margin-bottom:8px;\">Tonton kedua: <strong>Tonton sambil mengisi formulir</strong>, gunakan \"Formulir Analisis Lengkap BMS\"</li></ol></div><div class=\"card\" style=\"border-left:4px solid #FFB74D;\"><h3>🎯 Identifikasi Fitur Paling Jelas Terlebih Dahulu</h3><ul style=\"font-size:16px;margin-top:12px;\"><li>Video ini menggunakan <strong>Skeleton</strong> apa?</li><li>Bagian HOOK menggunakan jenis <strong>Strategy</strong> apa?</li><li>Siapa target audiens di lapisan Soul?</li></ul></div></div><div class=\"info-box\" style=\"margin-top:16px;\">⚠️ Tidak perlu mengisi setiap kolom. Tulis bagian yang tidak pasti dulu — bisa disamakan saat diskusi kelompok nanti.</div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Skrip Presenter</div><div class=\"script-content\">Baik, sekarang mari kita lakukan latihan pertama — analisis video.<br><br>Saya akan memutar sebuah video, dan masing-masing dari Anda akan menganalisisnya menggunakan \"Formulir Analisis Lengkap BMS.\" Tonton pertama: cukup tonton dan rasakan keseluruhan. Tonton kedua: tonton sambil mengisi formulir.<br><br>Tidak perlu mengisi setiap kolom — identifikasi fitur yang paling jelas terlebih dahulu. Anda punya 5 menit untuk menyelesaikan analisis secara mandiri.</div></div>",
+      "notes": "Bagikan 'Formulir Analisis Lengkap BMS.' Pilihan video: video perusahaan dengan kompleksitas sedang, disarankan Skeleton Tier A (misalnya HPVC atau HBVC)."
+    },
+    "M06-2-video": {
+      "section": "2️⃣ Analisis Video",
+      "title": "Tonton Video",
+      "studentContent": "<div class=\"video-placeholder\"><div class=\"icon\">🎬</div><div style=\"font-size:20px;color:white;margin-bottom:16px;\">Putar Video Latihan</div><div style=\"display:flex;gap:16px;justify-content:center;flex-wrap:wrap;\"><a href=\"/video-player.html?src=/videos/95c6ba719e05cfa46ee9439ba16d6a3281e3f50f_1770017078837.mp4&title=Video Latihan A\" target=\"_blank\" style=\"display:inline-block;padding:14px 28px;background:linear-gradient(135deg,#FF7043,#FF8A65);color:white;text-decoration:none;border-radius:10px;font-size:18px;font-weight:600;\">▶ Video A</a><a href=\"/video-player.html?src=/videos/4bad7690df49e58e4b725a98a758690ba251d31f_1770017319924.mp4&title=Video Latihan B\" target=\"_blank\" style=\"display:inline-block;padding:14px 28px;background:linear-gradient(135deg,#4CAF50,#66BB6A);color:white;text-decoration:none;border-radius:10px;font-size:18px;font-weight:600;\">▶ Video B</a></div><div style=\"color:var(--text-secondary);margin-top:16px;font-size:14px;\">Tonton pertama: rasakan keseluruhan. Tonton kedua: tonton sambil mengisi formulir</div></div>",
+      "presenterContent": "<div class=\"tip-box presenter-only\"><strong>💡 Tips Pemilihan Video:</strong><br>Pilih video perusahaan dengan kompleksitas sedang yang memiliki fitur yang dapat diidentifikasi tapi tidak terlalu sulit. Disarankan Skeleton Tier A (misalnya HPVC atau HBVC) agar peserta dapat cepat mengidentifikasi strukturnya.</div>",
+      "notes": "Putar video 2 kali (~3 menit), kemudian peserta mengisi formulir analisis secara mandiri selama 5 menit. Instruktur dan asisten berkeliling mengamati tapi tidak mengintervensi."
+    },
+    "M06-2-writing": {
+      "section": "2️⃣ Analisis Video",
+      "title": "Analisis Mandiri",
+      "studentContent": "<div style=\"text-align:center;\"><div style=\"font-size:100px;margin-bottom:20px;\">📝</div><div style=\"font-size:22px;font-weight:bold;margin-bottom:16px;\">Isi Formulir Analisis Secara Mandiri</div><div style=\"font-size:16px;color:var(--text-secondary);\">Analisis video yang baru saja ditonton menggunakan Formulir Analisis Lengkap BMS</div></div>",
+      "presenterContent": "<div class=\"action-box presenter-only\"><strong>▶ Aksi Instruktur:</strong><ul style=\"margin-top:8px;\"><li>Berkeliling mengamati arah analisis peserta</li><li>Jangan mengintervensi, tapi catat situasi tipikal</li><li>Beri peringatan 1 menit terakhir: \"Satu menit lagi\"</li></ul></div>",
+      "notes": "5 menit analisis mandiri. Instruktur dan asisten berkeliling, mengamati arah analisis, tidak mengintervensi tapi mencatat situasi tipikal."
+    },
+    "M06-3-title": {
+      "section": "3️⃣ Diskusi Kelompok",
+      "title": "Part 3",
+      "subtitle": "Diskusi Kelompok",
+      "description": "⏱ 0:20 - 0:30 | 10 Menit",
+      "notes": "Peserta mendiskusikan hasil analisis dalam kelompok. Fokus pada apakah mereka menggunakan bahasa kerangka."
+    },
+    "M06-3-tasks": {
+      "section": "3️⃣ Diskusi Kelompok",
+      "title": "Tugas Diskusi",
+      "studentContent": "<div class=\"interactive-badge\">🤝 Diskusi Kelompok</div><div style=\"margin-top:16px;\"><div class=\"card\" style=\"margin-bottom:12px;border-left:4px solid #2196F3;\"><h3>1️⃣ Samakan Hasil Analisis</h3><p style=\"font-size:16px;margin-top:8px;\">Skeleton apa yang Anda identifikasi? Strategy apa yang Anda pilih? Lihat apakah semua orang mendapat jawaban yang sama.</p></div><div class=\"card\" style=\"margin-bottom:12px;border-left:4px solid #FF9800;\"><h3>2️⃣ Diskusikan Perbedaan</h3><p style=\"font-size:16px;margin-top:8px;\">Jika penilaian Anda berbeda, diskusikan mengapa.</p></div><div class=\"card\" style=\"border-left:4px solid #4CAF50;\"><h3>3️⃣ Identifikasi Masalah</h3><p style=\"font-size:16px;margin-top:8px;\">Apa 1-2 area yang bisa diperbaiki dari video ini?</p></div></div><div class=\"warning-box\" style=\"margin-top:16px;\"><strong>⚠️ Gunakan Bahasa Kerangka!</strong><table style=\"width:100%;font-size:14px;margin-top:8px;\"><tr><td style=\"padding:6px;color:#f44336;\">❌ \"Saya rasa ada yang salah di sini\"</td><td style=\"padding:6px;color:#4CAF50;\">✅ \"Strategy HOOK seharusnya PAIN, bukan SUSPENSE\"</td></tr><tr><td style=\"padding:6px;color:#f44336;\">❌ \"Pembukaannya kurang menarik\"</td><td style=\"padding:6px;color:#4CAF50;\">✅ \"Strategy HOOK bisa diganti CONTRAST untuk meningkatkan efek kontras\"</td></tr></table></div>",
+      "presenterContent": "<div class=\"tip-box presenter-only\"><strong>💡 Panduan Pengamatan:</strong><ul style=\"margin-top:8px;\"><li>Fokus pada apakah peserta menggunakan bahasa kerangka</li><li>Mendengar \"rasanya ada yang kurang\" → Arahkan ke \"target_audience di Soul Profile tidak cocok dengan konten aktual\"</li><li>Mendengar \"temponya agak lambat\" → Arahkan ke \"pacing di Meat Profile bisa disesuaikan ke medium\"</li></ul></div>",
+      "notes": "Kelompok 4-5 orang berdiskusi. Instruktur dan asisten berkeliling, mengarahkan peserta menggunakan terminologi ketika mendengar 'kata-kata perasaan.'"
+    },
+    "M06-4-title": {
+      "section": "4️⃣ Review Analisis",
+      "title": "Part 4",
+      "subtitle": "Review Analisis",
+      "description": "⏱ 0:30 - 0:40 | 10 Menit",
+      "notes": "Minta 2-3 kelompok berbagi hasil analisis; instruktur memberikan demonstrasi review."
+    },
+    "M06-4-sharing": {
+      "section": "4️⃣ Review Analisis",
+      "title": "Berbagi Kelompok",
+      "studentContent": "<div class=\"interactive-badge\">🤝 Berbagi Kelompok</div><div class=\"highlight-box\" style=\"margin-top:16px;font-size:18px;\">Setiap kelompok punya 1-2 menit untuk berbagi temuan inti:<ol style=\"margin-top:12px;padding-left:20px;\"><li style=\"margin-bottom:8px;\">Apa <strong>Skeleton</strong> video ini?</li><li style=\"margin-bottom:8px;\">Setiap Section menggunakan <strong>Strategy</strong> apa?</li><li>Apa <strong>masalah</strong> yang Anda temukan?</li></ol></div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Skrip Presenter</div><div class=\"script-content\">Baik, waktu habis. Mari kita dengar hasil analisis beberapa kelompok.<br><br>Siapa yang ingin duluan? Gunakan 1-2 menit untuk berbagi temuan inti: Apa Skeleton videonya? Setiap Section menggunakan Strategy apa? Masalah apa yang Anda temukan?</div></div>",
+      "notes": "Minta 2-3 kelompok berbagi hasil analisis secara singkat."
+    },
+    "M06-4-demo": {
+      "section": "4️⃣ Review Analisis",
+      "title": "Demonstrasi Review Instruktur",
+      "studentContent": "<div class=\"highlight-box\"><h3>💡 Demo Review: \"Kata Perasaan\" → \"Bahasa Kerangka\"</h3></div><table style=\"width:100%;border-collapse:collapse;font-size:16px;margin-top:16px;\"><tr style=\"background:rgba(255,255,255,0.1);\"><th style=\"padding:14px;text-align:left;border-bottom:1px solid #444;\">Dimensi Review</th><th style=\"padding:14px;text-align:left;border-bottom:1px solid #444;\">Skrip Demo</th></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;color:#4CAF50;\"><strong>Akui Kelebihan</strong></td><td style=\"padding:14px;border-bottom:1px solid #333;\">\"Kalian mengidentifikasi bahwa HOOK menggunakan strategi SUSPENSE — sangat akurat!\"</td></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;color:#FF9800;\"><strong>Tunjukkan Kekurangan</strong></td><td style=\"padding:14px;border-bottom:1px solid #333;\">\"Meat Profile dan Soul tidak cukup cocok — Soul menargetkan wanita muda, tapi pacing diatur ke low\"</td></tr><tr><td style=\"padding:14px;color:#2196F3;\"><strong>Transformasi Kosakata</strong></td><td style=\"padding:14px;\">\"Temponya agak lambat\" → \"Pacing di Meat Profile bisa disesuaikan ke medium\"</td></tr></table><div class=\"info-box\" style=\"margin-top:16px;\"><strong>Inilah cara berpikir yang akan Anda latih selanjutnya —</strong> mengubah \"kata perasaan\" menjadi \"bahasa kerangka.\"</div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Skrip Presenter</div><div class=\"script-content\">Kerja bagus. Saya tambahkan beberapa komentar review.<br><br>Kalian mengidentifikasi bahwa bagian HOOK menggunakan strategi SUSPENSE — sangat akurat. SUSPENSE termasuk dalam grup HAND, dan mekanisme psikologis intinya adalah menciptakan celah informasi yang membuat penonton \"ingin tahu jawabannya.\"<br><br>Tapi ada sesuatu yang perlu diperhatikan — Meat Profile dan Soul tidak cukup cocok. Lapisan Soul mendefinisikan target audiens sebagai wanita muda, tapi pacing video diatur ke low, yang berarti tempo lebih lambat. Audiens muda biasanya membutuhkan ritme yang lebih cepat.<br><br>Perhatikan apa yang baru saya lakukan — saya mendemonstrasikan mengubah \"kata perasaan\" menjadi \"bahasa kerangka.\" Inilah cara berpikir yang akan Anda latih selanjutnya.</div></div>",
+      "notes": "Demonstrasi kunci: cara mengubah 'kata perasaan' menjadi 'bahasa kerangka.' Akui kelebihan dulu, baru tunjukkan kekurangan."
+    },
+    "M06-5-title": {
+      "section": "5️⃣ Desain Praktis",
+      "title": "Part 5",
+      "subtitle": "Desain Praktis",
+      "description": "⏱ 0:40 - 0:55 | 15 Menit",
+      "notes": "Setiap kelompok menerima paket info produk dan menyelesaikan desain Skeleton + Strategy."
+    },
+    "M06-5-task": {
+      "section": "5️⃣ Desain Praktis",
+      "title": "Tugas Desain",
+      "studentContent": "<div class=\"interactive-badge\">🤝 Praktik Kelompok</div><div class=\"highlight-box\" style=\"margin-top:16px;\"><strong>Setiap kelompok mendapat satu produk. Selesaikan dalam 15 menit:</strong></div><div style=\"margin-top:16px;\"><div class=\"card\" style=\"margin-bottom:12px;border-left:4px solid #FFB74D;\"><h3>1️⃣ Pilih Jenis Skeleton</h3><p style=\"font-size:16px;margin-top:8px;\">Skeleton apa yang cocok untuk produk Anda? HPVC? HBVC? HPRVC? Atau yang lain?</p></div><div class=\"card\" style=\"border-left:4px solid #2196F3;\"><h3>2️⃣ Desain Strategy untuk Setiap Section</h3><p style=\"font-size:16px;margin-top:8px;\">Apa grup L0-nya? Strategy L1 mana yang dipilih? Bagaimana L2 dieksekusi secara spesifik?<br><strong style=\"color:var(--accent);\">Ingat, setiap pilihan harus punya alasan!</strong></p></div></div><div class=\"info-box\" style=\"margin-top:16px;\">💡 Gunakan panduan referensi cepat untuk membantu keputusan. Fokus diskusi pada \"mengapa\" memilih itu, bukan hanya \"apa\" yang dipilih.</div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Skrip Presenter</div><div class=\"script-content\">Bagus, Anda sudah selesai menganalisis video orang lain. Sekarang giliran Anda mendesain!<br><br>Setiap kelompok akan mendapat satu produk. Selesaikan dalam 15 menit: Pertama, pilih jenis Skeleton; Kedua, desain Strategy untuk setiap Section (L0/L1/L2). Ingat, setiap pilihan harus punya alasan!</div></div><div class=\"tip-box presenter-only\"><strong>💡 Tips Pengamatan:</strong><ul style=\"margin-top:8px;\"><li>Amati apakah kelompok mendiskusikan \"mengapa\" bukan hanya \"apa\"</li><li>Arahkan dengan pertanyaan: \"Apakah produk Anda perlu membangun kepercayaan dulu? Atau bisa langsung menunjukkan hasilnya?\"</li><li>Jangan langsung beri jawaban — biarkan peserta bernalar menggunakan bahasa kerangka</li></ul></div>",
+      "notes": "Bagikan paket info produk ke setiap kelompok. Instruktur berkeliling menggunakan pertanyaan untuk mengarahkan pemikiran — jangan beri jawaban langsung."
+    },
+    "M06-5-scoring": {
+      "section": "5️⃣ Desain Praktis",
+      "title": "Referensi Penilaian",
+      "studentContent": "<table style=\"width:100%;border-collapse:collapse;font-size:16px;\"><tr style=\"background:rgba(255,255,255,0.1);\"><th style=\"padding:14px;text-align:left;border-bottom:1px solid #444;\">Dimensi</th><th style=\"padding:14px;text-align:center;border-bottom:1px solid #444;\">Bobot</th><th style=\"padding:14px;text-align:left;border-bottom:1px solid #444;\">Kriteria Penilaian</th></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\"><strong style=\"color:#FFB74D;\">🦴 Desain Bone</strong></td><td style=\"padding:14px;text-align:center;border-bottom:1px solid #333;font-size:20px;font-weight:bold;\">30 poin</td><td style=\"padding:14px;border-bottom:1px solid #333;\">Pemilihan Skeleton yang masuk akal + pasangan Strategy yang tepat untuk setiap Section</td></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\"><strong style=\"color:#BA68C8;\">👻 Desain Soul</strong></td><td style=\"padding:14px;text-align:center;border-bottom:1px solid #333;font-size:20px;font-weight:bold;\">25 poin</td><td style=\"padding:14px;border-bottom:1px solid #333;\">SoulProfile lengkap dan spesifik dengan target audiens yang jelas</td></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\"><strong style=\"color:#81C784;\">🥩 Desain Meat</strong></td><td style=\"padding:14px;text-align:center;border-bottom:1px solid #333;font-size:20px;font-weight:bold;\">20 poin</td><td style=\"padding:14px;border-bottom:1px solid #333;\">MeatProfile cocok dengan Bone/Soul</td></tr><tr><td style=\"padding:14px;\"><strong style=\"color:var(--accent);\">💡 Logika Desain</strong></td><td style=\"padding:14px;text-align:center;font-size:20px;font-weight:bold;\">25 poin</td><td style=\"padding:14px;\">Bisa menjelaskan alasan di balik setiap pilihan menggunakan bahasa kerangka</td></tr></table>",
+      "presenterContent": "<div class=\"tip-box presenter-only\"><strong>💡 Tips Penilaian:</strong> Referensi penilaian hanya untuk referensi instruktur — tidak perlu menilai per item di kelas. Kuncinya adalah apakah peserta bisa menjelaskan \"mengapa\" dengan jelas.</div>",
+      "notes": "Kriteria penilaian hanya untuk referensi. Intinya adalah apakah peserta bisa menjelaskan pilihan mereka menggunakan bahasa kerangka."
+    },
+    "M06-6-title": {
+      "section": "6️⃣ Presentasi Singkat",
+      "title": "Part 6",
+      "subtitle": "Presentasi Singkat",
+      "description": "⏱ 0:55 - 1:10 | 15 Menit",
+      "notes": "Setiap kelompok mengirim perwakilan untuk presentasi, 2 menit per kelompok."
+    },
+    "M06-6-present": {
+      "section": "6️⃣ Presentasi Singkat",
+      "title": "Poin Presentasi",
+      "studentContent": "<div class=\"highlight-box\" style=\"font-size:18px;\"><strong>Setiap kelompok punya 2 menit. Fokus pada tiga hal:</strong></div><div style=\"margin-top:20px;\"><div class=\"card\" style=\"margin-bottom:12px;border-left:4px solid #FFB74D;\"><h3>1️⃣ Skeleton apa yang dipilih? Mengapa?</h3></div><div class=\"card\" style=\"margin-bottom:12px;border-left:4px solid #2196F3;\"><h3>2️⃣ Strategy apa untuk setiap Section? Mengapa kombinasi ini?</h3></div><div class=\"card\" style=\"border-left:4px solid #BA68C8;\"><h3>3️⃣ Bagaimana lapisan Soul didefinisikan? Bagaimana kerjanya dengan pilihan Bone?</h3></div></div><div class=\"info-box\" style=\"margin-top:16px;\">💡 Kelompok lain dengarkan dengan seksama dan ajukan pertanyaan menggunakan bahasa kerangka.<br>Contoh: \"Mengapa kalian tidak memilih CONTRAST untuk bagian HOOK?\" \"Jika audiens di lapisan Soul berubah, apakah Strategy juga perlu berubah?\"</div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Skrip Presenter</div><div class=\"script-content\">Baik, waktu habis! Setiap kelompok, kirim perwakilan untuk mempresentasikan desain kalian dalam 2 menit.<br><br>Fokus pada tiga hal: Skeleton apa yang dipilih? Mengapa? Strategy apa untuk setiap Section? Mengapa kombinasi ini? Bagaimana lapisan Soul didefinisikan? Bagaimana kerjanya dengan pilihan Bone?<br><br>Kelompok lain, dengarkan dengan seksama dan silakan ajukan pertanyaan menggunakan bahasa kerangka.</div></div><div class=\"tip-box presenter-only\"><strong>💡 Tips Review:</strong><ul style=\"margin-top:8px;\"><li>Akui kelebihan dulu, baru tunjukkan area yang bisa dioptimalkan</li><li>Gunakan review dengan bahasa kerangka sebagai demonstrasi</li><li>Dorong kelompok lain bertanya menggunakan bahasa kerangka</li></ul></div>",
+      "notes": "2 menit presentasi per kelompok. Instruktur mereview setiap kelompok, mendorong kelompok lain bertanya menggunakan bahasa kerangka."
+    },
+    "M06-6-diagnosis": {
+      "section": "6️⃣ Presentasi Singkat",
+      "title": "Diagnosis Masalah Umum",
+      "studentContent": "<table style=\"width:100%;border-collapse:collapse;font-size:15px;\"><tr style=\"background:rgba(255,255,255,0.1);\"><th style=\"padding:14px;text-align:left;border-bottom:1px solid #444;\">Gejala</th><th style=\"padding:14px;text-align:left;border-bottom:1px solid #444;\">Arah Diagnosis</th></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\"><strong>HOOK tidak cukup menarik</strong></td><td style=\"padding:14px;border-bottom:1px solid #333;\">Periksa pilihan Strategy L1 bagian HOOK — disarankan SUSPENSE, CONTRAST, PAIN, dll.</td></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\"><strong>Logika video tidak mengalir</strong></td><td style=\"padding:14px;border-bottom:1px solid #333;\">Periksa jenis Skeleton — apakah susunan Section logis? Apakah transisinya alami?</td></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\"><strong>Konten tidak cocok dengan pengguna target</strong></td><td style=\"padding:14px;border-bottom:1px solid #333;\">Periksa SoulProfile — apakah target audiens jelas? Apakah gaya bahasa dan alur emosi cocok?</td></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\"><strong>CTA kurang kuat</strong></td><td style=\"padding:14px;border-bottom:1px solid #333;\">Periksa Strategy bagian CTA — disarankan URGENCY (URGENCY_TIME / URGENCY_STOCK) untuk menciptakan urgensi</td></tr><tr><td style=\"padding:14px;\"><strong>Visual terputus dari konten</strong></td><td style=\"padding:14px;\">Periksa keselarasan MeatProfile dengan Bone/Soul — apakah gaya visual dan pacing mendukung strategi keseluruhan?</td></tr></table>",
+      "presenterContent": "<div class=\"tip-box presenter-only\"><strong>💡 Tips Pengajaran:</strong> Rujuk tabel diagnosis ini saat mereview desain setiap kelompok. Gunakan terminologi kerangka untuk memberikan saran perbaikan yang spesifik.</div>",
+      "notes": "Tabel diagnosis masalah umum. Membantu instruktur dan peserta menemukan masalah dengan cepat."
+    },
+    "M06-7-title": {
+      "section": "7️⃣ Penutupan",
+      "title": "Part 7",
+      "subtitle": "Penutupan",
+      "description": "⏱ 1:10 - 1:20 | 10 Menit",
+      "notes": "Tinjauan kerangka BMS, tekankan nilai kerangka."
+    },
+    "M06-7-summary": {
+      "section": "7️⃣ Penutupan",
+      "title": "Ringkasan Kerangka BMS",
+      "studentContent": "<div class=\"three-layer\"><div class=\"layer-box layer-bone\"><h3>Bone</h3><h4>Tulang</h4><p><strong>Mendefinisikan Struktur</strong></p><p style=\"margin-top:8px;font-size:13px;\">Section blok bangunan<br>Skeleton kerangka struktur<br>Strategy teknik persuasi</p></div><div class=\"layer-box layer-soul\"><h3>Soul</h3><h4>Jiwa</h4><p><strong>Menjelaskan Mengapa Berhasil</strong></p><p style=\"margin-top:8px;font-size:13px;\">Target Audiens, Skenario Pemicu<br>Tipe Reward, Tipe Konflik, Alur Emosi</p></div><div class=\"layer-box layer-meat\"><h3>Meat</h3><h4>Daging</h4><p><strong>Menentukan Cara Penyajian</strong></p><p style=\"margin-top:8px;font-size:13px;\">Gaya Visual, Desain Suara<br>Kontrol Pacing, Elemen Visual</p></div></div><div style=\"text-align:center;padding:30px 0;\"><div style=\"font-size:20px;color:var(--text-secondary);margin-bottom:20px;\">Anda telah mempelajari sebuah cara berpikir —</div><div style=\"font-size:28px;color:var(--accent);font-weight:bold;\">Menganalisis konten, mendesain konten, dan mendiskusikan konten dengan bahasa kerangka</div></div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Skrip Presenter</div><div class=\"script-content\">Selama dua hari pelatihan, kita telah membahas seluruh kerangka Tulang-Daging-Jiwa.<br><br>Kerangka BMS — Bone mendefinisikan struktur, mencakup Section, Skeleton, dan Strategy di tiga tingkat; Soul menjelaskan mengapa berhasil, mendefinisikan target audiens dan alur emosi; Meat menentukan cara penyajian, menspesifikasi gaya visual dan standar produksi. Ketiga lapisan bekerja bersama — tidak ada yang boleh terlewat.<br><br>Tapi yang lebih penting, Anda telah mempelajari sebuah cara berpikir — menganalisis konten, mendesain konten, dan mendiskusikan konten dengan bahasa kerangka.</div></div>",
+      "notes": "Ringkasan kerangka. Tekankan bahwa perubahan cara berpikir lebih penting daripada menghafal terminologi."
+    },
+    "M06-7-before-after": {
+      "section": "7️⃣ Penutupan",
+      "title": "Sebelum vs Sesudah Pelatihan",
+      "studentContent": "<div class=\"comparison-box\"><div class=\"comparison-before\"><div class=\"comparison-label\">❌ Sebelum Pelatihan</div><div style=\"font-size:24px;text-align:center;padding:20px;\">\"Video ini lumayan bagus\"<br>\"Yang itu tidak berhasil\"</div></div><div class=\"comparison-after\"><div class=\"comparison-label\">✅ Sesudah Pelatihan</div><div style=\"font-size:18px;padding:20px;\">\"Video ini menggunakan skeleton HPVC,<br>bagian HOOK menggunakan strategi SUSPENSE,<br>tapi bagian CTA kurang URGENCY<br>untuk mendorong tindakan\"</div></div></div><div class=\"highlight-box\" style=\"margin-top:20px;text-align:center;font-size:22px;\"><strong>Itulah kemajuan!</strong></div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Skrip Presenter</div><div class=\"script-content\">Sebelum pelatihan, ketika melihat sebuah video Anda mungkin bilang \"ini lumayan bagus\" atau \"yang itu tidak berhasil.\" Sekarang? Anda bisa bilang \"video ini menggunakan skeleton HPVC, bagian HOOK menggunakan strategi SUSPENSE, tapi bagian CTA kurang URGENCY untuk mendorong tindakan.\"<br><br>Itulah kemajuan!</div></div>",
+      "notes": "Gunakan perbandingan Sebelum/Sesudah agar peserta merasakan kemajuan mereka secara visual."
+    },
+    "M06-7-action": {
+      "section": "7️⃣ Penutupan",
+      "title": "Tiga Hal yang Harus Dilakukan Setelah Kembali",
+      "studentContent": "<div style=\"margin-top:10px;\"><div class=\"card\" style=\"margin-bottom:16px;border-left:4px solid #2196F3;\"><h3>1️⃣ Analisis Video yang Ada</h3><p style=\"font-size:16px;margin-top:8px;\">Lakukan analisis BMS lengkap terhadap video perusahaan Anda yang sudah ada menggunakan formulir analisis yang dipelajari hari ini</p></div><div class=\"card\" style=\"margin-bottom:16px;border-left:4px solid #4CAF50;\"><h3>2️⃣ Desain dengan Kerangka Dulu</h3><p style=\"font-size:16px;margin-top:8px;\">Lain kali membuat video baru, desain dengan kerangka dulu, baru tulis naskahnya</p></div><div class=\"card\" style=\"border-left:4px solid #FF9800;\"><h3>3️⃣ Satukan Bahasa Tim</h3><p style=\"font-size:16px;margin-top:8px;\">Saat tim Anda mendiskusikan konten, coba gunakan bahasa kerangka — Anda akan merasakan efisiensinya jauh lebih tinggi</p></div></div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Skrip Presenter</div><div class=\"script-content\">Setelah kembali, saya sarankan melakukan tiga hal:<br><br>Pertama, lakukan analisis BMS lengkap terhadap video perusahaan Anda yang sudah ada menggunakan formulir analisis yang dipelajari hari ini;<br><br>Kedua, lain kali membuat video baru, desain dengan kerangka dulu, baru tulis naskahnya;<br><br>Ketiga, saat tim Anda mendiskusikan konten, coba gunakan bahasa kerangka — Anda akan merasakan efisiensinya jauh lebih tinggi.</div></div>",
+      "notes": "Tiga rekomendasi tindakan untuk membantu peserta terus menerapkan setelah pelatihan."
+    },
+    "M06-8-title": {
+      "section": "8️⃣ Q&A + Foto Bersama",
+      "title": "Part 8",
+      "subtitle": "Q&A + Foto Bersama",
+      "description": "⏱ 1:20 - 1:30 | 10 Menit",
+      "notes": "Sesi tanya jawab terbuka."
+    },
+    "M06-8-qa": {
+      "section": "8️⃣ Q&A + Foto Bersama",
+      "title": "Pertanyaan Umum",
+      "studentContent": "<div class=\"interactive-badge\">❓ Sesi Q&A</div><table style=\"width:100%;border-collapse:collapse;font-size:15px;margin-top:16px;\"><tr style=\"background:rgba(255,255,255,0.1);\"><th style=\"padding:14px;text-align:left;border-bottom:1px solid #444;\">Pertanyaan Peserta</th><th style=\"padding:14px;text-align:left;border-bottom:1px solid #444;\">Respons yang Disarankan</th></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\">Bagaimana jika analisis saya berbeda dari yang lain?</td><td style=\"padding:14px;border-bottom:1px solid #333;\">Itu normal! Itulah nilai dari diskusi. Kuncinya adalah berdiskusi dengan bahasa kerangka, bukan \"saya rasa\"</td></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\">Bagaimana jika waktunya tidak cukup?</td><td style=\"padding:14px;border-bottom:1px solid #333;\">Selesai lebih baik daripada sempurna. Selesaikan bagian terpenting dulu, detail bisa dilanjutkan setelah kelas</td></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\">Saya tidak yakin pilihan saya benar?</td><td style=\"padding:14px;border-bottom:1px solid #333;\">Kerangka tidak punya satu jawaban benar — kuncinya adalah bisa menjelaskan \"mengapa\" Anda membuat pilihan itu</td></tr><tr><td style=\"padding:14px;\">Bagaimana cara menggunakannya setelah kembali?</td><td style=\"padding:14px;\">Mulai dari menganalisis video yang ada — bedah dulu dengan kerangka, lalu coba desain konten baru menggunakan kerangka</td></tr></table>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Skrip Presenter</div><div class=\"script-content\">Mari sisakan 10 menit terakhir untuk pertanyaan. Tentang kerangka BMS, tentang penerapan praktis — pertanyaan apa pun boleh.</div></div>",
+      "notes": "Q&A terbuka. Rujuk tabel ini untuk pertanyaan umum."
+    },
+    "M06-end": {
+      "section": "Selesai",
+      "title": "Pelatihan Selesai ✓",
+      "subtitle": "Terima kasih atas partisipasi dan dedikasi Anda selama dua hari!",
+      "description": "Buat konten yang lebih baik dengan Kerangka BMS",
+      "notes": "Foto bersama, pelatihan selesai. Informasikan saluran dukungan dan sumber daya lanjutan."
+    }
+  }
+}

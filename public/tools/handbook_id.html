@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buku Panduan BMS Bootcamp (Formulir Saja)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', 'Noto Sans SC', sans-serif; background-color: #f8fafc; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        @media print {
+            body { background-color: white; }
+            #sidebar, #print-actions { display: none !important; }
+            #main-content { margin-left: 0 !important; width: 100% !important; padding: 0 !important; }
+            .print-container { box-shadow: none !important; border: none !important; margin: 0 auto !important; max-width: 210mm !important; }
+            .page-break { page-break-after: always; }
+            body.print-all-mode .tab-content { display: block !important; page-break-after: always; margin-bottom: 0 !important; }
+            body.print-all-mode .tab-content:last-child { page-break-after: auto; }
+        }
+        .underline-input { border-bottom: 1px dashed #cbd5e1; padding-bottom: 2px; min-height: 24px; display: inline-block; width: 100%; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+    </style>
+</head>
+<body class="h-screen overflow-hidden flex flex-col md:flex-row text-slate-800">
+
+    <!-- Mobile top navigation -->
+    <div class="md:hidden bg-slate-900 text-white p-4 shadow-md z-20 flex justify-between items-center">
+        <h1 class="font-bold text-lg">Buku Panduan BMS (ID)</h1>
+        <button onclick="document.getElementById('sidebar').classList.toggle('hidden')" class="p-2 bg-slate-800 rounded">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </div>
+
+    <!-- Sidebar -->
+    <nav id="sidebar" class="hidden md:flex flex-col w-full md:w-64 bg-slate-900 text-slate-300 h-full flex-shrink-0 z-10 shadow-xl overflow-y-auto">
+        <div class="p-6">
+            <h1 class="text-xl font-black text-white tracking-tight leading-tight">BMS Bootcamp<br><span class="text-blue-400 text-sm font-semibold">Lembar Kerja Praktik</span></h1>
+        </div>
+        <div class="flex-grow pb-6">
+            <div class="px-4 mb-2 text-xs font-bold text-slate-500 uppercase tracking-widest">Formulir Analisis & Desain</div>
+            <ul class="space-y-1 px-3 mb-6">
+                <li><button onclick="switchTab('m02', this)" class="nav-btn w-full text-left px-4 py-2.5 rounded-lg font-medium transition-colors hover:bg-slate-800 hover:text-white active bg-blue-600 text-white shadow-sm flex items-center gap-2"><span class="text-lg">🦴</span> 01 Analisis Section & Strategy (M02)</button></li>
+                <li><button onclick="switchTab('m03', this)" class="nav-btn w-full text-left px-4 py-2.5 rounded-lg font-medium transition-colors hover:bg-slate-800 hover:text-white flex items-center gap-2"><span class="text-lg">👻</span> 02 Formulir Desain Soul (M03)</button></li>
+                <li><button onclick="switchTab('m04', this)" class="nav-btn w-full text-left px-4 py-2.5 rounded-lg font-medium transition-colors hover:bg-slate-800 hover:text-white flex items-center gap-2"><span class="text-lg">🥩</span> 03 Formulir Analisis Meat (M04)</button></li>
+                <li><button onclick="switchTab('m06', this)" class="nav-btn w-full text-left px-4 py-2.5 rounded-lg font-medium transition-colors hover:bg-slate-800 hover:text-white flex items-center gap-2"><span class="text-lg">💎</span> 04 Analisis Komprehensif (M06)</button></li>
+            </ul>
+        </div>
+        <div class="p-4 border-t border-slate-800 text-center text-xs text-slate-500">Hanya berisi formulir praktik<br>Lihat dokumen terpisah untuk lembar referensi</div>
+    </nav>
+
+    <!-- Main content area -->
+    <main id="main-content" class="flex-grow overflow-y-auto p-4 md:p-8 bg-slate-100/50 relative">
+
+        <!-- M02 -->
+        <div id="m02" class="tab-content active print-container w-full max-w-[210mm] mx-auto bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+            <header class="bg-blue-900 text-white p-6 flex justify-between items-center">
+                <div><h1 class="text-2xl font-black">BMS Bootcamp</h1><h2 class="text-blue-200 font-medium">🦴 Analisis Section & Strategy (M02)</h2></div>
+                <span class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">Skeleton + Strategy</span>
+            </header>
+            <div class="p-8 space-y-8">
+                <section>
+                    <h3 class="text-lg font-bold text-slate-800 border-b-2 border-slate-100 pb-2 mb-4">1. Informasi Dasar</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-end gap-2 col-span-2"><label class="font-bold text-sm whitespace-nowrap">Nama/Link Video:</label><div class="underline-input"></div></div>
+                        <div class="flex items-end gap-2"><label class="font-bold text-sm whitespace-nowrap">Produk/Merek:</label><div class="underline-input"></div></div>
+                        <div class="flex items-end gap-2"><label class="font-bold text-sm whitespace-nowrap">Tanggal:</label><div class="underline-input"></div></div>
+                    </div>
+                </section>
+                <section>
+                    <h3 class="text-lg font-bold text-blue-900 border-b-2 border-blue-100 pb-2 mb-4">Part 1: Analisis Skeleton</h3>
+                    <table class="w-full text-sm text-left border-collapse border border-slate-200">
+                        <thead class="bg-slate-50 text-xs text-slate-700"><tr><th class="border p-2 w-12 text-center">#</th><th class="border p-2 w-32">Tipe (Type)</th><th class="border p-2">Strategi L0</th><th class="border p-2">Strategi L1</th><th class="border p-2">Strategi L2</th></tr></thead>
+                        <tbody><script>for(let i=1;i<=10;i++)document.write(`<tr><td class="border p-3 text-center text-slate-500 text-xs">${i}</td><td class="border p-3"></td><td class="border p-3"></td><td class="border p-3"></td><td class="border p-3"></td></tr>`)</script></tbody>
+                    </table>
+                </section>
+                <section>
+                    <h3 class="text-lg font-bold text-slate-800 border-b-2 border-slate-100 pb-2 mb-4">Part 3: Ringkasan & Temuan</h3>
+                    <div class="space-y-4">
+                        <div class="border rounded p-3 min-h-[80px]"><label class="font-bold text-sm block mb-2">Temuan Utama:</label><div class="underline-input mb-4"></div><div class="underline-input"></div></div>
+                        <div class="border rounded p-3 min-h-[80px]"><label class="font-bold text-sm block mb-2">Saran Perbaikan:</label><div class="underline-input mb-4"></div><div class="underline-input"></div></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- M03 Soul -->
+        <div id="m03" class="tab-content print-container w-full max-w-[210mm] mx-auto bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+            <header class="bg-purple-900 text-white p-6 flex justify-between items-center">
+                <div><h1 class="text-2xl font-black">BMS Bootcamp</h1><h2 class="text-purple-200 font-medium">👻 Formulir Desain SoulProfile (M03)</h2></div>
+                <span class="bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full">Soul System</span>
+            </header>
+            <div class="p-8 space-y-8">
+                <section>
+                    <h3 class="text-lg font-bold text-slate-800 border-b-2 border-slate-100 pb-2 mb-4">Informasi Dasar</h3>
+                    <div class="grid grid-cols-2 gap-4"><div class="flex items-end gap-2 col-span-2"><label class="font-bold text-sm">Produk/Merek:</label><div class="underline-input"></div></div></div>
+                </section>
+                <section>
+                    <h3 class="text-lg font-bold text-purple-900 border-b-2 border-purple-100 pb-2 mb-4">Desain 5 Field</h3>
+                    <table class="w-full text-sm border border-slate-200">
+                        <thead class="bg-purple-50 text-xs">
+                            <tr>
+                                <th class="border p-2 w-28">Field</th>
+                                <th class="border p-2 w-24">Sub-dimensi</th>
+                                <th class="border p-2">Konten (Input)</th>
+                                <th class="border p-2">Alasan (Rationale)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td rowspan="3" class="border p-2 font-bold text-purple-800">Target Audience</td><td class="border p-2 text-xs">Profil (Age/Gender)</td><td class="border p-2"><div class="underline-input"></div></td><td rowspan="3" class="border p-2"><div class="underline-input h-full"></div></td></tr>
+                            <tr><td class="border p-2 text-xs">Pain Points</td><td class="border p-2"><div class="underline-input"></div></td></tr>
+                            <tr><td class="border p-2 text-xs">Tingkat Konsumsi</td><td class="border p-2"><div class="underline-input"></div></td></tr>
+                            <tr><td rowspan="3" class="border p-2 font-bold text-purple-800">Trigger Scenario</td><td class="border p-2 text-xs">Deskripsi Skenario</td><td class="border p-2"><div class="underline-input"></div></td><td rowspan="3" class="border p-2"><div class="underline-input h-full"></div></td></tr>
+                            <tr><td class="border p-2 text-xs">Waktu Pemicu</td><td class="border p-2"><div class="underline-input"></div></td></tr>
+                            <tr><td class="border p-2 text-xs">Kondisi Pengguna</td><td class="border p-2"><div class="underline-input"></div></td></tr>
+                            <tr><td class="border p-2 font-bold text-purple-800">Reward Type</td><td class="border p-2 text-xs">Tipe Motivasi</td><td class="border p-2 text-xs text-slate-400">beauty / money / time / safety / control / confidence / health<div class="underline-input"></div></td><td class="border p-2"><div class="underline-input h-full"></div></td></tr>
+                            <tr><td class="border p-2 font-bold text-purple-800">Conflict Type</td><td class="border p-2 text-xs">Tipe Konflik</td><td class="border p-2 text-xs text-slate-400">internal / external / comparison / cost / misconception<div class="underline-input"></div></td><td class="border p-2"><div class="underline-input h-full"></div></td></tr>
+                            <tr><td class="border p-2 font-bold text-purple-800">Emotion Arc</td><td class="border p-2 text-xs">Kurva Emosi</td><td class="border p-2"><div class="underline-input"></div></td><td class="border p-2"><div class="underline-input h-full"></div></td></tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+
+        <!-- M04 Meat -->
+        <div id="m04" class="tab-content print-container w-full max-w-[210mm] mx-auto bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+            <header class="bg-rose-900 text-white p-6 flex justify-between items-center">
+                <div><h1 class="text-2xl font-black">BMS Bootcamp</h1><h2 class="text-rose-200 font-medium">🥩 Formulir Analisis MeatProfile (M04)</h2></div>
+                <span class="bg-rose-600 text-white text-xs font-bold px-3 py-1 rounded-full">Meat System</span>
+            </header>
+            <div class="p-8 space-y-8">
+                <section>
+                    <h3 class="text-lg font-bold text-slate-800 border-b-2 border-slate-100 pb-2 mb-4">Informasi Dasar</h3>
+                    <div class="grid grid-cols-2 gap-4"><div class="flex items-end gap-2 col-span-2"><label class="font-bold text-sm">Produk/Merek:</label><div class="underline-input"></div></div></div>
+                </section>
+                <section>
+                    <h3 class="text-lg font-bold text-rose-900 border-b-2 border-rose-100 pb-2 mb-4">Analisis 11 Field</h3>
+                    <table class="w-full text-sm border border-slate-200">
+                        <thead class="bg-rose-50 text-xs">
+                            <tr>
+                                <th class="border p-2 w-16">Grup</th>
+                                <th class="border p-2 w-28">Field</th>
+                                <th class="border p-2 w-40">Opsi</th>
+                                <th class="border p-2">Input</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td rowspan="3" class="border p-2 font-bold text-rose-800">Format</td><td class="border p-2 text-xs font-mono">talent_framing</td><td class="border p-2 text-[10px] text-slate-500 leading-tight">product_only / hands_demo / body_no_face / talking_head / full_body / skit</td><td class="border p-2"><div class="underline-input"></div></td></tr>
+                            <tr><td class="border p-2 text-xs font-mono">duration_range</td><td class="border p-2 text-[10px] text-slate-500 leading-tight">[min, target, max] s</td><td class="border p-2"><div class="underline-input"></div></td></tr>
+                            <tr><td class="border p-2 text-xs font-mono">aspect_ratio</td><td class="border p-2 text-[10px] text-slate-500 leading-tight">9:16 / 16:9</td><td class="border p-2"><div class="underline-input"></div></td></tr>
+                            <tr><td rowspan="4" class="border p-2 font-bold text-rose-800">Audiovisual</td><td class="border p-2 text-xs font-mono">voice_type</td><td class="border p-2 text-[10px] text-slate-500 leading-tight">human / ai / none</td><td class="border p-2"><div class="underline-input"></div></td></tr>
+                            <tr><td class="border p-2 text-xs font-mono">shot_grammar</td><td class="border p-2 text-[10px] text-slate-500 leading-tight">ECU / CU / MS / FS</td><td class="border p-2"><div class="underline-input"></div></td></tr>
+                            <tr><td class="border p-2 text-xs font-mono">camera_movement</td><td class="border p-2 text-[10px] text-slate-500 leading-tight">static / push / pull / pan / tilt / track</td><td class="border p-2"><div class="underline-input"></div></td></tr>
+                            <tr><td class="border p-2 text-xs font-mono">subtitle_form</td><td class="border p-2 text-[10px] text-slate-500 leading-tight">punchline / steps / label / data_card / minimal</td><td class="border p-2"><div class="underline-input"></div></td></tr>
+                            <tr><td rowspan="2" class="border p-2 font-bold text-rose-800">Ritme</td><td class="border p-2 text-xs font-mono">pacing</td><td class="border p-2 text-[10px] text-slate-500 leading-tight">low / medium / high</td><td class="border p-2"><div class="underline-input"></div></td></tr>
+                            <tr><td class="border p-2 text-xs font-mono">editing_pattern</td><td class="border p-2 text-[10px] text-slate-500 leading-tight">cut / transition</td><td class="border p-2"><div class="underline-input"></div></td></tr>
+                            <tr><td rowspan="2" class="border p-2 font-bold text-rose-800">Peningkatan</td><td class="border p-2 text-xs font-mono">screen_elements</td><td class="border p-2 text-[10px] text-slate-500 leading-tight">text_overlay / emoji / data_callout / arrow / sticker / broll_insert</td><td class="border p-2"><div class="underline-input"></div></td></tr>
+                            <tr><td class="border p-2 text-xs font-mono">audio_guidance</td><td class="border p-2 text-[10px] text-slate-500 leading-tight">bgm / sfx</td><td class="border p-2"><div class="underline-input"></div></td></tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+
+        <!-- M06 Full -->
+        <div id="m06" class="tab-content print-container w-full max-w-[210mm] mx-auto bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+            <header class="bg-emerald-900 text-white p-6 flex justify-between items-center">
+                <div><h1 class="text-2xl font-black">BMS Bootcamp</h1><h2 class="text-emerald-200 font-medium">💎 Analisis Komprehensif (M06)</h2></div>
+                <span class="bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">Master Class</span>
+            </header>
+            <div class="p-8 space-y-6">
+                <section class="grid grid-cols-4 gap-4 pb-4 border-b">
+                    <div class="flex items-end gap-2 col-span-4"><label class="font-bold text-xs">Nama Video:</label><div class="underline-input"></div></div>
+                    <div class="flex items-end gap-2"><label class="font-bold text-xs">Merek:</label><div class="underline-input"></div></div>
+                    <div class="flex items-end gap-2"><label class="font-bold text-xs">Tanggal:</label><div class="underline-input"></div></div>
+                </section>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="space-y-6">
+                        <section><h3 class="text-sm font-bold text-purple-900 border-b border-purple-200 pb-1 mb-2">👻 Lapisan Soul</h3><div class="space-y-2 text-xs"><div class="bg-purple-50 p-2 rounded"><span class="font-bold">1. Audiens:</span> <div class="underline-input mt-1"></div></div><div class="bg-purple-50 p-2 rounded"><span class="font-bold">2. Skenario:</span> <div class="underline-input mt-1"></div></div><div class="bg-purple-50 p-2 rounded"><span class="font-bold">3. Motivasi:</span> <div class="underline-input mt-1"></div></div></div></section>
+                        <section><h3 class="text-sm font-bold text-rose-900 border-b border-rose-200 pb-1 mb-2">🥩 Lapisan Meat</h3><div class="space-y-2 text-xs"><div class="bg-rose-50 p-2 rounded"><span class="font-bold">Format (3):</span> <div class="underline-input mt-1"></div></div><div class="bg-rose-50 p-2 rounded"><span class="font-bold">Audiovisual (4):</span> <div class="underline-input mt-1"></div></div><div class="bg-rose-50 p-2 rounded"><span class="font-bold">Ritme (2):</span> <div class="underline-input mt-1"></div></div><div class="bg-rose-50 p-2 rounded"><span class="font-bold">Peningkatan (2):</span> <div class="underline-input mt-1"></div></div></div></section>
+                    </div>
+                    <div>
+                        <section><h3 class="text-sm font-bold text-blue-900 border-b border-blue-200 pb-1 mb-2">🦴 Lapisan Bone</h3><table class="w-full text-[10px] border border-slate-200"><thead class="bg-blue-50"><tr><th class="border p-1 w-8">#</th><th class="border p-1 w-16">Tipe</th><th class="border p-1">Strategi Inti</th></tr></thead><tbody><script>for(let i=1;i<=10;i++)document.write(`<tr><td class="border p-1 text-center">${i}</td><td class="border p-1"></td><td class="border p-1"></td></tr>`)</script></tbody></table></section>
+                        <section class="mt-4 bg-emerald-50 rounded p-2"><label class="font-bold text-emerald-900 text-xs">Wawasan Komprehensif:</label><div class="underline-input"></div><div class="underline-input mt-2"></div></section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div id="print-actions" class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+        <button onclick="window.print()" class="bg-white border text-slate-700 px-4 py-3 rounded-xl shadow-lg font-semibold text-sm">Cetak Halaman Ini</button>
+        <button onclick="document.body.classList.add('print-all-mode'); setTimeout(()=>{window.print(); window.onafterprint=()=>{document.body.classList.remove('print-all-mode')}},100)" class="bg-blue-600 text-white px-4 py-3 rounded-xl shadow-lg font-bold text-sm">Ekspor Semua (Buku)</button>
+    </div>
+
+    <script>
+        function switchTab(id, btn) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            document.querySelectorAll('.nav-btn').forEach(b => { b.classList.remove('bg-blue-600','text-white','shadow-sm'); b.classList.add('hover:bg-slate-800'); });
+            if(id.startsWith('m')) { btn.classList.add('bg-blue-600','text-white'); btn.classList.remove('hover:bg-slate-800'); }
+            else { btn.classList.add('bg-slate-700','text-white'); btn.classList.remove('hover:bg-slate-800'); }
+            if(window.innerWidth<768) document.getElementById('sidebar').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

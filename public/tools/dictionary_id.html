@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamus Arsitektur BMS (ID)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        @media print {
+            body { background-color: white; }
+            #sidebar, #print-actions { display: none !important; }
+            #main-content { margin-left: 0 !important; width: 100% !important; padding: 0 !important; }
+            .print-container { box-shadow: none !important; border: none !important; margin: 0 auto !important; max-width: 210mm !important; }
+            .page-break { page-break-after: always; }
+            body.print-all-mode .tab-content { display: block !important; page-break-after: always; margin-bottom: 0 !important; }
+            body.print-all-mode .tab-content:last-child { page-break-after: auto; }
+        }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; animation: fadeIn 0.3s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+    </style>
+</head>
+<body class="h-screen overflow-hidden flex flex-col md:flex-row text-slate-800">
+
+    <div class="md:hidden bg-slate-900 text-white p-4 shadow-md z-20 flex justify-between items-center">
+        <h1 class="font-bold text-lg">Kamus Arsitektur (ID)</h1>
+        <button onclick="document.getElementById('sidebar').classList.toggle('hidden')" class="p-2 bg-slate-800 rounded">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </div>
+
+    <nav id="sidebar" class="hidden md:flex flex-col w-full md:w-64 bg-slate-900 text-slate-300 h-full flex-shrink-0 z-10 shadow-xl overflow-y-auto">
+        <div class="p-6">
+            <h1 class="text-xl font-black text-white tracking-tight leading-tight">BMS Bootcamp<br><span class="text-blue-400 text-sm font-semibold">Kamus Arsitektur v1.2</span></h1>
+        </div>
+        <div class="flex-grow pb-6">
+            <div class="px-4 mb-2 text-xs font-bold text-slate-500 uppercase tracking-widest">Definisi Inti</div>
+            <ul class="space-y-1 px-3">
+                <li><button onclick="switchTab('cs-skel', this)" class="nav-btn w-full text-left px-4 py-2.5 rounded-lg font-medium transition-colors hover:bg-slate-800 hover:text-white active bg-blue-600 text-white shadow-sm flex items-center gap-2"><span class="text-lg">🦴</span> 01 Lembar Cepat Section</button></li>
+                <li><button onclick="switchTab('cs-strat', this)" class="nav-btn w-full text-left px-4 py-2.5 rounded-lg font-medium transition-colors hover:bg-slate-800 hover:text-white flex items-center gap-2"><span class="text-lg">🌲</span> 02 Lembar Cepat Strategy</button></li>
+                <li><button onclick="switchTab('cs-soul', this)" class="nav-btn w-full text-left px-4 py-2.5 rounded-lg font-medium transition-colors hover:bg-slate-800 hover:text-white flex items-center gap-2"><span class="text-lg">👻</span> 03 Definisi Lapisan Soul</button></li>
+                <li><button onclick="switchTab('cs-meat', this)" class="nav-btn w-full text-left px-4 py-2.5 rounded-lg font-medium transition-colors hover:bg-slate-800 hover:text-white flex items-center gap-2"><span class="text-lg">🥩</span> 04 Lembar Cepat Meat</button></li>
+            </ul>
+        </div>
+        <div class="p-4 border-t border-slate-800 text-center text-xs text-slate-500">Termasuk Definisi Soul<br>Kamus Lengkap</div>
+    </nav>
+
+    <main id="main-content" class="flex-grow overflow-y-auto p-4 md:p-8 bg-slate-100/50 relative">
+
+        <!-- 01 Section -->
+        <div id="cs-skel" class="tab-content active print-container w-full max-w-[210mm] mx-auto bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+            <header class="bg-blue-600 text-white p-6 border-b border-blue-700">
+                <h2 class="text-2xl font-bold flex items-center gap-2">🦴 01 Lembar Cepat Section</h2>
+            </header>
+            <div class="p-8">
+                <h3 class="font-bold text-lg mb-4 text-blue-900 border-b pb-2">1. Definisi Section Inti (7 Jenis Section, 8 Dimensi termasuk Urutan Section)</h3>
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-blue-600 block">H (Hook) Penangkap Perhatian</strong><span class="text-xs text-slate-500">Menghentikan scroll otomatis, merebut bandwidth kognitif (Wajib)</span></div>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-blue-600 block">Br (Bridge) Pembangun Relevansi</strong><span class="text-xs text-slate-500">Membangun konteks dan relevansi personal (Opsional)</span></div>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-amber-600 block">P (Problem) Pembangun Ketegangan</strong><span class="text-xs text-slate-500">Mengungkap kesenjangan antara kondisi saat ini dan ideal (Sangat disarankan)</span></div>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-emerald-600 block">Re (Resolution) Pelepas Ketegangan</strong><span class="text-xs text-slate-500">Meredakan ketegangan, menunjukkan jalur perbaikan (Sangat disarankan)</span></div>
+                    <div class="bg-indigo-50 p-3 rounded border border-indigo-100"><strong class="text-indigo-600 block">Rv (Reversal) Penulisan Ulang Kognitif</strong><span class="text-xs text-slate-500">Membatalkan keyakinan lama, menghilangkan resistensi potensial</span></div>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-rose-600 block">V (Value) Stabilisasi Keputusan</strong><span class="text-xs text-slate-500">Nilai inti produk/layanan (Sangat disarankan)</span></div>
+                    <div class="bg-slate-50 p-3 rounded border border-slate-100"><strong class="text-purple-600 block">C (CTA) Pemicu Tindakan</strong><span class="text-xs text-slate-500">Mengubah preferensi menjadi tindakan (Wajib)</span></div>
+                </div>
+
+                <h3 class="font-bold text-lg mb-4 text-blue-900 border-b pb-2">2. Kombinasi Skeleton Umum (8 Jenis)</h3>
+                <table class="w-full text-sm text-left border-collapse border border-slate-200">
+                    <thead class="bg-blue-50 text-slate-700"><tr><th class="border p-2">Jenis</th><th class="border p-2">Alur Struktur</th><th class="border p-2">Tier</th><th class="border p-2">Referensi Rasio Durasi</th><th class="border p-2">Skenario Penggunaan</th></tr></thead>
+                    <tbody>
+                        <tr><td class="border p-2 font-bold">HPVC</td><td class="border p-2 font-mono text-xs">H → P → V → C</td><td class="border p-2 text-center font-bold text-green-700">A</td><td class="border p-2 text-xs">15%/25%/45%/15%</td><td class="border p-2">Standar 4 bagian, seeding reguler</td></tr>
+                        <tr><td class="border p-2 font-bold">HBVC</td><td class="border p-2 font-mono text-xs">H → Br → V → C</td><td class="border p-2 text-center font-bold text-green-700">A</td><td class="border p-2 text-xs">15%/20%/50%/15%</td><td class="border p-2">Seeding cepat dengan bridge</td></tr>
+                        <tr><td class="border p-2 font-bold">HRVC</td><td class="border p-2 font-mono text-xs">H → Re → V → C</td><td class="border p-2 text-center font-bold text-green-700">A</td><td class="border p-2 text-xs">15%/25%/45%/15%</td><td class="border p-2">Seeding langsung dengan resolusi</td></tr>
+                        <tr class="bg-blue-50/30"><td class="border p-2 font-bold">HPRVC</td><td class="border p-2 font-mono text-xs">H → P → Rv → V → C</td><td class="border p-2 text-center font-bold text-blue-700">B</td><td class="border p-2 text-xs">10%/20%/20%/35%/15%</td><td class="border p-2 font-bold">Universal 5 bagian, cocok untuk seeding & intro produk</td></tr>
+                        <tr><td class="border p-2 font-bold">HPBVC</td><td class="border p-2 font-mono text-xs">H → P → Br → V → C</td><td class="border p-2 text-center font-bold text-blue-700">B</td><td class="border p-2 text-xs">10%/20%/15%/40%/15%</td><td class="border p-2">Bridge setelah problem, perkuat relevansi</td></tr>
+                        <tr><td class="border p-2 font-bold">HBrPVC</td><td class="border p-2 font-mono text-xs">H → Br → P → V → C</td><td class="border p-2 text-center font-bold text-blue-700">B</td><td class="border p-2 text-xs">10%/15%/20%/40%/15%</td><td class="border p-2">Bridge dulu lalu problem, bangun kepercayaan</td></tr>
+                        <tr><td class="border p-2 font-bold">HBrRVC</td><td class="border p-2 font-mono text-xs">H → Br → Rv → V → C</td><td class="border p-2 text-center font-bold text-blue-700">B</td><td class="border p-2 text-xs">10%/15%/25%/35%/15%</td><td class="border p-2">Bridge + penulisan ulang kognitif, patahkan keyakinan lama</td></tr>
+                        <tr><td class="border p-2 font-bold">HBrPReVC</td><td class="border p-2 font-mono text-xs">H → Br → P → Re → V → C</td><td class="border p-2 text-center font-bold text-amber-700">C</td><td class="border p-2 text-xs">8%/12%/18%/17%/30%/15%</td><td class="border p-2">Lengkap 6 bagian, narasi konten mendalam</td></tr>
+                    </tbody>
+                </table>
+                <p class="text-xs text-slate-400 mt-2">Tier A = 4 section atau kurang (singkat & cepat); Tier B = 5 section (persuasi standar); Tier C = 6+ section (narasi mendalam)</p>
+            </div>
+        </div>
+
+        <!-- 02 Strategy -->
+        <div id="cs-strat" class="tab-content print-container w-full max-w-[210mm] mx-auto bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+            <header class="bg-emerald-600 text-white p-6 border-b border-emerald-700">
+                <h2 class="text-2xl font-bold flex items-center gap-2">🌲 02 Lembar Cepat Strategy</h2>
+            </header>
+            <div class="p-8">
+                <table class="w-full text-xs text-left border-collapse border border-slate-200">
+                    <thead class="bg-slate-100 text-slate-700">
+                        <tr><th class="border p-2 w-14">L0</th><th class="border p-2 w-20">Strategi L1</th><th class="border p-2">Deskripsi</th><th class="border p-2">Mekanisme Psikologis</th><th class="border p-2">Frasa Kunci</th><th class="border p-2 w-20">L2</th><th class="border p-2">Penjelasan L2</th></tr>
+                    </thead>
+                    <tbody>
+                        <!-- HEAD -->
+                        <tr><td rowspan="13" class="border p-2 font-bold bg-slate-50 text-center align-middle">HEAD<br>(Kognisi & Kepercayaan)</td><td rowspan="3" class="border p-2 font-bold align-middle">EXPLAIN<br><span class="font-normal text-slate-500">Penjelasan Mekanisme</span></td><td rowspan="3" class="border p-2 align-middle">Menjelaskan prinsip dan mekanisme agar pengguna paham kenapa efektif</td><td rowspan="3" class="border p-2 align-middle text-emerald-700">Logika Rasional →<br>Masuk akal sekarang</td><td rowspan="3" class="border p-2 align-middle italic text-slate-500">"Saya jelaskan kenapa ini efektif"</td><td class="border p-2 font-mono">Logic</td><td class="border p-2">Penalaran logis, penjelasan sebab-akibat</td></tr>
+                        <tr><td class="border p-2 font-mono">Data</td><td class="border p-2">Bukti data, hasil eksperimen</td></tr>
+                        <tr><td class="border p-2 font-mono">Transparency</td><td class="border p-2">Transparansi formula, pengungkapan bahan</td></tr>
+                        <tr><td rowspan="3" class="border p-2 font-bold align-middle">PROOF<br><span class="font-normal text-slate-500">Testimoni Nyata</span></td><td rowspan="3" class="border p-2 align-middle">Menampilkan hasil nyata dan testimoni pengguna, biarkan fakta berbicara</td><td rowspan="3" class="border p-2 align-middle text-emerald-700">Bukti Sosial →<br>Semua bilang bagus</td><td rowspan="3" class="border p-2 align-middle italic text-slate-500">"Banyak orang sudah membuktikan"</td><td class="border p-2 font-mono">UGC</td><td class="border p-2">Testimoni pengguna, ulasan nyata</td></tr>
+                        <tr><td class="border p-2 font-mono">Before_After</td><td class="border p-2">Perbandingan sebelum/sesudah, tampilan hasil</td></tr>
+                        <tr><td class="border p-2 font-mono">Sales_Data</td><td class="border p-2">Data penjualan, jumlah ulasan positif</td></tr>
+                        <tr><td rowspan="4" class="border p-2 font-bold align-middle">AUTHORITY<br><span class="font-normal text-slate-500">Dukungan Otoritas</span></td><td rowspan="4" class="border p-2 align-middle">Memanfaatkan ahli, institusi, sertifikasi untuk membangun kepercayaan</td><td rowspan="4" class="border p-2 align-middle text-emerald-700">Dukungan Profesional →<br>Disetujui para ahli</td><td rowspan="4" class="border p-2 align-middle italic text-slate-500">"Para ahli sudah membuktikan"</td><td class="border p-2 font-mono">Expert</td><td class="border p-2">Rekomendasi ahli, dukungan dokter</td></tr>
+                        <tr><td class="border p-2 font-mono">Certification</td><td class="border p-2">Sertifikat, laporan pengujian</td></tr>
+                        <tr><td class="border p-2 font-mono">Media</td><td class="border p-2">Liputan media, penghargaan & prestasi</td></tr>
+                        <tr><td class="border p-2 font-mono">Guarantee</td><td class="border p-2">Jaminan komitmen, garansi uang kembali</td></tr>
+                        <tr><td rowspan="3" class="border p-2 font-bold align-middle">CONTRAST<br><span class="font-normal text-slate-500">Efek Kontras</span></td><td rowspan="3" class="border p-2 align-middle">Menggunakan kontras untuk menciptakan dampak kognitif</td><td rowspan="3" class="border p-2 align-middle text-emerald-700">Penilaian Referensi →<br>Bandingkan baru tahu</td><td rowspan="3" class="border p-2 align-middle italic text-slate-500">"Coba bandingkan, pasti tahu bedanya"</td><td class="border p-2 font-mono">AB</td><td class="border p-2">Perbandingan produk A/B</td></tr>
+                        <tr><td class="border p-2 font-mono">Shocking</td><td class="border p-2">Kontras mengejutkan, hasil tak terduga</td></tr>
+                        <tr><td class="border p-2 font-mono">Value_Stack</td><td class="border p-2">Penumpukan nilai, persepsi sangat bernilai</td></tr>
+                        <!-- HEART -->
+                        <tr><td rowspan="7" class="border p-2 font-bold bg-slate-50 text-center align-middle">HEART<br>(Emosi & Resonansi)</td><td rowspan="3" class="border p-2 font-bold align-middle">PAIN<br><span class="font-normal text-slate-500">Resonansi Titik Sakit</span></td><td rowspan="3" class="border p-2 align-middle">Memicu resonansi titik sakit, membuat pengguna merasa dipahami</td><td rowspan="3" class="border p-2 align-middle text-emerald-700">Empati →<br>Saya juga merasakan hal yang sama</td><td rowspan="3" class="border p-2 align-middle italic text-slate-500">"Kamu juga punya masalah ini?"</td><td class="border p-2 font-mono">Scene</td><td class="border p-2">Resonansi skenario, pendalaman situasi</td></tr>
+                        <tr><td class="border p-2 font-mono">Daily</td><td class="border p-2">Gangguan harian, masalah umum</td></tr>
+                        <tr><td class="border p-2 font-mono">Loss</td><td class="border p-2">Keengganan rugi, biaya kehilangan</td></tr>
+                        <tr><td rowspan="2" class="border p-2 font-bold align-middle">FEAR<br><span class="font-normal text-slate-500">Daya Tarik Ketakutan</span></td><td rowspan="2" class="border p-2 align-middle">Membangkitkan kesadaran risiko, memotivasi tindakan pencegahan</td><td rowspan="2" class="border p-2 align-middle text-emerald-700">Keengganan Rugi →<br>Takut akan konsekuensi</td><td rowspan="2" class="border p-2 align-middle italic text-slate-500">"Kalau tidak lakukan ini, akibatnya buruk"</td><td class="border p-2 font-mono">Consequence</td><td class="border p-2">Peringatan konsekuensi, biaya tidak bertindak</td></tr>
+                        <tr><td class="border p-2 font-mono">Miss_Out</td><td class="border p-2">Takut ketinggalan (FOMO)</td></tr>
+                        <tr><td rowspan="2" class="border p-2 font-bold align-middle">STORY<br><span class="font-normal text-slate-500">Penceritaan</span></td><td rowspan="2" class="border p-2 align-middle">Membangun koneksi emosional melalui penceritaan</td><td rowspan="2" class="border p-2 align-middle text-emerald-700">Pendalaman Emosional →<br>Tersentuh oleh ceritanya</td><td rowspan="2" class="border p-2 align-middle italic text-slate-500">"Dengarkan cerita ini"</td><td class="border p-2 font-mono">Origin</td><td class="border p-2">Cerita merek, cerita pendiri</td></tr>
+                        <tr><td class="border p-2 font-mono">User</td><td class="border p-2">Cerita pengguna, pengalaman nyata</td></tr>
+                        <!-- EYES -->
+                        <tr><td rowspan="2" class="border p-2 font-bold bg-slate-50 text-center align-middle">EYES<br>(Visual & Pengalaman)</td><td rowspan="2" class="border p-2 font-bold align-middle">DEMO<br><span class="font-normal text-slate-500">Demonstrasi</span></td><td rowspan="2" class="border p-2 align-middle">Mendemonstrasikan penggunaan dan hasil produk secara langsung</td><td rowspan="2" class="border p-2 align-middle text-emerald-700">Melihat Berarti Percaya →<br>Lihat hasilnya</td><td rowspan="2" class="border p-2 align-middle italic text-slate-500">"Lihat, begini cara pakainya"</td><td class="border p-2 font-mono">Step</td><td class="border p-2">Demo langkah demi langkah, tutorial penggunaan</td></tr>
+                        <tr><td class="border p-2 font-mono">Multi_Angle</td><td class="border p-2">Tampilan multi-sudut, presentasi menyeluruh</td></tr>
+                        <!-- HAND -->
+                        <tr><td rowspan="4" class="border p-2 font-bold bg-slate-50 text-center align-middle">HAND<br>(Ketertarikan & Tindakan)</td><td rowspan="2" class="border p-2 font-bold align-middle">SUSPENSE<br><span class="font-normal text-slate-500">Suspensi & Pertanyaan</span></td><td rowspan="2" class="border p-2 align-middle">Memicu rasa ingin tahu melalui suspensi atau pertanyaan retoris</td><td rowspan="2" class="border p-2 align-middle text-emerald-700">Celah Informasi →<br>Ingin tahu jawabannya</td><td rowspan="2" class="border p-2 align-middle italic text-slate-500">"Kenapa bisa begini? Jangan di-skip!"</td><td class="border p-2 font-mono">Question</td><td class="border p-2">Pembukaan retoris, memicu rasa ingin tahu</td></tr>
+                        <tr><td class="border p-2 font-mono">Reveal</td><td class="border p-2">Pengungkapan twist, jawaban terungkap</td></tr>
+                        <tr><td rowspan="2" class="border p-2 font-bold align-middle">URGENCY<br><span class="font-normal text-slate-500">Kelangkaan & Urgensi</span></td><td rowspan="2" class="border p-2 align-middle">Menciptakan kelangkaan dan urgensi untuk mendorong tindakan</td><td rowspan="2" class="border p-2 align-middle text-emerald-700">Tekanan Waktu/Jumlah →<br>Harus bertindak sekarang</td><td rowspan="2" class="border p-2 align-middle italic text-slate-500">"Beli sekarang atau kehabisan"</td><td class="border p-2 font-mono">Time</td><td class="border p-2">Promo waktu terbatas, hitungan mundur</td></tr>
+                        <tr><td class="border p-2 font-mono">Stock</td><td class="border p-2">Stok terbatas, peringatan habis</td></tr>
+                    </tbody>
+                </table>
+                <div class="mt-4 p-3 bg-emerald-50 border border-emerald-200 rounded text-xs text-slate-600">
+                    <strong class="text-emerald-800">Catatan Matriks Kompatibilitas:</strong> Tidak semua strategi L1 berlaku untuk setiap Section. Misalnya, URGENCY biasanya hanya digunakan di section C (CTA), PAIN biasanya digunakan di section P (Problem). Untuk matriks kompatibilitas Section x L1 yang lengkap, lihat field <code class="bg-white px-1 rounded">strategy_section_compatibility</code> di file konfigurasi SSOT.
+                </div>
+            </div>
+        </div>
+
+        <!-- 03 Soul -->
+        <div id="cs-soul" class="tab-content print-container w-full max-w-[210mm] mx-auto bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+            <header class="bg-purple-600 text-white p-6 border-b border-purple-700">
+                <h2 class="text-2xl font-bold flex items-center gap-2">👻 03 Definisi Lapisan Soul</h2>
+            </header>
+            <div class="p-8">
+                <div class="space-y-8">
+                    <!-- 1. Target Audience -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-purple-900 border-b border-purple-100 pb-2">1. Target Audience (Audiens Sasaran)</h3>
+                        <table class="w-full text-sm border-collapse border border-slate-200">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-28">Field</th><th class="border p-2 w-24">Tipe</th><th class="border p-2">Penjelasan</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono text-xs">age_range</td><td class="border p-2 text-xs">string</td><td class="border p-2 text-slate-600">Rentang usia, mis. "18-25", "30-45"</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">gender</td><td class="border p-2 text-xs">enum</td><td class="border p-2 text-slate-600">male / female / all</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">pain_points</td><td class="border p-2 text-xs">string[]</td><td class="border p-2 text-slate-600">Daftar titik sakit utama</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">consumption_level</td><td class="border p-2 text-xs">enum</td><td class="border p-2 text-slate-600">low / medium / high / premium</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- 2. Trigger Scenario -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-purple-900 border-b border-purple-100 pb-2">2. Trigger Scenario (Skenario Pemicu)</h3>
+                        <table class="w-full text-sm border-collapse border border-slate-200">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-28">Field</th><th class="border p-2 w-24">Tipe</th><th class="border p-2">Penjelasan</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono text-xs">description</td><td class="border p-2 text-xs">string</td><td class="border p-2 text-slate-600">Deskripsi skenario, mis. "scroll HP setelah pulang kerja", "belanja di mall akhir pekan"</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">timing</td><td class="border p-2 text-xs">string</td><td class="border p-2 text-slate-600">Titik waktu, mis. "sebelum tidur", "saat perjalanan", "setelah makan"</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">user_state</td><td class="border p-2 text-xs">string</td><td class="border p-2 text-slate-600">Status pengguna, mis. "bosan & santai", "cemas & bimbang", "aktif mencari"</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- 3. Reward Type -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-purple-900 border-b border-purple-100 pb-2">3. Reward Type (Jenis Imbalan — 7 Enum)</h3>
+                        <div class="grid grid-cols-4 gap-3 text-sm">
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">beauty</strong><span class="text-slate-600 text-xs">Tampil lebih cantik</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">money</strong><span class="text-slate-600 text-xs">Hemat/cari uang</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">time</strong><span class="text-slate-600 text-xs">Hemat waktu</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">safety</strong><span class="text-slate-600 text-xs">Rasa aman</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">control</strong><span class="text-slate-600 text-xs">Rasa kendali</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">confidence</strong><span class="text-slate-600 text-xs">Kepercayaan diri</span></div>
+                            <div class="bg-purple-50 p-3 rounded border border-purple-100 text-center"><strong class="text-purple-700 block">health</strong><span class="text-slate-600 text-xs">Kesehatan</span></div>
+                        </div>
+                    </section>
+
+                    <!-- 4. Conflict Type -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-purple-900 border-b border-purple-100 pb-2">4. Conflict Type (Jenis Konflik — 5 Enum)</h3>
+                        <div class="grid grid-cols-3 gap-3 text-sm">
+                            <div class="bg-amber-50 p-3 rounded border border-amber-100 text-center"><strong class="text-amber-700 block">internal</strong><span class="text-slate-600 text-xs">Konflik batin</span></div>
+                            <div class="bg-amber-50 p-3 rounded border border-amber-100 text-center"><strong class="text-amber-700 block">external</strong><span class="text-slate-600 text-xs">Hambatan eksternal</span></div>
+                            <div class="bg-amber-50 p-3 rounded border border-amber-100 text-center"><strong class="text-amber-700 block">comparison</strong><span class="text-slate-600 text-xs">Perbandingan sosial</span></div>
+                            <div class="bg-amber-50 p-3 rounded border border-amber-100 text-center"><strong class="text-amber-700 block">cost</strong><span class="text-slate-600 text-xs">Kekhawatiran biaya</span></div>
+                            <div class="bg-amber-50 p-3 rounded border border-amber-100 text-center"><strong class="text-amber-700 block">misconception</strong><span class="text-slate-600 text-xs">Kesalahpahaman kognitif</span></div>
+                        </div>
+                    </section>
+
+                    <!-- 5. Emotion Arc -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-purple-900 border-b border-purple-100 pb-2">5. Emotion Arc (Busur Emosi — Array Node)</h3>
+                        <p class="text-sm text-slate-600 mb-3">Setiap Section memiliki satu node emosi, menandai label emosi dan nilai intensitas (0-10) untuk section tersebut. Seluruh busur terdiri dari array node <code class="bg-slate-100 px-1 rounded text-xs">nodes[]</code>.</p>
+                        <table class="w-full text-sm border-collapse border border-slate-200">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-20">Field</th><th class="border p-2 w-28">Tipe</th><th class="border p-2">Penjelasan</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono text-xs">section</td><td class="border p-2 text-xs">enum (H/Br/P/Re/Rv/V/C)</td><td class="border p-2 text-slate-600">Section yang ditandai</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">emotion</td><td class="border p-2 text-xs">string</td><td class="border p-2 text-slate-600">Label emosi utama section (mis. curiosity, anxiety, relief, desire, urgency)</td></tr>
+                                <tr><td class="border p-2 font-mono text-xs">intensity</td><td class="border p-2 text-xs">number 0-10</td><td class="border p-2 text-slate-600">Intensitas emosi, 0 = tenang, 10 = ekstrem</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-xs text-slate-400 mt-2">Contoh: <code class="bg-slate-100 px-1 rounded">[{section:"H", emotion:"curiosity", intensity:7}, {section:"P", emotion:"anxiety", intensity:8}, {section:"V", emotion:"desire", intensity:9}, {section:"C", emotion:"urgency", intensity:6}]</code></p>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+        <!-- 04 Meat -->
+        <div id="cs-meat" class="tab-content print-container w-full max-w-[210mm] mx-auto bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-12">
+            <header class="bg-rose-600 text-white p-6 border-b border-rose-700">
+                <h2 class="text-2xl font-bold flex items-center gap-2">🥩 04 Lembar Cepat Meat</h2>
+            </header>
+            <div class="p-8">
+                <p class="text-sm text-slate-600 mb-6">4 grup, 11 field — dari format dasar hingga elemen peningkatan, definisi berlapis untuk presentasi visual video.</p>
+                <div class="space-y-8">
+
+                    <!-- ===== Grup 1: Batasan Format ===== -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-rose-900 border-b border-rose-100 pb-2">Grup 1: Batasan Format — 3 Field</h3>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">1.1 Framing Talent <code class="bg-slate-100 px-1 rounded text-xs">talent_framing</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-24">Kode</th><th class="border p-2 w-20">Nama</th><th class="border p-2">Deskripsi</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">product_only</td><td class="border p-2">Produk Saja</td><td class="border p-2">Tidak ada orang di layar, hanya produk; cocok untuk close-up produk, unboxing ASMR, tampilan bahan</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">hands_demo</td><td class="border p-2">Demo Tangan</td><td class="border p-2">Tangan terlihat mengoperasikan produk, tanpa wajah; cocok untuk langkah tutorial, demo makeup</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">body_no_face</td><td class="border p-2">Badan Tanpa Wajah</td><td class="border p-2">Badan terlihat tapi wajah tidak ditampilkan; cocok untuk tampilan outfit, perbandingan tubuh</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">talking_head</td><td class="border p-2">Talking Head</td><td class="border p-2">Wajah di layar, berbicara ke kamera; persona kuat, cocok untuk review, seeding, berbagi pengetahuan</td></tr>
+                                <tr><td class="border p-2 text-center">5</td><td class="border p-2 font-mono">full_body</td><td class="border p-2">Full Body</td><td class="border p-2">Seluruh tubuh dalam frame, aksi fisik; cocok untuk outfit, fitness, vlog gaya hidup</td></tr>
+                                <tr><td class="border p-2 text-center">6</td><td class="border p-2 font-mono">skit</td><td class="border p-2">Skit</td><td class="border p-2">Pertunjukan naskah multi-orang; potensi viral tinggi, cocok untuk komedi, twist plot</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">1.2 Rentang Durasi <code class="bg-slate-100 px-1 rounded text-xs">duration_range</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-28">Sub-field</th><th class="border p-2 w-20">Tipe</th><th class="border p-2">Deskripsi</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono">min_seconds</td><td class="border p-2">number</td><td class="border p-2">Durasi minimum (detik) — di bawah ini, informasi tidak bisa tersampaikan lengkap</td></tr>
+                                <tr><td class="border p-2 font-mono">max_seconds</td><td class="border p-2">number</td><td class="border p-2">Durasi maksimum (detik) — di atas ini, tingkat penyelesaian turun signifikan</td></tr>
+                                <tr><td class="border p-2 font-mono">target_seconds</td><td class="border p-2">number</td><td class="border p-2">Durasi target (detik) — panjang ideal, menyeimbangkan informasi dan tingkat penyelesaian</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">1.3 Rasio Aspek <code class="bg-slate-100 px-1 rounded text-xs">aspect_ratio</code></h4>
+                        <div class="grid grid-cols-3 gap-2 text-xs mb-2">
+                            <div class="bg-slate-50 p-2 rounded border text-center"><strong class="block font-mono">9:16</strong><span class="text-slate-500">Vertikal — TikTok/Reels</span></div>
+                            <div class="bg-slate-50 p-2 rounded border text-center"><strong class="block font-mono">16:9</strong><span class="text-slate-500">Horizontal — YouTube</span></div>
+                            <div class="bg-slate-50 p-2 rounded border text-center"><strong class="block font-mono">1:1</strong><span class="text-slate-500">Kotak — Feed/Tampilan produk</span></div>
+                        </div>
+                    </section>
+
+                    <!-- ===== Grup 2: Gaya Audiovisual ===== -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-rose-900 border-b border-rose-100 pb-2">Grup 2: Gaya Audiovisual — 4 Field</h3>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">2.1 Jenis Suara <code class="bg-slate-100 px-1 rounded text-xs">voice_type</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-20">Kode</th><th class="border p-2 w-24">Nama</th><th class="border p-2">Deskripsi</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">human</td><td class="border p-2">Suara Manusia</td><td class="border p-2">Faktor kepercayaan tertinggi; cocok untuk konten berbasis persona dan emosional</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">ai_tts</td><td class="border p-2">AI TTS</td><td class="border p-2">Efisiensi produksi tinggi, dapat diskalakan; cocok untuk konten padat informasi</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">none</td><td class="border p-2">Tanpa Suara</td><td class="border p-2">Visual murni + teks; cocok untuk ASMR, tampilan produk, konten dampak visual</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">2.2 Tata Bahasa Shot <code class="bg-slate-100 px-1 rounded text-xs">shot_grammar</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-28">Sub-field</th><th class="border p-2 w-20">Tipe</th><th class="border p-2">Deskripsi</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono">section_constraints</td><td class="border p-2">object</td><td class="border p-2">Batasan jumlah shot per Section: min_shots / max_shots / min_duration_ratio</td></tr>
+                                <tr><td class="border p-2 font-mono">rules</td><td class="border p-2">string[]</td><td class="border p-2">Aturan komposisi, mis. "aturan sepertiga" / "rasio emas" / "simetri tengah"</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">2.3 Gerakan Kamera <code class="bg-slate-100 px-1 rounded text-xs">camera_movement</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-16">Kode</th><th class="border p-2 w-16">Nama</th><th class="border p-2">Deskripsi</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">static</td><td class="border p-2">Statis</td><td class="border p-2">Kamera terkunci; stabilitas kuat, cocok untuk talking head, close-up produk</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">push</td><td class="border p-2">Dorong</td><td class="border p-2">Bergerak maju, fokus pada detail; menciptakan urgensi dan perhatian</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">pull</td><td class="border p-2">Tarik</td><td class="border p-2">Bergerak mundur, ungkap keseluruhan; menciptakan ruang dan efek pengungkapan</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">pan</td><td class="border p-2">Pan</td><td class="border p-2">Gerakan horizontal kiri-kanan; cocok untuk pemandangan luas, tampilan perbandingan</td></tr>
+                                <tr><td class="border p-2 text-center">5</td><td class="border p-2 font-mono">tilt</td><td class="border p-2">Tilt</td><td class="border p-2">Gerakan vertikal atas-bawah; cocok untuk objek vertikal (outfit full body)</td></tr>
+                                <tr><td class="border p-2 text-center">6</td><td class="border p-2 font-mono">track</td><td class="border p-2">Track</td><td class="border p-2">Mengikuti gerakan subjek; nuansa dinamis terkuat, menciptakan pengalaman imersif</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">2.4 Bentuk Subtitle <code class="bg-slate-100 px-1 rounded text-xs">subtitle_form</code></h4>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-2">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-20">Kode</th><th class="border p-2 w-20">Nama</th><th class="border p-2">Deskripsi</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">punchline</td><td class="border p-2">Punchline</td><td class="border p-2">Teks besar di tengah, menekankan frasa kunci; cocok untuk highlight selling point, amplifikasi pain point</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">steps</td><td class="border p-2">Langkah</td><td class="border p-2">1.2.3. langkah bernomor, nuansa tutorial; cocok untuk cara penggunaan, alur proses</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">label</td><td class="border p-2">Label</td><td class="border p-2">Teks kecil sebagai anotasi, info pelengkap; tidak mengganggu, cocok untuk nama produk, label bahan</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">data_card</td><td class="border p-2">Kartu Data</td><td class="border p-2">Visualisasi data; cocok untuk data eksperimen, angka penjualan, persentase perbandingan</td></tr>
+                                <tr><td class="border p-2 text-center">5</td><td class="border p-2 font-mono">minimal</td><td class="border p-2">Minimal</td><td class="border p-2">Hampir tanpa subtitle, visual utama; cocok untuk dampak visual, ASMR</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- ===== Grup 3: Ritme & Editing ===== -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-rose-900 border-b border-rose-100 pb-2">Grup 3: Ritme & Editing — 2 Field</h3>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">3.1 Tempo <code class="bg-slate-100 px-1 rounded text-xs">pacing</code></h4>
+                        <p class="text-xs text-slate-500 mb-2"><strong>level</strong> — Tingkat tempo:</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-3">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-16">Nilai</th><th class="border p-2 w-16">Nama</th><th class="border p-2">Deskripsi</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">low</td><td class="border p-2">Lambat</td><td class="border p-2">Didominasi long take, imersi kuat; cocok untuk penceritaan, tone merek, ASMR</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">medium</td><td class="border p-2">Sedang</td><td class="border p-2">Tempo seimbang, transisi moderat; pilihan aman untuk sebagian besar skenario</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">high</td><td class="border p-2">Cepat</td><td class="border p-2">Potongan cepat, densitas informasi tinggi; cocok untuk promosi, seeding cepat</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-xs text-slate-500 mb-2"><strong>shot_duration</strong> — Batasan durasi per-shot:</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-4">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-16">Parameter</th><th class="border p-2 w-16">Nama</th><th class="border p-2">Deskripsi</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 font-mono">min</td><td class="border p-2">Min detik</td><td class="border p-2">Minimum detik per shot — di bawah ini, penonton tidak sempat menyerap informasi</td></tr>
+                                <tr><td class="border p-2 font-mono">max</td><td class="border p-2">Max detik</td><td class="border p-2">Maksimum detik per shot — di atas ini, shot terasa bertele-tele</td></tr>
+                                <tr><td class="border p-2 font-mono">avg</td><td class="border p-2">Rata-rata detik</td><td class="border p-2">Rata-rata durasi shot yang diharapkan untuk seluruh video, referensi inti editing</td></tr>
+                            </tbody>
+                        </table>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">3.2 Pola Editing <code class="bg-slate-100 px-1 rounded text-xs">editing_pattern</code></h4>
+                        <p class="text-xs text-slate-500 mb-2"><strong>style</strong> — Deskripsi gaya editing (mis. "jump cut cepat + sinkron beat" / "editing naratif halus")</p>
+                        <p class="text-xs text-slate-500 mb-2"><strong>transitions</strong> — Jenis transisi yang diperbolehkan:</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-2">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-20">Nilai</th><th class="border p-2 w-16">Nama</th><th class="border p-2">Deskripsi</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">hard_cut</td><td class="border p-2">Hard Cut</td><td class="border p-2">Transisi shot langsung; ritme kuat, efisiensi penyampaian informasi tinggi</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">dissolve</td><td class="border p-2">Dissolve</td><td class="border p-2">Perpaduan bertahap antar shot; lembut dan natural, cocok untuk transisi suasana</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">effects</td><td class="border p-2">Efek</td><td class="border p-2">Zoom, rotasi, flash putih, dll.; dampak visual kuat, gunakan secukupnya</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- ===== Grup 4: Elemen Peningkatan ===== -->
+                    <section>
+                        <h3 class="font-bold text-lg mb-3 text-rose-900 border-b border-rose-100 pb-2">Grup 4: Elemen Peningkatan — 2 Field</h3>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">4.1 Elemen Layar <code class="bg-slate-100 px-1 rounded text-xs">screen_elements</code></h4>
+                        <p class="text-xs text-slate-500 mb-2"><strong>allowed_types</strong> — Jenis elemen yang diperbolehkan:</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-3">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-24">Nilai</th><th class="border p-2 w-16">Nama</th><th class="border p-2">Deskripsi</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">text_overlay</td><td class="border p-2">Teks Overlay</td><td class="border p-2">Teks tebal penekanan; highlight selling point utama, frasa kunci, data</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">emoji</td><td class="border p-2">Emoji</td><td class="border p-2">Dekorasi emoji; menambah keseruan dan kedekatan</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">data_callout</td><td class="border p-2">Data Callout</td><td class="border p-2">Persentase, angka, grafik — visualisasi data untuk persuasi lebih kuat</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">arrow</td><td class="border p-2">Panah</td><td class="border p-2">Mengarahkan perhatian penonton ke area tertentu dalam frame</td></tr>
+                                <tr><td class="border p-2 text-center">5</td><td class="border p-2 font-mono">sticker</td><td class="border p-2">Stiker</td><td class="border p-2">Elemen dekoratif, memperkaya kekayaan visual</td></tr>
+                                <tr><td class="border p-2 text-center">6</td><td class="border p-2 font-mono">broll_insert</td><td class="border p-2">B-roll</td><td class="border p-2">Sisipan footage pelengkap, memperkaya lapisan visual dan ritme naratif</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="grid grid-cols-2 gap-2 text-xs mb-4">
+                            <div class="bg-rose-50 p-2 rounded border border-rose-100"><strong class="text-rose-700">hook_required</strong> — Apakah section HOOK wajib menyertakan elemen layar (teks overlay/elemen visual meningkatkan retensi 1-2 detik pertama)</div>
+                            <div class="bg-rose-50 p-2 rounded border border-rose-100"><strong class="text-rose-700">cta_required</strong> — Apakah section CTA wajib menyertakan elemen layar (panah/prompt tombol mengurangi keraguan bertindak)</div>
+                            <div class="bg-slate-50 p-2 rounded border border-slate-200"><strong>max_text_length</strong> — Maksimum karakter per teks overlay (mengontrol keringkasan)</div>
+                            <div class="bg-slate-50 p-2 rounded border border-slate-200"><strong>rules</strong> — Aturan tambahan, mis. "maks 2 teks overlay per section" / "B-roll tidak boleh melebihi 20% dari total durasi"</div>
+                        </div>
+
+                        <h4 class="font-bold text-sm mt-4 mb-2 text-slate-700">4.2 Panduan Audio <code class="bg-slate-100 px-1 rounded text-xs">audio_guidance</code></h4>
+                        <p class="text-xs text-slate-500 mb-2"><strong>bgm_style</strong> — Gaya BGM:</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-3">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-20">Nilai</th><th class="border p-2 w-16">Nama</th><th class="border p-2">Deskripsi</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">upbeat</td><td class="border p-2">Upbeat</td><td class="border p-2">Tempo ceria; cocok untuk seeding cepat, penjualan promosi</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">emotional</td><td class="border p-2">Emosional</td><td class="border p-2">Sentimental dan menyentuh; cocok untuk penceritaan, film merek, testimoni pengguna</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">minimal</td><td class="border p-2">Minimal</td><td class="border p-2">Latar belakang low-key; tidak mengganggu, cocok untuk konten berbasis suara</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">none</td><td class="border p-2">Tanpa BGM</td><td class="border p-2">Tanpa musik latar; cocok untuk ASMR, memaksimalkan keaslian</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-xs text-slate-500 mb-2"><strong>sfx_density</strong> — Densitas efek suara:</p>
+                        <table class="w-full text-xs border-collapse border border-slate-200 mb-3">
+                            <thead class="bg-slate-50"><tr><th class="border p-2 w-8">#</th><th class="border p-2 w-16">Nilai</th><th class="border p-2 w-16">Nama</th><th class="border p-2">Deskripsi</th></tr></thead>
+                            <tbody>
+                                <tr><td class="border p-2 text-center">1</td><td class="border p-2 font-mono">high</td><td class="border p-2">Tinggi</td><td class="border p-2">SFX di hampir setiap transisi shot; cocok untuk tempo cepat, energi tinggi</td></tr>
+                                <tr><td class="border p-2 text-center">2</td><td class="border p-2 font-mono">medium</td><td class="border p-2">Sedang</td><td class="border p-2">SFX di momen kunci; aksen di transisi penting dan titik penekanan</td></tr>
+                                <tr><td class="border p-2 text-center">3</td><td class="border p-2 font-mono">low</td><td class="border p-2">Rendah</td><td class="border p-2">Aksen sesekali; hanya di momen paling kritis, menjaga keseluruhan tetap terkendali</td></tr>
+                                <tr><td class="border p-2 text-center">4</td><td class="border p-2 font-mono">none</td><td class="border p-2">Tidak Ada</td><td class="border p-2">Tanpa efek suara; cocok untuk voice-over murni, ASMR</td></tr>
+                            </tbody>
+                        </table>
+                        <p class="text-xs text-slate-500"><strong>sfx_guidelines</strong> — Aturan SFX tambahan (mis. "section HOOK wajib ada suara penarik perhatian" / "gunakan SFX whoosh untuk transisi")</p>
+                    </section>
+
+                </div>
+
+                <!-- Catatan batasan -->
+                <div class="mt-6 p-3 bg-rose-50 border border-rose-200 rounded text-xs text-slate-600">
+                    <strong class="text-rose-800">Yang TIDAK termasuk dalam Meat Profile:</strong> Tata rambut/makeup/kostum (tergantung talent dan tone produk spesifik), lokasi syuting (tergantung sumber daya produksi aktual), informasi produk (milik data bisnis topik spesifik). Singkatnya: Meat mendefinisikan "dengan gaya apa syutingnya", bukan "apa yang disyuting".
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <div id="print-actions" class="fixed bottom-6 right-6 flex flex-col gap-3 z-50">
+        <button onclick="window.print()" class="bg-white border text-slate-700 px-4 py-3 rounded-xl shadow-lg font-semibold text-sm">Cetak Halaman Ini</button>
+        <button onclick="document.body.classList.add('print-all-mode'); setTimeout(()=>{window.print(); window.onafterprint=()=>{document.body.classList.remove('print-all-mode')}},100)" class="bg-blue-600 text-white px-4 py-3 rounded-xl shadow-lg font-bold text-sm">Ekspor Semua (Buku)</button>
+    </div>
+
+    <script>
+        function switchTab(id, btn) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            document.querySelectorAll('.nav-btn').forEach(b => { b.classList.remove('bg-blue-600','text-white','shadow-sm'); b.classList.add('hover:bg-slate-800'); });
+            if(id.startsWith('m')) { btn.classList.add('bg-blue-600','text-white'); btn.classList.remove('hover:bg-slate-800'); }
+            else { btn.classList.add('bg-slate-700','text-white'); btn.classList.remove('hover:bg-slate-800'); }
+            if(window.innerWidth<768) document.getElementById('sidebar').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>

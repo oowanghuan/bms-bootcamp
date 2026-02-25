@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>骨肉魂 Bootcamp 培训助手</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg-dark: #1a1a1a;
+      --bg-panel: #2d2d2d;
+      --bg-hover: #3d3d3d;
+      --text-primary: #ffffff;
+      --text-secondary: #b0b0b0;
+      --accent: #4CAF50;
+      --accent-hover: #66BB6A;
+      --module-01: #E3F2FD;
+      --module-02: #FFF3E0;
+      --module-03: #F3E5F5;
+      --module-04: #E8F5E9;
+      --module-05: #FFEBEE;
+      --module-06: #FFF8E1;
+      --module-07: #ECEFF1;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-dark);
+      color: var(--text-primary);
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Layout */
+    .app-container {
+      display: flex;
+      height: 100vh;
+    }
+
+    /* Left Sidebar */
+    .sidebar {
+      width: 300px;
+      background: var(--bg-panel);
+      border-right: 1px solid #444;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+
+    .sidebar-header {
+      padding: 16px;
+      border-bottom: 1px solid #444;
+      text-align: center;
+    }
+
+    .sidebar-header h1 {
+      font-size: 18px;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .sidebar-header p {
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .folder-selector {
+      padding: 12px;
+      border-bottom: 1px solid #444;
+    }
+
+    .folder-selector button {
+      width: 100%;
+      padding: 10px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+
+    .folder-selector button:hover {
+      background: var(--accent-hover);
+    }
+
+    .module-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 8px;
+    }
+
+    .module-section {
+      margin-bottom: 8px;
+    }
+
+    .module-header {
+      padding: 10px 12px;
+      background: var(--bg-hover);
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+
+    .module-header:hover {
+      background: #4a4a4a;
+    }
+
+    .module-header .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    .module-header .count {
+      margin-left: auto;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    .module-items {
+      padding-left: 12px;
+      margin-top: 4px;
+      display: none;
+    }
+
+    .module-items.expanded {
+      display: block;
+    }
+
+    .video-item {
+      padding: 8px 12px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      border-radius: 4px;
+      transition: all 0.2s;
+      border-left: 3px solid transparent;
+    }
+
+    .video-item:hover {
+      background: var(--bg-hover);
+      color: var(--text-primary);
+    }
+
+    .video-item.active {
+      background: rgba(76, 175, 80, 0.2);
+      color: white;
+      border-left-color: var(--accent);
+    }
+
+    .video-item .video-name {
+      font-weight: 500;
+      margin-bottom: 2px;
+    }
+
+    .video-item .video-file {
+      font-size: 11px;
+      color: var(--text-secondary);
+      opacity: 0.7;
+    }
+
+    .video-item .video-keypoints {
+      margin-top: 6px;
+      padding-top: 6px;
+      border-top: 1px solid #444;
+      display: none;
+    }
+
+    .video-item.active .video-keypoints {
+      display: block;
+    }
+
+    .keypoint-link {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: var(--accent);
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .keypoint-link:hover {
+      color: var(--accent-hover);
+    }
+
+    .keypoint-link::before {
+      content: '📌 ';
+    }
+
+    /* Main Content */
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+    }
+
+    /* Video Container */
+    .video-container {
+      flex: 1;
+      position: relative;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .video-wrapper {
+      position: relative;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    #video-player {
+      max-width: 100%;
+      max-height: calc(100vh - 380px);
+      display: block;
+    }
+
+    #annotation-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    #annotation-canvas.drawing {
+      pointer-events: auto;
+      cursor: crosshair;
+    }
+
+    .no-video {
+      text-align: center;
+      color: var(--text-secondary);
+    }
+
+    .no-video h2 {
+      font-size: 24px;
+      margin-bottom: 16px;
+      color: var(--accent);
+    }
+
+    .no-video p {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    /* Teaching Notes Panel */
+    .teaching-notes-container {
+      background: var(--bg-panel);
+      border-top: 1px solid #444;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .teaching-notes-container.expanded {
+      max-height: 250px;
+      overflow-y: auto;
+    }
+
+    .teaching-notes-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      background: var(--bg-hover);
+      cursor: pointer;
+    }
+
+    .teaching-notes-header h3 {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .teaching-notes-header .toggle-icon {
+      transition: transform 0.3s;
+    }
+
+    .teaching-notes-container.expanded .toggle-icon {
+      transform: rotate(180deg);
+    }
+
+    .reveal-btn {
+      padding: 8px 16px;
+      background: linear-gradient(135deg, #FF6B6B, #FF8E53);
+      color: white;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 13px;
+      font-weight: 500;
+      transition: all 0.3s;
+      box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+    }
+
+    .reveal-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+    }
+
+    .reveal-btn.revealed {
+      background: linear-gradient(135deg, #4CAF50, #66BB6A);
+      box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+    }
+
+    .teaching-notes-content {
+      padding: 16px;
+      display: none;
+    }
+
+    .teaching-notes-content.visible {
+      display: block;
+    }
+
+    .teaching-notes-content.blur {
+      filter: blur(8px);
+      user-select: none;
+    }
+
+    .note-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid #3d3d3d;
+    }
+
+    .note-item:last-child {
+      border-bottom: none;
+    }
+
+    .note-time {
+      background: var(--accent);
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: monospace;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+
+    .note-time:hover {
+      background: var(--accent-hover);
+    }
+
+    .note-text {
+      flex: 1;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .note-tag {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 10px;
+      background: #444;
+      color: var(--text-secondary);
+    }
+
+    .note-tag.hook { background: #FF6B6B33; color: #FF6B6B; }
+    .note-tag.structure { background: #4CAF5033; color: #4CAF50; }
+    .note-tag.emotion { background: #9C27B033; color: #CE93D8; }
+    .note-tag.technique { background: #2196F333; color: #64B5F6; }
+
+    .no-notes {
+      text-align: center;
+      color: var(--text-secondary);
+      padding: 20px;
+      font-style: italic;
+    }
+
+    /* Timeline */
+    .timeline-container {
+      background: var(--bg-panel);
+      padding: 12px 16px;
+      border-top: 1px solid #444;
+    }
+
+    .time-display {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: var(--text-secondary);
+      margin-bottom: 8px;
+    }
+
+    .timeline {
+      height: 40px;
+      background: #1a1a1a;
+      border-radius: 4px;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .timeline-progress {
+      height: 100%;
+      background: var(--accent);
+      border-radius: 4px;
+      width: 0%;
+      transition: width 0.1s;
+    }
+
+    .timeline-markers {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    .marker {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: #FF5722;
+      cursor: pointer;
+      transition: width 0.2s;
+    }
+
+    .marker:hover {
+      width: 5px;
+    }
+
+    .marker.preset {
+      background: #FFD700;
+    }
+
+    .marker-label {
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #333;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.2s;
+      pointer-events: none;
+    }
+
+    .marker:hover .marker-label {
+      opacity: 1;
+    }
+
+    /* Controls */
+    .controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: var(--bg-panel);
+      border-top: 1px solid #444;
+    }
+
+    .control-btn {
+      width: 40px;
+      height: 40px;
+      background: var(--bg-hover);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    .control-btn:hover {
+      background: var(--accent);
+    }
+
+    .control-btn.active {
+      background: var(--accent);
+    }
+
+    .speed-control {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-left: auto;
+    }
+
+    .speed-control select {
+      background: var(--bg-hover);
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* Right Panel - Tools */
+    .tools-panel {
+      width: 200px;
+      background: var(--bg-panel);
+      border-left: 1px solid #444;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex-shrink: 0;
+      overflow-y: auto;
+    }
+
+    .tools-section h3 {
+      font-size: 12px;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+    }
+
+    .tool-btn {
+      padding: 12px 8px;
+      background: var(--bg-hover);
+      border: 2px solid transparent;
+      border-radius: 8px;
+      color: white;
+      cursor: pointer;
+      font-size: 12px;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .tool-btn:hover {
+      background: #4a4a4a;
+    }
+
+    .tool-btn.active {
+      border-color: var(--accent);
+      background: rgba(76, 175, 80, 0.2);
+    }
+
+    .tool-btn .icon {
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .color-picker {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .color-swatch {
+      width: 28px;
+      height: 28px;
+      border-radius: 4px;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: transform 0.2s;
+    }
+
+    .color-swatch:hover {
+      transform: scale(1.1);
+    }
+
+    .color-swatch.active {
+      border-color: white;
+    }
+
+    .stroke-sizes {
+      display: flex;
+      gap: 8px;
+    }
+
+    .stroke-btn {
+      flex: 1;
+      padding: 8px;
+      background: var(--bg-hover);
+      border: 2px solid transparent;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .stroke-btn.active {
+      border-color: var(--accent);
+    }
+
+    .action-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: auto;
+    }
+
+    .action-btn {
+      padding: 10px;
+      background: var(--bg-hover);
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      font-size: 13px;
+      transition: background 0.2s;
+    }
+
+    .action-btn:hover {
+      background: #4a4a4a;
+    }
+
+    .action-btn.danger:hover {
+      background: #c62828;
+    }
+
+    /* Keyboard shortcuts hint */
+    .shortcuts-hint {
+      font-size: 11px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .shortcuts-hint kbd {
+      background: var(--bg-hover);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
+    /* Fullscreen mode */
+    .fullscreen .sidebar,
+    .fullscreen .tools-panel {
+      display: none;
+    }
+
+    .fullscreen .controls,
+    .fullscreen .timeline-container,
+    .fullscreen .teaching-notes-container {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .fullscreen .timeline-container {
+      bottom: 64px;
+    }
+
+    .fullscreen .teaching-notes-container {
+      bottom: 116px;
+    }
+
+    .fullscreen:hover .controls,
+    .fullscreen:hover .timeline-container,
+    .fullscreen:hover .teaching-notes-container {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container" id="app">
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <h1>骨肉魂 Bootcamp</h1>
+        <p>培训助手 v1.1</p>
+      </div>
+
+      <div class="folder-selector">
+        <button onclick="selectFolder()">📁 选择素材文件夹</button>
+      </div>
+
+      <div class="module-list" id="module-list">
+        <div class="no-video" style="padding: 20px; text-align: center;">
+          <p style="color: var(--text-secondary);">点击上方按钮选择<br/>「素材类型与创作法体系tk」<br/>文件夹</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="video-container" id="video-container">
+        <div class="no-video" id="no-video">
+          <h2>🎬 骨肉魂培训助手</h2>
+          <p>精确到0.1秒的视频案例分析工具</p>
+          <p>支持画面标注、时间标记、教学要点</p>
+          <br>
+          <p style="color: #666;">← 从左侧选择素材文件夹开始</p>
+        </div>
+        <div class="video-wrapper" id="video-wrapper" style="display: none;">
+          <video id="video-player"></video>
+          <canvas id="annotation-canvas"></canvas>
+        </div>
+      </div>
+
+      <!-- Teaching Notes Panel -->
+      <div class="teaching-notes-container expanded" id="teaching-notes-container">
+        <div class="teaching-notes-header" onclick="toggleNotesPanel()">
+          <h3>
+            <span class="toggle-icon">▼</span>
+            📋 本视频教学要点
+          </h3>
+          <button class="reveal-btn" id="reveal-btn" onclick="event.stopPropagation(); toggleReveal()">
+            🔒 点击揭晓答案
+          </button>
+        </div>
+        <div class="teaching-notes-content visible" id="teaching-notes-content">
+          <div class="no-notes">暂无教学要点配置<br><small>可在 videos_teaching_notes.json 中添加</small></div>
+        </div>
+      </div>
+
+      <div class="timeline-container">
+        <div class="time-display">
+          <span id="current-time">00:00.0</span>
+          <span id="video-title">未选择视频</span>
+          <span id="duration">00:00.0</span>
+        </div>
+        <div class="timeline" id="timeline" onclick="seekVideo(event)">
+          <div class="timeline-progress" id="timeline-progress"></div>
+          <div class="timeline-markers" id="timeline-markers"></div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="control-btn" onclick="skipTime(-5)" title="后退5秒 (J)">⏪</button>
+        <button class="control-btn" onclick="skipTime(-0.1)" title="后退0.1秒 (Shift+←)">◀</button>
+        <button class="control-btn" onclick="frameBack()" title="上一帧 (←)">⏮</button>
+        <button class="control-btn" onclick="togglePlay()" id="play-btn" title="播放/暂停 (空格)">▶</button>
+        <button class="control-btn" onclick="frameForward()" title="下一帧 (→)">⏭</button>
+        <button class="control-btn" onclick="skipTime(0.1)" title="前进0.1秒 (Shift+→)">▶</button>
+        <button class="control-btn" onclick="skipTime(5)" title="前进5秒 (L)">⏩</button>
+
+        <button class="control-btn" onclick="addMarker()" title="添加标记 (M)">📍</button>
+
+        <div class="speed-control">
+          <span style="font-size: 12px; color: var(--text-secondary);">速度:</span>
+          <select id="speed-select" onchange="changeSpeed(this.value)">
+            <option value="0.25">0.25x</option>
+            <option value="0.5">0.5x</option>
+            <option value="1" selected>1x</option>
+            <option value="1.5">1.5x</option>
+            <option value="2">2x</option>
+          </select>
+        </div>
+
+        <button class="control-btn" onclick="toggleFullscreen()" title="全屏 (F11)">⛶</button>
+      </div>
+    </div>
+
+    <!-- Right Panel - Tools -->
+    <div class="tools-panel">
+      <div class="tools-section">
+        <h3>标注工具</h3>
+        <div class="tool-grid">
+          <button class="tool-btn" onclick="setTool('pen')" id="tool-pen" title="画笔 (P)">
+            <div class="icon">✏️</div>
+            <div>画笔</div>
+          </button>
+          <button class="tool-btn" onclick="setTool('arrow')" id="tool-arrow" title="箭头 (A)">
+            <div class="icon">➡️</div>
+            <div>箭头</div>
+          </button>
+          <button class="tool-btn" onclick="setTool('circle')" id="tool-circle" title="圆形 (O)">
+            <div class="icon">⭕</div>
+            <div>圆形</div>
+          </button>
+          <button class="tool-btn" onclick="setTool('rect')" id="tool-rect" title="矩形 (R)">
+            <div class="icon">⬜</div>
+            <div>矩形</div>
+          </button>
+          <button class="tool-btn" onclick="setTool('text')" id="tool-text" title="文字 (T)">
+            <div class="icon">T</div>
+            <div>文字</div>
+          </button>
+          <button class="tool-btn" onclick="setTool('eraser')" id="tool-eraser" title="橡皮 (E)">
+            <div class="icon">🧹</div>
+            <div>橡皮</div>
+          </button>
+        </div>
+      </div>
+
+      <div class="tools-section">
+        <h3>颜色</h3>
+        <div class="color-picker">
+          <div class="color-swatch active" style="background: #FF0000;" onclick="setColor('#FF0000')"></div>
+          <div class="color-swatch" style="background: #FFFF00;" onclick="setColor('#FFFF00')"></div>
+          <div class="color-swatch" style="background: #00FF00;" onclick="setColor('#00FF00')"></div>
+          <div class="color-swatch" style="background: #00FFFF;" onclick="setColor('#00FFFF')"></div>
+          <div class="color-swatch" style="background: #0000FF;" onclick="setColor('#0000FF')"></div>
+          <div class="color-swatch" style="background: #FFFFFF;" onclick="setColor('#FFFFFF')"></div>
+        </div>
+      </div>
+
+      <div class="tools-section">
+        <h3>线条粗细</h3>
+        <div class="stroke-sizes">
+          <button class="stroke-btn" onclick="setStroke(2)">细</button>
+          <button class="stroke-btn active" onclick="setStroke(4)">中</button>
+          <button class="stroke-btn" onclick="setStroke(8)">粗</button>
+        </div>
+      </div>
+
+      <div class="tools-section">
+        <h3>快捷键</h3>
+        <div class="shortcuts-hint">
+          <kbd>空格</kbd> 播放/暂停<br>
+          <kbd>←</kbd><kbd>→</kbd> 逐帧<br>
+          <kbd>J</kbd><kbd>L</kbd> ±5秒<br>
+          <kbd>M</kbd> 添加标记<br>
+          <kbd>D</kbd> 开始/停止标注<br>
+          <kbd>H</kbd> 显示/隐藏要点
+        </div>
+      </div>
+
+      <div class="action-btns">
+        <button class="action-btn" onclick="toggleDrawing()" id="draw-toggle">🖊️ 开始标注 (D)</button>
+        <button class="action-btn" onclick="undoAnnotation()">↩️ 撤销 (Ctrl+Z)</button>
+        <button class="action-btn danger" onclick="clearAnnotations()">🗑️ 清除全部</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // State
+    let video = document.getElementById('video-player');
+    let canvas = document.getElementById('annotation-canvas');
+    let ctx = canvas.getContext('2d');
+    let isDrawing = false;
+    let drawingEnabled = false;
+    let currentTool = 'pen';
+    let currentColor = '#FF0000';
+    let strokeWidth = 4;
+    let annotations = [];
+    let currentPath = [];
+    let startPos = null;
+    let markers = [];
+    let videoFiles = [];
+    let folderHandle = null;
+    let notesRevealed = false;
+    let notesPanelExpanded = true;
+    let currentVideoNotes = null;
+
+    // Teaching notes configuration - can be loaded from external JSON
+    let teachingNotes = {};
+
+    // Module definitions
+    const modules = [
+      { id: '01', name: 'Module 01: 开场与认知重构', color: '#E3F2FD', folders: ['基础素材类型A', '基础素材类型B'] },
+      { id: '02', name: 'Module 02: 骨架系统', color: '#FFF3E0', folders: ['第1类', '第2类', '第3类', '第4类', '第5类', '第7类', '第11类'] },
+      { id: '03', name: 'Module 03: 灵魂系统', color: '#F3E5F5', folders: ['第3类', '第12类', '第13类', '第14类', '第18类', '第23类'] },
+      { id: '04', name: 'Module 04: 肉体系统', color: '#E8F5E9', folders: ['第6类', '第19类', '第22类', '素材爆款'] },
+      { id: '05', name: 'Module 05: AI Pipeline', color: '#FFEBEE', folders: ['第16类', '第24类'] },
+      { id: '06', name: 'Module 06: 综合演练', color: '#FFF8E1', folders: ['第8类', '第9类', '第10类', '第15类', '第17类', '第20类', '第21类'] },
+      { id: '07', name: 'Module 07: 毕业项目', color: '#ECEFF1', folders: [] }
+    ];
+
+    // Try to load teaching notes from JSON file
+    async function loadTeachingNotes() {
+      try {
+        const response = await fetch('videos_teaching_notes.json');
+        if (response.ok) {
+          teachingNotes = await response.json();
+          console.log('Teaching notes loaded:', Object.keys(teachingNotes).length, 'videos configured');
+        }
+      } catch (e) {
+        console.log('No teaching notes file found, using empty config');
+      }
+    }
+
+    loadTeachingNotes();
+
+    // Select folder
+    async function selectFolder() {
+      try {
+        folderHandle = await window.showDirectoryPicker();
+        await scanFolder(folderHandle);
+      } catch (err) {
+        if (err.name !== 'AbortError') {
+          console.error('Error selecting folder:', err);
+          alert('无法选择文件夹。请确保使用支持File System API的浏览器（Chrome/Edge）。');
+        }
+      }
+    }
+
+    // Scan folder for videos
+    async function scanFolder(handle, path = '') {
+      videoFiles = [];
+      const categorizedVideos = {};
+
+      for await (const entry of handle.values()) {
+        if (entry.kind === 'directory') {
+          const subPath = path ? `${path}/${entry.name}` : entry.name;
+          const subHandle = await handle.getDirectoryHandle(entry.name);
+
+          for await (const file of subHandle.values()) {
+            if (file.kind === 'file' && file.name.endsWith('.mp4') && !file.name.startsWith('.')) {
+              const videoKey = `${entry.name}/${file.name}`;
+              const notes = teachingNotes[videoKey] || teachingNotes[file.name] || null;
+
+              const videoInfo = {
+                name: notes?.displayName || file.name.replace('.mp4', ''),
+                fileName: file.name,
+                folder: entry.name,
+                path: subPath,
+                handle: file,
+                notes: notes
+              };
+              videoFiles.push(videoInfo);
+
+              // Categorize by module
+              for (const mod of modules) {
+                if (mod.folders.some(f => entry.name.includes(f))) {
+                  if (!categorizedVideos[mod.id]) {
+                    categorizedVideos[mod.id] = [];
+                  }
+                  categorizedVideos[mod.id].push(videoInfo);
+                  break;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      renderModuleList(categorizedVideos);
+    }
+
+    // Render module list
+    function renderModuleList(categorizedVideos) {
+      const container = document.getElementById('module-list');
+      container.innerHTML = '';
+
+      modules.forEach(mod => {
+        const videos = categorizedVideos[mod.id] || [];
+        if (videos.length === 0) return;
+
+        const section = document.createElement('div');
+        section.className = 'module-section';
+
+        const header = document.createElement('div');
+        header.className = 'module-header';
+        header.innerHTML = `
+          <span class="dot" style="background: ${mod.color}"></span>
+          <span>${mod.name}</span>
+          <span class="count">${videos.length}</span>
+        `;
+        header.onclick = () => {
+          const items = section.querySelector('.module-items');
+          items.classList.toggle('expanded');
+        };
+
+        const items = document.createElement('div');
+        items.className = 'module-items';
+
+        videos.forEach(v => {
+          const item = document.createElement('div');
+          item.className = 'video-item';
+          item.dataset.videoKey = `${v.folder}/${v.fileName}`;
+
+          let keypointsHtml = '';
+          if (v.notes && v.notes.keypoints && v.notes.keypoints.length > 0) {
+            keypointsHtml = `<div class="video-keypoints">
+              ${v.notes.keypoints.map(kp =>
+                `<span class="keypoint-link" onclick="event.stopPropagation(); jumpToTime(${kp.time})">${kp.time}s - ${kp.label}</span>`
+              ).join('')}
+            </div>`;
+          }
+
+          item.innerHTML = `
+            <div class="video-name">${v.name}</div>
+            <div class="video-file">${v.folder}/${v.fileName}</div>
+            ${keypointsHtml}
+          `;
+          item.onclick = () => loadVideo(v, item);
+          items.appendChild(item);
+        });
+
+        section.appendChild(header);
+        section.appendChild(items);
+        container.appendChild(section);
+      });
+
+      // Show uncategorized
+      const uncategorized = videoFiles.filter(v => {
+        return !modules.some(m => m.folders.some(f => v.folder.includes(f)));
+      });
+
+      if (uncategorized.length > 0) {
+        const section = document.createElement('div');
+        section.className = 'module-section';
+
+        const header = document.createElement('div');
+        header.className = 'module-header';
+        header.innerHTML = `
+          <span class="dot" style="background: #888"></span>
+          <span>其他素材</span>
+          <span class="count">${uncategorized.length}</span>
+        `;
+        header.onclick = () => {
+          const items = section.querySelector('.module-items');
+          items.classList.toggle('expanded');
+        };
+
+        const items = document.createElement('div');
+        items.className = 'module-items';
+
+        uncategorized.forEach(v => {
+          const item = document.createElement('div');
+          item.className = 'video-item';
+          item.innerHTML = `
+            <div class="video-name">${v.name}</div>
+            <div class="video-file">${v.folder}/${v.fileName}</div>
+          `;
+          item.onclick = () => loadVideo(v, item);
+          items.appendChild(item);
+        });
+
+        section.appendChild(header);
+        section.appendChild(items);
+        container.appendChild(section);
+      }
+    }
+
+    // Load video
+    async function loadVideo(videoInfo, element) {
+      try {
+        const file = await videoInfo.handle.getFile();
+        const url = URL.createObjectURL(file);
+
+        video.src = url;
+        video.load();
+
+        document.getElementById('no-video').style.display = 'none';
+        document.getElementById('video-wrapper').style.display = 'block';
+        document.getElementById('video-title').textContent = videoInfo.name;
+
+        // Update active state
+        document.querySelectorAll('.video-item').forEach(el => el.classList.remove('active'));
+        element.classList.add('active');
+
+        // Reset annotations and markers
+        clearAnnotations();
+        markers = [];
+
+        // Reset notes reveal state
+        notesRevealed = false;
+        updateRevealButton();
+
+        // Load teaching notes for this video
+        currentVideoNotes = videoInfo.notes;
+        renderTeachingNotes();
+
+        video.onloadedmetadata = () => {
+          canvas.width = video.videoWidth;
+          canvas.height = video.videoHeight;
+          canvas.style.width = video.offsetWidth + 'px';
+          canvas.style.height = video.offsetHeight + 'px';
+          updateTimeDisplay();
+
+          // Add preset markers from notes
+          if (currentVideoNotes && currentVideoNotes.keypoints) {
+            currentVideoNotes.keypoints.forEach(kp => {
+              markers.push({
+                time: kp.time,
+                label: kp.label,
+                tag: kp.tag || '',
+                preset: true
+              });
+            });
+          }
+          renderMarkers();
+        };
+
+      } catch (err) {
+        console.error('Error loading video:', err);
+        alert('无法加载视频文件');
+      }
+    }
+
+    // Teaching notes functions
+    function toggleNotesPanel() {
+      notesPanelExpanded = !notesPanelExpanded;
+      document.getElementById('teaching-notes-container').classList.toggle('expanded', notesPanelExpanded);
+    }
+
+    function toggleReveal() {
+      notesRevealed = !notesRevealed;
+      updateRevealButton();
+      document.getElementById('teaching-notes-content').classList.toggle('blur', !notesRevealed);
+    }
+
+    function updateRevealButton() {
+      const btn = document.getElementById('reveal-btn');
+      if (notesRevealed) {
+        btn.textContent = '🔓 已揭晓';
+        btn.classList.add('revealed');
+      } else {
+        btn.textContent = '🔒 点击揭晓答案';
+        btn.classList.remove('revealed');
+      }
+    }
+
+    function renderTeachingNotes() {
+      const container = document.getElementById('teaching-notes-content');
+
+      if (!currentVideoNotes || !currentVideoNotes.keypoints || currentVideoNotes.keypoints.length === 0) {
+        container.innerHTML = '<div class="no-notes">暂无教学要点配置<br><small>可在 videos_teaching_notes.json 中添加</small></div>';
+        container.classList.add('visible');
+        container.classList.remove('blur');
+        return;
+      }
+
+      const tagColors = {
+        'hook': 'hook',
+        '开场': 'hook',
+        'structure': 'structure',
+        '骨架': 'structure',
+        '结构': 'structure',
+        'emotion': 'emotion',
+        '灵魂': 'emotion',
+        '情感': 'emotion',
+        'technique': 'technique',
+        '技巧': 'technique',
+        '肉体': 'technique'
+      };
+
+      let html = '';
+      currentVideoNotes.keypoints.forEach(kp => {
+        const tagClass = tagColors[kp.tag] || '';
+        const tagHtml = kp.tag ? `<span class="note-tag ${tagClass}">${kp.tag}</span>` : '';
+
+        html += `
+          <div class="note-item">
+            <span class="note-time" onclick="jumpToTime(${kp.time})">${formatTimeShort(kp.time)}</span>
+            <span class="note-text">${kp.label}</span>
+            ${tagHtml}
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+      container.classList.add('visible');
+      container.classList.toggle('blur', !notesRevealed);
+
+      // Expand the notes panel
+      document.getElementById('teaching-notes-container').classList.add('expanded');
+      notesPanelExpanded = true;
+    }
+
+    function jumpToTime(seconds) {
+      video.currentTime = seconds;
+      video.pause();
+    }
+
+    function formatTimeShort(seconds) {
+      const mins = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60);
+      return `${mins}:${secs.toString().padStart(2, '0')}`;
+    }
+
+    // Video controls
+    function togglePlay() {
+      if (video.paused) {
+        video.play();
+        document.getElementById('play-btn').textContent = '⏸';
+      } else {
+        video.pause();
+        document.getElementById('play-btn').textContent = '▶';
+      }
+    }
+
+    function frameForward() {
+      video.pause();
+      video.currentTime = Math.min(video.duration, video.currentTime + 1/30);
+    }
+
+    function frameBack() {
+      video.pause();
+      video.currentTime = Math.max(0, video.currentTime - 1/30);
+    }
+
+    function skipTime(seconds) {
+      video.currentTime = Math.max(0, Math.min(video.duration, video.currentTime + seconds));
+    }
+
+    function changeSpeed(speed) {
+      video.playbackRate = parseFloat(speed);
+    }
+
+    function seekVideo(e) {
+      const rect = e.target.getBoundingClientRect();
+      const percent = (e.clientX - rect.left) / rect.width;
+      video.currentTime = percent * video.duration;
+    }
+
+    function formatTime(seconds) {
+      if (isNaN(seconds)) return '00:00.0';
+      const mins = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60);
+      const ms = Math.floor((seconds % 1) * 10);
+      return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}.${ms}`;
+    }
+
+    function updateTimeDisplay() {
+      document.getElementById('current-time').textContent = formatTime(video.currentTime);
+      document.getElementById('duration').textContent = formatTime(video.duration);
+      document.getElementById('timeline-progress').style.width = (video.currentTime / video.duration * 100) + '%';
+    }
+
+    video.addEventListener('timeupdate', updateTimeDisplay);
+    video.addEventListener('play', () => document.getElementById('play-btn').textContent = '⏸');
+    video.addEventListener('pause', () => document.getElementById('play-btn').textContent = '▶');
+
+    // Markers
+    function addMarker() {
+      if (!video.src) return;
+      markers.push({
+        time: video.currentTime,
+        label: `标记 ${markers.filter(m => !m.preset).length + 1}`,
+        preset: false
+      });
+      renderMarkers();
+    }
+
+    function renderMarkers() {
+      const container = document.getElementById('timeline-markers');
+      container.innerHTML = '';
+
+      markers.forEach((m, i) => {
+        const marker = document.createElement('div');
+        marker.className = 'marker' + (m.preset ? ' preset' : '');
+        marker.style.left = (m.time / video.duration * 100) + '%';
+        marker.innerHTML = `<span class="marker-label">${m.label} (${formatTimeShort(m.time)})</span>`;
+        marker.onclick = (e) => {
+          e.stopPropagation();
+          video.currentTime = m.time;
+        };
+        container.appendChild(marker);
+      });
+    }
+
+    // Annotation tools
+    function setTool(tool) {
+      currentTool = tool;
+      document.querySelectorAll('.tool-btn').forEach(btn => btn.classList.remove('active'));
+      document.getElementById('tool-' + tool)?.classList.add('active');
+    }
+
+    function setColor(color) {
+      currentColor = color;
+      document.querySelectorAll('.color-swatch').forEach(sw => sw.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    function setStroke(width) {
+      strokeWidth = width;
+      document.querySelectorAll('.stroke-btn').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    function toggleDrawing() {
+      drawingEnabled = !drawingEnabled;
+      canvas.classList.toggle('drawing', drawingEnabled);
+      document.getElementById('draw-toggle').textContent = drawingEnabled ? '✅ 标注中 (D)' : '🖊️ 开始标注 (D)';
+
+      if (drawingEnabled) {
+        video.pause();
+      }
+    }
+
+    // Canvas drawing
+    canvas.addEventListener('mousedown', (e) => {
+      if (!drawingEnabled) return;
+      isDrawing = true;
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      startPos = {
+        x: (e.clientX - rect.left) * scaleX,
+        y: (e.clientY - rect.top) * scaleY
+      };
+      currentPath = [startPos];
+    });
+
+    canvas.addEventListener('mousemove', (e) => {
+      if (!isDrawing || !drawingEnabled) return;
+
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      const pos = {
+        x: (e.clientX - rect.left) * scaleX,
+        y: (e.clientY - rect.top) * scaleY
+      };
+
+      if (currentTool === 'pen' || currentTool === 'eraser') {
+        currentPath.push(pos);
+        redrawCanvas();
+        drawCurrentPath();
+      } else {
+        redrawCanvas();
+        drawShape(startPos, pos);
+      }
+    });
+
+    canvas.addEventListener('mouseup', (e) => {
+      if (!isDrawing || !drawingEnabled) return;
+      isDrawing = false;
+
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+      const endPos = {
+        x: (e.clientX - rect.left) * scaleX,
+        y: (e.clientY - rect.top) * scaleY
+      };
+
+      // Save annotation
+      annotations.push({
+        tool: currentTool,
+        color: currentTool === 'eraser' ? '#000000' : currentColor,
+        stroke: currentTool === 'eraser' ? strokeWidth * 3 : strokeWidth,
+        path: currentTool === 'pen' || currentTool === 'eraser' ? [...currentPath] : null,
+        start: startPos,
+        end: endPos
+      });
+
+      currentPath = [];
+      startPos = null;
+      redrawCanvas();
+    });
+
+    function drawCurrentPath() {
+      if (currentPath.length < 2) return;
+
+      ctx.strokeStyle = currentTool === 'eraser' ? '#000000' : currentColor;
+      ctx.lineWidth = currentTool === 'eraser' ? strokeWidth * 3 : strokeWidth;
+      ctx.lineCap = 'round';
+      ctx.lineJoin = 'round';
+
+      if (currentTool === 'eraser') {
+        ctx.globalCompositeOperation = 'destination-out';
+      }
+
+      ctx.beginPath();
+      ctx.moveTo(currentPath[0].x, currentPath[0].y);
+      for (let i = 1; i < currentPath.length; i++) {
+        ctx.lineTo(currentPath[i].x, currentPath[i].y);
+      }
+      ctx.stroke();
+
+      ctx.globalCompositeOperation = 'source-over';
+    }
+
+    function drawShape(start, end) {
+      ctx.strokeStyle = currentColor;
+      ctx.lineWidth = strokeWidth;
+      ctx.lineCap = 'round';
+
+      if (currentTool === 'arrow') {
+        // Draw line
+        ctx.beginPath();
+        ctx.moveTo(start.x, start.y);
+        ctx.lineTo(end.x, end.y);
+        ctx.stroke();
+
+        // Draw arrowhead
+        const angle = Math.atan2(end.y - start.y, end.x - start.x);
+        const headLen = 20;
+        ctx.beginPath();
+        ctx.moveTo(end.x, end.y);
+        ctx.lineTo(end.x - headLen * Math.cos(angle - Math.PI / 6), end.y - headLen * Math.sin(angle - Math.PI / 6));
+        ctx.moveTo(end.x, end.y);
+        ctx.lineTo(end.x - headLen * Math.cos(angle + Math.PI / 6), end.y - headLen * Math.sin(angle + Math.PI / 6));
+        ctx.stroke();
+      } else if (currentTool === 'circle') {
+        const rx = Math.abs(end.x - start.x) / 2;
+        const ry = Math.abs(end.y - start.y) / 2;
+        const cx = (start.x + end.x) / 2;
+        const cy = (start.y + end.y) / 2;
+        ctx.beginPath();
+        ctx.ellipse(cx, cy, rx, ry, 0, 0, 2 * Math.PI);
+        ctx.stroke();
+      } else if (currentTool === 'rect') {
+        ctx.strokeRect(start.x, start.y, end.x - start.x, end.y - start.y);
+      }
+    }
+
+    function redrawCanvas() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      annotations.forEach(ann => {
+        ctx.strokeStyle = ann.color;
+        ctx.lineWidth = ann.stroke;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+
+        if (ann.tool === 'eraser') {
+          ctx.globalCompositeOperation = 'destination-out';
+        }
+
+        if (ann.tool === 'pen' || ann.tool === 'eraser') {
+          if (ann.path && ann.path.length > 1) {
+            ctx.beginPath();
+            ctx.moveTo(ann.path[0].x, ann.path[0].y);
+            for (let i = 1; i < ann.path.length; i++) {
+              ctx.lineTo(ann.path[i].x, ann.path[i].y);
+            }
+            ctx.stroke();
+          }
+        } else {
+          drawShapeFromAnnotation(ann);
+        }
+
+        ctx.globalCompositeOperation = 'source-over';
+      });
+    }
+
+    function drawShapeFromAnnotation(ann) {
+      ctx.strokeStyle = ann.color;
+      ctx.lineWidth = ann.stroke;
+
+      if (ann.tool === 'arrow') {
+        ctx.beginPath();
+        ctx.moveTo(ann.start.x, ann.start.y);
+        ctx.lineTo(ann.end.x, ann.end.y);
+        ctx.stroke();
+
+        const angle = Math.atan2(ann.end.y - ann.start.y, ann.end.x - ann.start.x);
+        const headLen = 20;
+        ctx.beginPath();
+        ctx.moveTo(ann.end.x, ann.end.y);
+        ctx.lineTo(ann.end.x - headLen * Math.cos(angle - Math.PI / 6), ann.end.y - headLen * Math.sin(angle - Math.PI / 6));
+        ctx.moveTo(ann.end.x, ann.end.y);
+        ctx.lineTo(ann.end.x - headLen * Math.cos(angle + Math.PI / 6), ann.end.y - headLen * Math.sin(angle + Math.PI / 6));
+        ctx.stroke();
+      } else if (ann.tool === 'circle') {
+        const rx = Math.abs(ann.end.x - ann.start.x) / 2;
+        const ry = Math.abs(ann.end.y - ann.start.y) / 2;
+        const cx = (ann.start.x + ann.end.x) / 2;
+        const cy = (ann.start.y + ann.end.y) / 2;
+        ctx.beginPath();
+        ctx.ellipse(cx, cy, rx, ry, 0, 0, 2 * Math.PI);
+        ctx.stroke();
+      } else if (ann.tool === 'rect') {
+        ctx.strokeRect(ann.start.x, ann.start.y, ann.end.x - ann.start.x, ann.end.y - ann.start.y);
+      }
+    }
+
+    function undoAnnotation() {
+      annotations.pop();
+      redrawCanvas();
+    }
+
+    function clearAnnotations() {
+      annotations = [];
+      redrawCanvas();
+    }
+
+    // Fullscreen
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.getElementById('app').requestFullscreen();
+        document.getElementById('app').classList.add('fullscreen');
+      } else {
+        document.exitFullscreen();
+        document.getElementById('app').classList.remove('fullscreen');
+      }
+    }
+
+    // Keyboard shortcuts
+    document.addEventListener('keydown', (e) => {
+      // Ignore if typing in input
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+
+      switch(e.key) {
+        case ' ':
+          e.preventDefault();
+          togglePlay();
+          break;
+        case 'ArrowLeft':
+          if (e.shiftKey) {
+            skipTime(-0.1);
+          } else if (e.ctrlKey) {
+            skipTime(-1);
+          } else {
+            frameBack();
+          }
+          break;
+        case 'ArrowRight':
+          if (e.shiftKey) {
+            skipTime(0.1);
+          } else if (e.ctrlKey) {
+            skipTime(1);
+          } else {
+            frameForward();
+          }
+          break;
+        case 'j':
+        case 'J':
+          skipTime(-5);
+          break;
+        case 'l':
+        case 'L':
+          skipTime(5);
+          break;
+        case 'm':
+        case 'M':
+          addMarker();
+          break;
+        case 'd':
+        case 'D':
+          toggleDrawing();
+          break;
+        case 'h':
+        case 'H':
+          toggleReveal();
+          break;
+        case 'p':
+        case 'P':
+          setTool('pen');
+          break;
+        case 'a':
+        case 'A':
+          setTool('arrow');
+          break;
+        case 'o':
+        case 'O':
+          setTool('circle');
+          break;
+        case 'r':
+        case 'R':
+          setTool('rect');
+          break;
+        case 't':
+        case 'T':
+          setTool('text');
+          break;
+        case 'e':
+        case 'E':
+          setTool('eraser');
+          break;
+        case 'z':
+        case 'Z':
+          if (e.ctrlKey || e.metaKey) {
+            e.preventDefault();
+            undoAnnotation();
+          }
+          break;
+        case 'F11':
+          e.preventDefault();
+          toggleFullscreen();
+          break;
+        case 'Escape':
+          if (drawingEnabled) toggleDrawing();
+          break;
+      }
+    });
+
+    // Resize handler
+    window.addEventListener('resize', () => {
+      if (video.videoWidth) {
+        canvas.style.width = video.offsetWidth + 'px';
+        canvas.style.height = video.offsetHeight + 'px';
+      }
+    });
+
+    // Auto-load video from URL parameter: ?src=/videos/xxx.mp4
+    (function autoLoadFromURL() {
+      const params = new URLSearchParams(window.location.search);
+      const src = params.get('src');
+      if (!src) return;
+
+      video.src = src;
+      video.load();
+
+      document.getElementById('no-video').style.display = 'none';
+      document.getElementById('video-wrapper').style.display = 'block';
+
+      const title = params.get('title') || decodeURIComponent(src.split('/').pop().replace('.mp4', ''));
+      document.getElementById('video-title').textContent = title;
+
+      video.onloadedmetadata = () => {
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        canvas.style.width = video.offsetWidth + 'px';
+        canvas.style.height = video.offsetHeight + 'px';
+        updateTimeDisplay();
+      };
+    })();
+  </script>
+</body>
+</html>

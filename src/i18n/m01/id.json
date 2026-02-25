@@ -1,0 +1,155 @@
+{
+  "slides": {
+    "M01-title": {
+      "section": "Judul Modul",
+      "title": "Module 01",
+      "subtitle": "Pembukaan & Reframing Kognitif",
+      "description": "Hari 1 Pagi | 90 Menit",
+      "notes": "Ini adalah pembukaan paling krusial dari seluruh pelatihan. Jika pembukaan gagal, semua materi selanjutnya akan jauh kurang efektif."
+    },
+    "M01-objectives": {
+      "section": "Judul Modul",
+      "title": "Tujuan Pembelajaran",
+      "studentContent": "\n          <p style=\"margin-bottom: 20px;\">Setelah menyelesaikan modul ini, Anda akan mampu:</p>\n          <ul>\n            <li><strong>Menyadari</strong> keterbatasan \"penilaian berdasarkan perasaan\"</li>\n            <li><strong>Memahami</strong> nilai dari \"Sistem Operasi Konten\"</li>\n            <li><strong>Membangun</strong> gambaran keseluruhan tentang \"Kerangka Tiga Lapis Bone-Meat-Soul\"</li>\n            <li><strong>Mengembangkan</strong> motivasi intrinsik untuk mempelajari kerangka BMS</li>\n          </ul>\n        ",
+      "presenterContent": "\n          <div class=\"tip-box presenter-only\">\n            <strong>💡 Tips Pengajaran:</strong> 4 tujuan ini adalah hasil inti dari modul ini. Semua konten selanjutnya dirancang berdasarkan 4 tujuan ini.\n          </div>\n        ",
+      "notes": "Jalankan tujuan pembelajaran dengan cepat; tidak perlu diuraikan panjang lebar."
+    },
+    "M01-part1-title": {
+      "section": "1️⃣ Pembukaan & Pemanasan",
+      "title": "Part 1",
+      "subtitle": "Pembukaan & Pemanasan",
+      "description": "⏱ 0:00 - 0:10 | 10 Menit",
+      "notes": "Kunci pembukaan adalah membangun rasa antisipasi."
+    },
+    "M01-1-opening": {
+      "section": "1️⃣ Pembukaan & Pemanasan",
+      "title": "Selamat Datang di BMS Bootcamp",
+      "studentContent": "\n          <div class=\"big-quote\" style=\"font-size: 32px;\">\n            \"Video ini bagus\"<br>Apa sebenarnya artinya?\n          </div>\n          <div class=\"highlight-box\" style=\"text-align: center; font-size: 20px;\">\n            Hari ini bukan tentang mengajarkan cara membuat video<br>\n            Melainkan tentang mengajarkan sebuah <strong>\"Sistem Operasi\"</strong> untuk mengevaluasi dan membuat konten video\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"script-box presenter-only\">\n            <div class=\"script-label\">📢 Skrip Presenter</div>\n            <div class=\"script-content\">\n              Halo semuanya, selamat datang di <em>BMS Bootcamp</em>.<br><br>\n              Setiap hari kita menonton video, mengevaluasi video, dan membuat video... tapi apa sebenarnya arti \"video ini bagus\"?<br><br>\n              Hari ini bukan tentang mengajarkan cara membuat video. Melainkan tentang mengajarkan sebuah <em>\"Sistem Operasi\"</em> untuk mengevaluasi dan membuat konten video.<br><br>\n              Setelah pelatihan ini, Anda akan bisa berdiskusi tentang konten menggunakan bahasa yang sama, dan bahkan meminta AI membantu menulis naskah.\n            </div>\n          </div>\n        ",
+      "notes": "3 kalimat pembukaan harus ringkas dan berdampak. Berbicaralah dengan tempo sedang agar peserta punya waktu untuk menyerap."
+    },
+    "M01-1-icebreaker": {
+      "section": "1️⃣ Pembukaan & Pemanasan",
+      "title": "Perkenalan Singkat",
+      "studentContent": "\n          <div class=\"interactive-badge\">🤝 Sesi Interaktif</div>\n          <div class=\"highlight-box\" style=\"font-size: 22px;\">\n            <strong>Perkenalan Diri 15 Detik:</strong><br>\n            Nama Anda + lini produk yang Anda tangani\n          </div>\n          <div style=\"margin-top: 40px; text-align: center; color: var(--text-secondary);\">\n            <p style=\"font-size: 20px;\">Sebelum kita mulai, saya ingin bertanya kepada semua:</p>\n            <p style=\"font-size: 28px; color: var(--accent); margin-top: 20px;\"><strong>Bagaimana biasanya Anda menilai apakah sebuah video bagus atau tidak?</strong></p>\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"tip-box presenter-only\">\n            <strong>💡 Tips Presenter:</strong>\n            <ul style=\"margin-top: 8px;\">\n              <li>Jika peserta lebih dari 15 orang, perkenalan bisa per kelompok atau pilih beberapa saja</li>\n              <li>Segmen ini tidak boleh lebih dari 5 menit</li>\n              <li>Kumpulkan 2-3 jawaban untuk pertanyaan icebreaker, cukup bilang \"Bagus, terima kasih\" tanpa mengomentari</li>\n            </ul>\n          </div>\n        ",
+      "notes": "Pertanyaan icebreaker menyiapkan panggung untuk Eksperimen Kertas Kosong. Jawaban samar dari peserta akan mengonfirmasi kesimpulan nanti."
+    },
+    "M01-part2-title": {
+      "section": "2️⃣ Eksperimen Kertas Kosong",
+      "title": "Part 2",
+      "subtitle": "Eksperimen Kertas Kosong",
+      "description": "⏱ 0:10 - 0:45 | 35 Menit",
+      "notes": "Eksperimen Kertas Kosong adalah inti dari modul ini! Jangan lewatkan bagian apa pun."
+    },
+    "M01-2-rules": {
+      "section": "2️⃣ Eksperimen Kertas Kosong",
+      "title": "Aturan Eksperimen",
+      "studentContent": "\n          <div class=\"highlight-box\" style=\"font-size: 22px;\">\n            <strong>Selanjutnya, saya akan memutar sebuah video</strong><br><br>\n            Silakan tuliskan jawaban Anda di kertas:<br><br>\n            <span style=\"font-size: 28px; color: var(--accent);\">\"Mengapa video ini bagus? Atau mengapa tidak bagus?\"</span>\n          </div>\n          <div class=\"info-box\" style=\"margin-top: 24px;\">\n            ⚠️ Silakan berpikir sendiri. Jangan berdiskusi dengan orang di sebelah Anda.\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"action-box presenter-only\">\n            <strong>▶ Aksi Presenter:</strong> Pastikan setiap peserta memiliki kertas kosong dan pulpen\n          </div>\n        ",
+      "notes": "Menekankan \"berpikir sendiri\" sangat penting agar perspektif yang berbeda terlihat nantinya."
+    },
+    "M01-2-video": {
+      "section": "2️⃣ Eksperimen Kertas Kosong",
+      "title": "Tonton Videonya",
+      "studentContent": "<div class=\"video-placeholder\"><div class=\"icon\">🎬</div><div style=\"font-size: 20px; color: white; margin-bottom: 16px;\">Pilih Video untuk Diputar</div><div style=\"display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;\"><a href=\"/video-player.html?src=/videos/95c6ba719e05cfa46ee9439ba16d6a3281e3f50f_1770017078837.mp4&title=Video Kasus A\" target=\"_blank\" style=\"display: inline-block; padding: 14px 28px; background: linear-gradient(135deg, #FF6B35, #FF8F5E); color: white; text-decoration: none; border-radius: 10px; font-size: 18px; font-weight: 600;\">▶ Video A</a><a href=\"/video-player.html?src=/videos/4bad7690df49e58e4b725a98a758690ba251d31f_1770017319924.mp4&title=Video Kasus B\" target=\"_blank\" style=\"display: inline-block; padding: 14px 28px; background: linear-gradient(135deg, #4CAF50, #66BB6A); color: white; text-decoration: none; border-radius: 10px; font-size: 18px; font-weight: 600;\">▶ Video B</a></div><div style=\"color: var(--text-secondary); margin-top: 16px; font-size: 14px;\">Membuka alat analisis video di tab baru</div></div>",
+      "presenterContent": "<div class=\"tip-box presenter-only\"><strong>💡 Tips Pemilihan Video:</strong><br>Pilih video yang <em>kontroversial</em> (bukan yang jelas viral atau jelas gagal) untuk memicu pendapat berbeda.<br>Disarankan menggunakan video produk perusahaan sendiri agar peserta lebih relate.</div>",
+      "notes": "Pemilihan video sangat krusial! Pilih video yang akan memunculkan evaluasi berbeda. Mengklik tombol akan membuka pemutar BMS Training Assistant di tab baru."
+    },
+    "M01-2-writing": {
+      "section": "2️⃣ Eksperimen Kertas Kosong",
+      "title": "Menulis Mandiri",
+      "studentContent": "<div style=\"text-align: center;\"><div style=\"font-size: 120px; margin-bottom: 20px;\">✍️</div><div style=\"font-size: 18px; color: var(--text-secondary); margin-top: 12px;\">Tulis beberapa kata kunci, atau tulis satu paragraf — terserah Anda</div></div>",
+      "presenterContent": "\n          <div class=\"action-box presenter-only\">\n            <strong>▶ Aksi Presenter:</strong>\n            <ul style=\"margin-top: 8px;\">\n              <li>Berjalan pelan di sekitar ruangan, mengamati progres penulisan peserta</li>\n              <li>Jangan membaca konten spesifik mereka — jaga elemen kejutan</li>\n              <li>Jika ada yang berdiskusi, ingatkan dengan lembut: \"Silakan berpikir sendiri\"</li>\n              <li>Beri peringatan 1 menit: \"Satu menit lagi\"</li>\n            </ul>\n          </div>\n        ",
+      "notes": "8 menit dirancang dengan cermat — cukup waktu untuk berpikir serius, tapi tidak terlalu lama. Presenter harus berkeliling tapi tidak mengintervensi."
+    },
+    "M01-2-sharing": {
+      "section": "2️⃣ Eksperimen Kertas Kosong",
+      "title": "Sesi Berbagi",
+      "studentContent": "\n          <div class=\"interactive-badge\">🤝 Sesi Interaktif</div>\n          <div class=\"highlight-box\" style=\"font-size: 20px;\">\n            Mari beberapa peserta berbagi jawaban mereka\n          </div>\n          <div style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px;\">\n            <div style=\"padding: 16px; background: rgba(255,255,255,0.05); border-radius: 10px;\">\n              <div style=\"color: var(--accent); font-weight: 500; margin-bottom: 8px;\">Berbasis Perasaan</div>\n              <div style=\"font-size: 14px; color: var(--text-secondary);\">\"Rasanya berkualitas tinggi\" \"Terlihat premium\"</div>\n            </div>\n            <div style=\"padding: 16px; background: rgba(255,255,255,0.05); border-radius: 10px;\">\n              <div style=\"color: var(--accent); font-weight: 500; margin-bottom: 8px;\">Berbasis Elemen</div>\n              <div style=\"font-size: 14px; color: var(--text-secondary);\">\"Musiknya bagus\" \"Visualnya indah\"</div>\n            </div>\n            <div style=\"padding: 16px; background: rgba(255,255,255,0.05); border-radius: 10px;\">\n              <div style=\"color: var(--accent); font-weight: 500; margin-bottom: 8px;\">Teknis</div>\n              <div style=\"font-size: 14px; color: var(--text-secondary);\">\"Temponya cepat\" \"Banyak transisi\"</div>\n            </div>\n            <div style=\"padding: 16px; background: rgba(255,255,255,0.05); border-radius: 10px;\">\n              <div style=\"color: var(--accent); font-weight: 500; margin-bottom: 8px;\">Samar</div>\n              <div style=\"font-size: 14px; color: var(--text-secondary);\">\"Saya tidak bisa menjelaskan alasannya\"</div>\n            </div>\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"tip-box presenter-only\">\n            <strong>💡 Strategi Pemilihan:</strong>\n            <ul style=\"margin-top: 8px;\">\n              <li>Pilih 5-8 orang (sesuaikan dengan ukuran kelas)</li>\n              <li>Sengaja pilih orang yang terlihat memiliki jawaban berbeda</li>\n              <li>Jangan pilih semua dari area yang sama</li>\n            </ul>\n          </div>\n        ",
+      "notes": "Ini adalah sesi untuk mengumpulkan \"bukti\". Jawaban yang berbeda adalah bukti yang dibutuhkan untuk menyoroti masalah nanti."
+    },
+    "M01-2-problem": {
+      "section": "2️⃣ Eksperimen Kertas Kosong",
+      "title": "Menemukan Masalah",
+      "studentContent": "\n          <div style=\"text-align: center; padding: 40px 0;\">\n            <div style=\"font-size: 24px; color: var(--text-secondary); margin-bottom: 30px;\">Apakah Anda menyadari ada masalah?</div>\n            <div style=\"font-size: 48px; color: var(--accent-secondary); font-weight: bold;\">Kita tidak punya bahasa yang sama</div>\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"script-box presenter-only\">\n            <div class=\"script-label\">📢 Skrip Presenter (Momen Kunci!)</div>\n            <div class=\"script-content\">\n              <em>(Menatap semua orang, jeda 3 detik)</em><br><br>\n              Apakah Anda menyadari ada masalah?<br><br>\n              <em>(Jeda 5 detik, biarkan semua berpikir)</em><br><br>\n              <strong style=\"font-size: 20px;\">Kita tidak punya bahasa yang sama.</strong>\n            </div>\n          </div>\n          <div class=\"warning-box presenter-only\">\n            <strong>⚠️ Panduan Nada:</strong> Kalimat ini harus disampaikan dengan <em>tenang dan perlahan</em> — bukan sebagai teguran, melainkan sebagai pernyataan fakta. Biarkan peserta merasakan sendiri betapa seriusnya masalah ini.\n          </div>\n        ",
+      "notes": "Ini adalah klimaks dari seluruh Eksperimen Kertas Kosong! \"Kita tidak punya bahasa yang sama\" membutuhkan jeda dan bobot yang cukup."
+    },
+    "M01-2-consequence": {
+      "section": "2️⃣ Eksperimen Kertas Kosong",
+      "title": "Apa Artinya Ini?",
+      "studentContent": "\n          <div class=\"slide-body\">\n            <p style=\"font-size: 20px; margin-bottom: 24px;\">Semua jawaban Anda masuk akal. Tapi kita mengevaluasi dari sudut pandang yang sangat berbeda:</p>\n            <ul style=\"font-size: 18px; margin-bottom: 30px;\">\n              <li>Ada yang bicara soal perasaan, ada yang soal visual</li>\n              <li>Ada yang menyebut data, ada yang tidak bisa menjelaskan alasannya...</li>\n            </ul>\n            <div class=\"highlight-box\" style=\"font-size: 20px;\">\n              Jika sebuah tim tidak memiliki kerangka evaluasi yang seragam, tim tersebut <strong>tidak bisa mereplikasi kesuksesan</strong>\n            </div>\n            <div class=\"big-quote\" style=\"margin-top: 20px;\">\"Video viral Anda itu keberuntungan, bukan kemampuan.\"</div>\n          </div>\n        ",
+      "notes": "Argumen inti: Tidak ada bahasa bersama = Tidak bisa mereplikasi kesuksesan = Video viral bergantung pada keberuntungan."
+    },
+    "M01-2-classify": {
+      "section": "2️⃣ Eksperimen Kertas Kosong",
+      "title": "Latihan Klasifikasi Tiga Kolom",
+      "studentContent": "\n          <div class=\"interactive-badge\">🤝 Sesi Interaktif</div>\n          <div class=\"highlight-box\">\n            <strong>Silakan selesaikan tugas berikut:</strong>\n            <ol style=\"margin-top: 12px; padding-left: 20px;\">\n              <li style=\"margin-bottom: 8px;\">Lihat kata-kata evaluasi yang Anda tulis di kertas</li>\n              <li style=\"margin-bottom: 8px;\">Coba kelompokkan menjadi <strong>tiga kategori</strong> dan masukkan ke tiga kolom</li>\n              <li>Beri setiap kolom sebuah <strong>judul</strong></li>\n            </ol>\n          </div>\n          <div class=\"info-box\" style=\"margin-top: 20px;\">\n            Tidak ada jawaban yang benar. Kategorikan sesuai keinginan Anda.<br>\n            ⏱ Waktu: 5 menit\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"action-box presenter-only\">\n            <strong>▶ Aksi Presenter:</strong> Bagikan lembar tiga kolom, siapkan gunting dan lem (atau minta peserta menulis kategori langsung)\n          </div>\n          <div class=\"tip-box presenter-only\">\n            <strong>💡 Kategorisasi Umum Peserta:</strong>\n            <ul style=\"margin-top: 8px;\">\n              <li>\"Visual / Audio / Perasaan\"</li>\n              <li>\"Konten / Bentuk / Efek\"</li>\n              <li>\"Bagus / Rata-rata / Tidak Yakin\"</li>\n            </ul>\n          </div>\n        ",
+      "notes": "Latihan ini membuat peserta secara aktif menemukan kebutuhan akan kerangka yang seragam, bukan menerimanya secara pasif."
+    },
+    "M01-2-discovery": {
+      "section": "2️⃣ Eksperimen Kertas Kosong",
+      "title": "Tunjukkan & Temukan",
+      "studentContent": "\n          <div style=\"text-align: center; padding: 30px 0;\">\n            <div style=\"font-size: 22px; margin-bottom: 30px;\">Setiap orang mengategorikan secara berbeda dan menggunakan judul yang berbeda</div>\n            <div style=\"font-size: 28px; color: var(--accent);\">Apa artinya itu?</div>\n            <div style=\"font-size: 20px; color: var(--text-secondary); margin-top: 30px;\">\n              Jika semua anggota tim mengategorikan secara berbeda,<br>kita tetap tidak punya bahasa yang sama...\n            </div>\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"script-box presenter-only\">\n            <div class=\"script-label\">📢 Skrip Presenter</div>\n            <div class=\"script-content\">\n              Bisakah beberapa peserta mengangkat lembar tiga kolom Anda agar semua bisa melihat?<br><br>\n              <em>(Melihat kategorisasi yang ditampilkan)</em> Menarik...<br><br>\n              Apakah semua menyadari? Setiap orang mengategorikan secara berbeda dan menggunakan judul yang berbeda.<br>\n              Apa artinya itu?\n            </div>\n          </div>\n          <div class=\"tip-box presenter-only\">\n            <strong>🎯 Momen Kunci:</strong> Arahkan peserta untuk mengatakannya sendiri: \"Kita membutuhkan standar klasifikasi yang seragam\"\n          </div>\n        ",
+      "notes": "Ini adalah momen \"aha\" bagi peserta. Arahkan mereka untuk menemukannya sendiri."
+    },
+    "M01-2-mission": {
+      "section": "2️⃣ Eksperimen Kertas Kosong",
+      "title": "Misi Hari Ini",
+      "studentContent": "\n          <div class=\"slide-body\" style=\"text-align: center;\">\n            <p style=\"font-size: 20px; margin-bottom: 30px;\">Yang akan kita lakukan hari ini adalah:</p>\n            <div style=\"font-size: 22px; margin-bottom: 16px;\">1️⃣ <strong>Menyeragamkan</strong> judul dari ketiga kolom ini</div>\n            <div style=\"font-size: 22px; margin-bottom: 40px;\">2️⃣ <strong>Menguraikan</strong> isi setiap kolom secara detail</div>\n            <div style=\"font-size: 18px; color: var(--text-secondary); margin-bottom: 20px;\">Inilah sistem yang akan kita pelajari hari ini —</div>\n            <div style=\"font-size: 56px; color: var(--accent); font-weight: bold;\">Bone · Meat · Soul</div>\n          </div>\n        ",
+      "notes": "Kerangka BMS resmi diperkenalkan! Transisi alami dari latihan klasifikasi peserta."
+    },
+    "M01-2-before-after": {
+      "section": "2️⃣ Eksperimen Kertas Kosong",
+      "title": "SEBELUM vs SESUDAH",
+      "studentContent": "\n          <div class=\"comparison-box\">\n            <div class=\"comparison-before\">\n              <div class=\"comparison-label\">❌ SEBELUM: Evaluasi Gaya Kertas Kosong</div>\n              <ul style=\"margin-top: 12px; font-size: 16px; list-style: none; padding: 0;\">\n                <li style=\"padding: 6px 0;\">\"Video ini punya tekstur yang bagus\"</li>\n                <li style=\"padding: 6px 0;\">\"Musiknya enak\"</li>\n                <li style=\"padding: 6px 0;\">\"Rasanya premium\"</li>\n              </ul>\n              <div style=\"margin-top: 16px; font-size: 14px; color: #f44336;\">\n                ✗ Tidak bisa direplikasi ✗ Tidak bisa ditransfer ✗ Tidak bisa dioptimasi\n              </div>\n            </div>\n            <div class=\"comparison-after\">\n              <div class=\"comparison-label\">✅ SESUDAH: Analisis Terstruktur</div>\n              <ul style=\"margin-top: 12px; font-size: 15px; list-style: none; padding: 0;\">\n                <li style=\"padding: 6px 0;\">【Bone】HOOK menggunakan SUSPENSE_QUESTION, Strategi HAND, Struktur HPVC</li>\n                <li style=\"padding: 6px 0;\">【Soul】Target audiens: ibu baru, Emosi: cemas → identifikasi → harapan</li>\n                <li style=\"padding: 6px 0;\">【Meat】Tempo: high, Format talking-head, Densitas editing tinggi</li>\n              </ul>\n              <div style=\"margin-top: 16px; font-size: 14px; color: #4CAF50;\">\n                ✓ Bisa direplikasi ✓ Bisa ditransfer ✓ Bisa dioptimasi\n              </div>\n            </div>\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"script-box presenter-only\">\n            <div class=\"script-label\">📢 Skrip Presenter</div>\n            <div class=\"script-content\">\n              <em>(Tampilkan SEBELUM)</em> Ini adalah titik awal kita hari ini.<br><br>\n              <em>(Tampilkan SESUDAH)</em> Ini adalah tujuan kita dalam dua hari.<br><br>\n              Ketika Anda bisa mengevaluasi video menggunakan bahasa seperti ini,<br>\n              Anda bukan lagi \"orang yang membuat video\" —<br>\n              <em>Anda adalah \"Arsitek Sistem Konten.\"</em>\n            </div>\n          </div>\n        ",
+      "notes": "Ini adalah perbandingan yang paling berdampak secara visual! Jangan jelaskan detail SESUDAH dulu — biarkan sebagai teaser."
+    },
+    "M01-part3-title": {
+      "section": "3️⃣ Reframing Kognitif",
+      "title": "Part 3",
+      "subtitle": "Reframing Kognitif",
+      "description": "⏱ 0:45 - 1:30 | 45 Menit",
+      "notes": "Bagian reframing kognitif bisa dibahas dengan tempo sedikit lebih cepat; konten detail akan dikembangkan di modul selanjutnya."
+    },
+    "M01-3-why-os": {
+      "section": "3️⃣ Reframing Kognitif",
+      "title": "Mengapa Kita Membutuhkan \"Sistem Operasi\"",
+      "studentContent": "\n          <table style=\"width: 100%; border-collapse: collapse; font-size: 16px;\">\n            <tr style=\"background: rgba(255,255,255,0.1);\">\n              <th style=\"padding: 14px; text-align: left; border-bottom: 1px solid #444;\">Dimensi</th>\n              <th style=\"padding: 14px; text-align: left; border-bottom: 1px solid #444; color: #f44336;\">Evaluasi Perasaan</th>\n              <th style=\"padding: 14px; text-align: left; border-bottom: 1px solid #444; color: #4CAF50;\">Sistem Operasi</th>\n            </tr>\n            <tr>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">Kosakata</td>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">\"Menarik\" \"Ada vibes-nya\" \"Enak dilihat\"</td>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">\"HOOK-PROBLEM-VALUE-CTA\"</td>\n            </tr>\n            <tr>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">Kemampuan Replikasi</td>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">Rendah (bergantung pada pengalaman individu)</td>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">Tinggi (bisa diajarkan, dipelajari, diiterasi)</td>\n            </tr>\n            <tr>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">Kolaborasi AI</td>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">Sulit (AI tidak memahami perasaan)</td>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">Efisien (input terstruktur = output terstruktur)</td>\n            </tr>\n            <tr>\n              <td style=\"padding: 14px;\">Komunikasi Tim</td>\n              <td style=\"padding: 14px;\">\"Kamu paham maksud saya kan?\"</td>\n              <td style=\"padding: 14px;\">\"HOOK ini menggunakan L2-Question\"</td>\n            </tr>\n          </table>\n        ",
+      "presenterContent": "\n          <div class=\"tip-box presenter-only\">\n            <strong>💡 Penekanan Utama:</strong> Fokus pada baris \"Kolaborasi AI\" — ini adalah nilai praktis yang paling diperhatikan peserta.\n          </div>\n        ",
+      "notes": "Gunakan tabel perbandingan untuk menunjukkan dengan jelas kepada peserta perbedaan antara kedua pendekatan."
+    },
+    "M01-3-overview": {
+      "section": "3️⃣ Reframing Kognitif",
+      "title": "Kerangka Tiga Lapis Bone-Meat-Soul",
+      "studentContent": "\n          <div class=\"three-layer\">\n            <div class=\"layer-box layer-bone\">\n              <h3>Bone</h3>\n              <h4>Tulang</h4>\n              <p><strong>Bagaimana strukturnya?</strong></p>\n              <p style=\"margin-top: 8px; font-size: 13px;\">Tipe Skeleton<br>Strategi & Teknik Persuasi</p>\n            </div>\n            <div class=\"layer-box layer-soul\">\n              <h3>Soul</h3>\n              <h4>Jiwa</h4>\n              <p><strong>Mengapa bisa menyentuh?</strong></p>\n              <p style=\"margin-top: 8px; font-size: 13px;\">Target Audiens, Skenario Pemicu<br>Tipe Reward, Tipe Konflik, Alur Emosi</p>\n            </div>\n            <div class=\"layer-box layer-meat\">\n              <h3>Meat</h3>\n              <h4>Daging</h4>\n              <p><strong>Bagaimana penyajiannya?</strong></p>\n              <p style=\"margin-top: 8px; font-size: 13px;\">Visual, Audio, Tempo<br>Subtitle, Efek, Durasi</p>\n            </div>\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"script-box presenter-only\">\n            <div class=\"script-label\">📢 Skrip Presenter</div>\n            <div class=\"script-content\">\n              <strong style=\"color: #FFB74D;\">Bone</strong> menjawab pertanyaan \"Bagaimana strukturnya?\" Apa kerangka kontennya? Strategi apa yang digunakan untuk membujuk?<br><br>\n              <strong style=\"color: #BA68C8;\">Soul</strong> menjawab \"Mengapa bisa menyentuh?\" Emosi apa yang dipicu? Reward apa yang ditawarkan? Ketegangan psikologis apa yang diselesaikan?<br><br>\n              <strong style=\"color: #81C784;\">Meat</strong> menjawab \"Seperti apa tampilan dan suaranya?\" Visual, tempo, dan audio apa yang digunakan?\n            </div>\n          </div>\n        ",
+      "notes": "Penampilan resmi pertama kerangka BMS. Bantu peserta membentuk gambaran keseluruhan."
+    },
+    "M01-3-order": {
+      "section": "3️⃣ Reframing Kognitif",
+      "title": "Mengapa Urutannya Bone → Soul → Meat",
+      "studentContent": "\n          <div class=\"slide-body\">\n            <ul style=\"font-size: 20px;\">\n              <li><strong style=\"color: #FFB74D;\">1. Bone Dulu:</strong> Tanpa struktur, emosi dan visual tidak terarah</li>\n              <li><strong style=\"color: #BA68C8;\">2. Soul Kedua:</strong> Hanya setelah memahami struktur, Anda bisa memahami desain emosional setiap bagian</li>\n              <li><strong style=\"color: #81C784;\">3. Meat Terakhir:</strong> Visual melayani struktur dan emosi</li>\n            </ul>\n            <div class=\"info-box\" style=\"margin-top: 30px;\">\n              <strong>⚠️ Kesalahpahaman Umum:</strong> Banyak orang ingin belajar \"cara membuat tampilan bagus\" terlebih dahulu, tapi \"tampilan bagus\" hanya bermakna jika ada tujuan struktural yang jelas.\n            </div>\n          </div>\n        ",
+      "notes": "Jelaskan logika di balik urutan pembelajaran. Koreksi kesalahpahaman \"belajar teknik pengambilan gambar dulu.\""
+    },
+    "M01-3-closing": {
+      "section": "3️⃣ Reframing Kognitif",
+      "title": "Pergeseran Kognitif",
+      "studentContent": "\n          <div style=\"text-align: center; padding: 30px 0;\">\n            <div style=\"font-size: 20px; color: var(--text-secondary); margin-bottom: 30px;\">\n              Lain kali Anda melihat sebuah video, jangan bertanya:\n            </div>\n            <div style=\"font-size: 24px; color: #f44336; text-decoration: line-through; margin-bottom: 30px;\">\n              \"Apakah video ini bagus atau jelek?\"\n            </div>\n            <div style=\"font-size: 20px; color: var(--text-secondary); margin-bottom: 20px;\">\n              Sebaliknya, tanyakan:\n            </div>\n            <div style=\"font-size: 28px; color: var(--accent);\">\n              \"Apa <strong>Bone</strong> video ini? <strong>Soul</strong>-nya? <strong>Meat</strong>-nya?\"\n            </div>\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"tip-box presenter-only\">\n            <strong>🎯 Cek Pergeseran Kognitif:</strong> Peserta harus bergeser dari \"Bagus atau jelek?\" → \"Apa Bone / Soul / Meat-nya?\"\n          </div>\n        ",
+      "notes": "Penutup modul. Pastikan peserta telah menyelesaikan pergeseran kognitif sebelum melanjutkan."
+    },
+    "M01-end": {
+      "section": "Selesai",
+      "title": "Module 01 Selesai ✓",
+      "subtitle": "Selanjutnya: Module 02 Sistem Bone",
+      "description": "Istirahat 5 menit",
+      "notes": "M01 selesai. Setelah istirahat singkat, lanjutkan ke M02 Sistem Bone — modul terpenting dari seluruh pelatihan."
+    }
+  }
+}

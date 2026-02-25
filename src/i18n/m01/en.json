@@ -1,0 +1,155 @@
+{
+  "slides": {
+    "M01-title": {
+      "section": "Module Title",
+      "title": "Module 01",
+      "subtitle": "Opening & Cognitive Reframing",
+      "description": "Day 1 Morning | 90 Minutes",
+      "notes": "This is the most critical opening of the entire course. If the opening fails, everything that follows will be significantly less effective."
+    },
+    "M01-objectives": {
+      "section": "Module Title",
+      "title": "Learning Objectives",
+      "studentContent": "\n          <p style=\"margin-bottom: 20px;\">After completing this module, you will be able to:</p>\n          <ul>\n            <li><strong>Recognize</strong> the limitations of \"gut-feeling evaluations\"</li>\n            <li><strong>Understand</strong> the value of a \"Content Operating System\"</li>\n            <li><strong>Establish</strong> an overall impression of the \"Bone-Meat-Soul Three-Layer Framework\"</li>\n            <li><strong>Develop</strong> intrinsic motivation to learn the BMS framework</li>\n          </ul>\n        ",
+      "presenterContent": "\n          <div class=\"tip-box presenter-only\">\n            <strong>💡 Teaching Tip:</strong> These 4 objectives are the core deliverables of this module. All subsequent content is designed around these 4 objectives.\n          </div>\n        ",
+      "notes": "Quickly go through the learning objectives; no need to elaborate."
+    },
+    "M01-part1-title": {
+      "section": "1️⃣ Opening Warm-Up",
+      "title": "Part 1",
+      "subtitle": "Opening Warm-Up",
+      "description": "⏱ 0:00 - 0:10 | 10 Minutes",
+      "notes": "The key to the opening is building a sense of anticipation."
+    },
+    "M01-1-opening": {
+      "section": "1️⃣ Opening Warm-Up",
+      "title": "Welcome to the BMS Bootcamp",
+      "studentContent": "\n          <div class=\"big-quote\" style=\"font-size: 32px;\">\n            \"This video is good\"<br>What does that actually mean?\n          </div>\n          <div class=\"highlight-box\" style=\"text-align: center; font-size: 20px;\">\n            Today is not about teaching you how to shoot videos<br>\n            It's about teaching you an <strong>\"Operating System\"</strong> for evaluating and creating video content\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"script-box presenter-only\">\n            <div class=\"script-label\">📢 Presenter Script</div>\n            <div class=\"script-content\">\n              Hello everyone, welcome to the <em>BMS Bootcamp</em>.<br><br>\n              Every day we watch videos, evaluate videos, and create videos... but what does \"this video is good\" actually mean?<br><br>\n              Today is not about teaching you how to shoot videos. It's about teaching you an <em>\"Operating System\"</em> for evaluating and creating video content.<br><br>\n              After this training, you'll be able to discuss content using a shared language, and even have AI help you write scripts.\n            </div>\n          </div>\n        ",
+      "notes": "The opening 3 sentences should be concise and impactful. Speak at a moderate pace to give participants time to absorb."
+    },
+    "M01-1-icebreaker": {
+      "section": "1️⃣ Opening Warm-Up",
+      "title": "Quick Introductions",
+      "studentContent": "\n          <div class=\"interactive-badge\">🤝 Interactive Session</div>\n          <div class=\"highlight-box\" style=\"font-size: 22px;\">\n            <strong>15-Second Self-Introduction:</strong><br>\n            Your name + the product line you're responsible for\n          </div>\n          <div style=\"margin-top: 40px; text-align: center; color: var(--text-secondary);\">\n            <p style=\"font-size: 20px;\">Before we begin, I'd like to ask everyone a question:</p>\n            <p style=\"font-size: 28px; color: var(--accent); margin-top: 20px;\"><strong>How do you usually judge whether a video is good or not?</strong></p>\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"tip-box presenter-only\">\n            <strong>💡 Presenter Tip:</strong>\n            <ul style=\"margin-top: 8px;\">\n              <li>If there are more than 15 people, have them introduce by group or select a few</li>\n              <li>This segment should not exceed 5 minutes</li>\n              <li>Collect 2-3 answers to the icebreaker question, just say \"Great, thanks\" without commenting</li>\n            </ul>\n          </div>\n        ",
+      "notes": "The icebreaker question sets the stage for the Blank Paper Experiment. Participants' vague answers will confirm the conclusions later."
+    },
+    "M01-part2-title": {
+      "section": "2️⃣ Blank Paper Experiment",
+      "title": "Part 2",
+      "subtitle": "Blank Paper Experiment",
+      "description": "⏱ 0:10 - 0:45 | 35 Minutes",
+      "notes": "The Blank Paper Experiment is the centerpiece of this module! Do not skip any part of it."
+    },
+    "M01-2-rules": {
+      "section": "2️⃣ Blank Paper Experiment",
+      "title": "Experiment Rules",
+      "studentContent": "\n          <div class=\"highlight-box\" style=\"font-size: 22px;\">\n            <strong>Next, I will play a video</strong><br><br>\n            Please write down your answer on paper:<br><br>\n            <span style=\"font-size: 28px; color: var(--accent);\">\"Why is this video good? Or why is it not good?\"</span>\n          </div>\n          <div class=\"info-box\" style=\"margin-top: 24px;\">\n            ⚠️ Please think independently. Do not discuss with the person next to you.\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"action-box presenter-only\">\n            <strong>▶ Presenter Action:</strong> Make sure every participant has blank paper and a pen\n          </div>\n        ",
+      "notes": "Emphasizing \"think independently\" is important so that different perspectives become visible later."
+    },
+    "M01-2-video": {
+      "section": "2️⃣ Blank Paper Experiment",
+      "title": "Watch the Video",
+      "studentContent": "<div class=\"video-placeholder\"><div class=\"icon\">🎬</div><div style=\"font-size: 20px; color: white; margin-bottom: 16px;\">Select a Video to Play</div><div style=\"display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;\"><a href=\"/video-player.html?src=/videos/95c6ba719e05cfa46ee9439ba16d6a3281e3f50f_1770017078837.mp4&title=Case Video A\" target=\"_blank\" style=\"display: inline-block; padding: 14px 28px; background: linear-gradient(135deg, #FF6B35, #FF8F5E); color: white; text-decoration: none; border-radius: 10px; font-size: 18px; font-weight: 600;\">▶ Video A</a><a href=\"/video-player.html?src=/videos/4bad7690df49e58e4b725a98a758690ba251d31f_1770017319924.mp4&title=Case Video B\" target=\"_blank\" style=\"display: inline-block; padding: 14px 28px; background: linear-gradient(135deg, #4CAF50, #66BB6A); color: white; text-decoration: none; border-radius: 10px; font-size: 18px; font-weight: 600;\">▶ Video B</a></div><div style=\"color: var(--text-secondary); margin-top: 16px; font-size: 14px;\">Opens video analysis tool in a new tab</div></div>",
+      "presenterContent": "<div class=\"tip-box presenter-only\"><strong>💡 Video Selection Tips:</strong><br>Choose a <em>controversial</em> video (not an obvious hit or obvious failure) to spark different opinions.<br>Using your company's own product videos is recommended, as participants will relate more.</div>",
+      "notes": "Video selection is critical! Choose a video that will elicit different evaluations. Clicking the button opens the BMS Training Assistant player in a new tab."
+    },
+    "M01-2-writing": {
+      "section": "2️⃣ Blank Paper Experiment",
+      "title": "Independent Writing",
+      "studentContent": "<div style=\"text-align: center;\"><div style=\"font-size: 120px; margin-bottom: 20px;\">✍️</div><div style=\"font-size: 18px; color: var(--text-secondary); margin-top: 12px;\">Write a few keywords, or write a paragraph — it's up to you</div></div>",
+      "presenterContent": "\n          <div class=\"action-box presenter-only\">\n            <strong>▶ Presenter Action:</strong>\n            <ul style=\"margin-top: 8px;\">\n              <li>Walk slowly around the room, observing participants' writing progress</li>\n              <li>Do not read their specific content — maintain the element of surprise</li>\n              <li>If anyone is discussing, gently remind them: \"Please think independently\"</li>\n              <li>Give a 1-minute warning: \"One minute left\"</li>\n            </ul>\n          </div>\n        ",
+      "notes": "8 minutes is carefully designed — enough time for serious thought, but not too long. The presenter should walk around but not intervene."
+    },
+    "M01-2-sharing": {
+      "section": "2️⃣ Blank Paper Experiment",
+      "title": "Sharing Session",
+      "studentContent": "\n          <div class=\"interactive-badge\">🤝 Interactive Session</div>\n          <div class=\"highlight-box\" style=\"font-size: 20px;\">\n            Let's have a few participants share their answers\n          </div>\n          <div style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px;\">\n            <div style=\"padding: 16px; background: rgba(255,255,255,0.05); border-radius: 10px;\">\n              <div style=\"color: var(--accent); font-weight: 500; margin-bottom: 8px;\">Feeling-Based</div>\n              <div style=\"font-size: 14px; color: var(--text-secondary);\">\"It feels high-quality\" \"It looks premium\"</div>\n            </div>\n            <div style=\"padding: 16px; background: rgba(255,255,255,0.05); border-radius: 10px;\">\n              <div style=\"color: var(--accent); font-weight: 500; margin-bottom: 8px;\">Element-Based</div>\n              <div style=\"font-size: 14px; color: var(--text-secondary);\">\"The music is great\" \"The visuals are beautiful\"</div>\n            </div>\n            <div style=\"padding: 16px; background: rgba(255,255,255,0.05); border-radius: 10px;\">\n              <div style=\"color: var(--accent); font-weight: 500; margin-bottom: 8px;\">Technical</div>\n              <div style=\"font-size: 14px; color: var(--text-secondary);\">\"The pacing is fast\" \"Lots of transitions\"</div>\n            </div>\n            <div style=\"padding: 16px; background: rgba(255,255,255,0.05); border-radius: 10px;\">\n              <div style=\"color: var(--accent); font-weight: 500; margin-bottom: 8px;\">Vague</div>\n              <div style=\"font-size: 14px; color: var(--text-secondary);\">\"I can't really explain why\"</div>\n            </div>\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"tip-box presenter-only\">\n            <strong>💡 Selection Strategy:</strong>\n            <ul style=\"margin-top: 8px;\">\n              <li>Select 5-8 people (adjust based on class size)</li>\n              <li>Deliberately choose people who appear to have different answers</li>\n              <li>Don't select everyone from the same area</li>\n            </ul>\n          </div>\n        ",
+      "notes": "This is the session for collecting \"evidence.\" The different answers are precisely the proof needed to highlight the problem later."
+    },
+    "M01-2-problem": {
+      "section": "2️⃣ Blank Paper Experiment",
+      "title": "Discovering the Problem",
+      "studentContent": "\n          <div style=\"text-align: center; padding: 40px 0;\">\n            <div style=\"font-size: 24px; color: var(--text-secondary); margin-bottom: 30px;\">Did you notice a problem?</div>\n            <div style=\"font-size: 48px; color: var(--accent-secondary); font-weight: bold;\">We don't have a shared language</div>\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"script-box presenter-only\">\n            <div class=\"script-label\">📢 Presenter Script (Key Moment!)</div>\n            <div class=\"script-content\">\n              <em>(Looking at everyone, pause for 3 seconds)</em><br><br>\n              Did you notice a problem?<br><br>\n              <em>(Pause for 5 seconds, let everyone think)</em><br><br>\n              <strong style=\"font-size: 20px;\">We don't have a shared language.</strong>\n            </div>\n          </div>\n          <div class=\"warning-box presenter-only\">\n            <strong>⚠️ Tone Guidance:</strong> This sentence should be delivered <em>calmly and slowly</em> — not as a reproach, but as a statement of fact. Let participants feel the severity of the problem themselves.\n          </div>\n        ",
+      "notes": "This is the climax of the entire Blank Paper Experiment! \"We don't have a shared language\" needs sufficient pause and weight."
+    },
+    "M01-2-consequence": {
+      "section": "2️⃣ Blank Paper Experiment",
+      "title": "What Does This Mean?",
+      "studentContent": "\n          <div class=\"slide-body\">\n            <p style=\"font-size: 20px; margin-bottom: 24px;\">All of your answers made sense. But we were evaluating from completely different angles:</p>\n            <ul style=\"font-size: 18px; margin-bottom: 30px;\">\n              <li>Some talked about feelings, others about visuals</li>\n              <li>Some mentioned data, others couldn't explain why...</li>\n            </ul>\n            <div class=\"highlight-box\" style=\"font-size: 20px;\">\n              If a team doesn't have a unified evaluation framework, it <strong>cannot replicate success</strong>\n            </div>\n            <div class=\"big-quote\" style=\"margin-top: 20px;\">\"Your viral hit was luck, not skill.\"</div>\n          </div>\n        ",
+      "notes": "Core argument: No shared language = Cannot replicate success = Viral hits depend on luck."
+    },
+    "M01-2-classify": {
+      "section": "2️⃣ Blank Paper Experiment",
+      "title": "Three-Column Classification Exercise",
+      "studentContent": "\n          <div class=\"interactive-badge\">🤝 Interactive Session</div>\n          <div class=\"highlight-box\">\n            <strong>Please complete the following task:</strong>\n            <ol style=\"margin-top: 12px; padding-left: 20px;\">\n              <li style=\"margin-bottom: 8px;\">Look at the evaluation words you wrote on your paper</li>\n              <li style=\"margin-bottom: 8px;\">Try to sort them into <strong>three categories</strong> and fill them into three columns</li>\n              <li>Give each column a <strong>heading</strong></li>\n            </ol>\n          </div>\n          <div class=\"info-box\" style=\"margin-top: 20px;\">\n            There is no right answer. Categorize them however you see fit.<br>\n            ⏱ Time: 5 minutes\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"action-box presenter-only\">\n            <strong>▶ Presenter Action:</strong> Distribute three-column sheets, prepare scissors and glue sticks (or have participants write their categories directly)\n          </div>\n          <div class=\"tip-box presenter-only\">\n            <strong>💡 Common Participant Categorizations:</strong>\n            <ul style=\"margin-top: 8px;\">\n              <li>\"Visual / Audio / Feeling\"</li>\n              <li>\"Content / Form / Effect\"</li>\n              <li>\"Good / Average / Uncertain\"</li>\n            </ul>\n          </div>\n        ",
+      "notes": "This exercise lets participants actively discover the need for a unified framework, rather than passively accepting it."
+    },
+    "M01-2-discovery": {
+      "section": "2️⃣ Blank Paper Experiment",
+      "title": "Show & Discover",
+      "studentContent": "\n          <div style=\"text-align: center; padding: 30px 0;\">\n            <div style=\"font-size: 22px; margin-bottom: 30px;\">Everyone categorized differently and used different headings</div>\n            <div style=\"font-size: 28px; color: var(--accent);\">What does that tell us?</div>\n            <div style=\"font-size: 20px; color: var(--text-secondary); margin-top: 30px;\">\n              If everyone on the team categorizes things differently,<br>we still don't have a shared language...\n            </div>\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"script-box presenter-only\">\n            <div class=\"script-label\">📢 Presenter Script</div>\n            <div class=\"script-content\">\n              Would a few participants please hold up your three-column sheets for everyone to see?<br><br>\n              <em>(Looking at the displayed categorizations)</em> Interesting...<br><br>\n              Did everyone notice? Each person categorized differently and used different headings.<br>\n              What does that tell us?\n            </div>\n          </div>\n          <div class=\"tip-box presenter-only\">\n            <strong>🎯 Key Moment:</strong> Guide participants to say it themselves: \"We need a unified classification standard\"\n          </div>\n        ",
+      "notes": "This is the \"aha\" moment for participants. Guide them to discover it on their own."
+    },
+    "M01-2-mission": {
+      "section": "2️⃣ Blank Paper Experiment",
+      "title": "Today's Mission",
+      "studentContent": "\n          <div class=\"slide-body\" style=\"text-align: center;\">\n            <p style=\"font-size: 20px; margin-bottom: 30px;\">What we're going to do today is:</p>\n            <div style=\"font-size: 22px; margin-bottom: 16px;\">1️⃣ <strong>Unify</strong> the headings of these three columns</div>\n            <div style=\"font-size: 22px; margin-bottom: 40px;\">2️⃣ <strong>Break down</strong> the contents of each column in detail</div>\n            <div style=\"font-size: 18px; color: var(--text-secondary); margin-bottom: 20px;\">This is the system we'll be learning today —</div>\n            <div style=\"font-size: 56px; color: var(--accent); font-weight: bold;\">Bone · Meat · Soul</div>\n          </div>\n        ",
+      "notes": "The BMS framework officially debuts! A natural transition from the participants' classification exercise."
+    },
+    "M01-2-before-after": {
+      "section": "2️⃣ Blank Paper Experiment",
+      "title": "BEFORE vs AFTER",
+      "studentContent": "\n          <div class=\"comparison-box\">\n            <div class=\"comparison-before\">\n              <div class=\"comparison-label\">❌ BEFORE: Blank-Paper Style Evaluation</div>\n              <ul style=\"margin-top: 12px; font-size: 16px; list-style: none; padding: 0;\">\n                <li style=\"padding: 6px 0;\">\"This video has great texture\"</li>\n                <li style=\"padding: 6px 0;\">\"The music is nice\"</li>\n                <li style=\"padding: 6px 0;\">\"It feels premium\"</li>\n              </ul>\n              <div style=\"margin-top: 16px; font-size: 14px; color: #f44336;\">\n                ✗ Not replicable ✗ Not transferable ✗ Not optimizable\n              </div>\n            </div>\n            <div class=\"comparison-after\">\n              <div class=\"comparison-label\">✅ AFTER: Structured Analysis</div>\n              <ul style=\"margin-top: 12px; font-size: 15px; list-style: none; padding: 0;\">\n                <li style=\"padding: 6px 0;\">【Bone】HOOK uses SUSPENSE_QUESTION, Strategy HAND, Structure HPVC</li>\n                <li style=\"padding: 6px 0;\">【Soul】Target audience: new moms, Emotion: anxiety → identification → hope</li>\n                <li style=\"padding: 6px 0;\">【Meat】Pacing: high, Talking-head format, High editing density</li>\n              </ul>\n              <div style=\"margin-top: 16px; font-size: 14px; color: #4CAF50;\">\n                ✓ Replicable ✓ Transferable ✓ Optimizable\n              </div>\n            </div>\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"script-box presenter-only\">\n            <div class=\"script-label\">📢 Presenter Script</div>\n            <div class=\"script-content\">\n              <em>(Show BEFORE)</em> This is where we started today.<br><br>\n              <em>(Show AFTER)</em> This is where we'll be in two days.<br><br>\n              When you can evaluate a video using language like this,<br>\n              you're no longer \"someone who shoots videos\" —<br>\n              <em>You're a \"Content System Architect.\"</em>\n            </div>\n          </div>\n        ",
+      "notes": "This is the most visually impactful comparison! Don't explain the AFTER details yet — leave them as a teaser."
+    },
+    "M01-part3-title": {
+      "section": "3️⃣ Cognitive Reframing",
+      "title": "Part 3",
+      "subtitle": "Cognitive Reframing",
+      "description": "⏱ 0:45 - 1:30 | 45 Minutes",
+      "notes": "The cognitive reframing section can be covered at a slightly faster pace; detailed content will be expanded in later modules."
+    },
+    "M01-3-why-os": {
+      "section": "3️⃣ Cognitive Reframing",
+      "title": "Why Do We Need an \"Operating System\"",
+      "studentContent": "\n          <table style=\"width: 100%; border-collapse: collapse; font-size: 16px;\">\n            <tr style=\"background: rgba(255,255,255,0.1);\">\n              <th style=\"padding: 14px; text-align: left; border-bottom: 1px solid #444;\">Dimension</th>\n              <th style=\"padding: 14px; text-align: left; border-bottom: 1px solid #444; color: #f44336;\">Gut-Feeling Evaluation</th>\n              <th style=\"padding: 14px; text-align: left; border-bottom: 1px solid #444; color: #4CAF50;\">Operating System</th>\n            </tr>\n            <tr>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">Vocabulary</td>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">\"Catchy\" \"Has a vibe\" \"Feels right\"</td>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">\"HOOK-PROBLEM-VALUE-CTA\"</td>\n            </tr>\n            <tr>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">Replicability</td>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">Low (depends on individual experience)</td>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">High (teachable, learnable, iterable)</td>\n            </tr>\n            <tr>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">AI Collaboration</td>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">Difficult (AI doesn't understand feelings)</td>\n              <td style=\"padding: 14px; border-bottom: 1px solid #333;\">Efficient (structured input = structured output)</td>\n            </tr>\n            <tr>\n              <td style=\"padding: 14px;\">Team Communication</td>\n              <td style=\"padding: 14px;\">\"You know what I mean?\"</td>\n              <td style=\"padding: 14px;\">\"This HOOK uses L2-Question\"</td>\n            </tr>\n          </table>\n        ",
+      "presenterContent": "\n          <div class=\"tip-box presenter-only\">\n            <strong>💡 Key Emphasis:</strong> Focus on the \"AI Collaboration\" row — this is the practical value participants care about most.\n          </div>\n        ",
+      "notes": "Use the comparison table to clearly show participants the difference between the two approaches."
+    },
+    "M01-3-overview": {
+      "section": "3️⃣ Cognitive Reframing",
+      "title": "The Bone-Meat-Soul Three-Layer Framework",
+      "studentContent": "\n          <div class=\"three-layer\">\n            <div class=\"layer-box layer-bone\">\n              <h3>Bone</h3>\n              <h4>Bone</h4>\n              <p><strong>How is it structured?</strong></p>\n              <p style=\"margin-top: 8px; font-size: 13px;\">Skeleton Type<br>Strategy & Persuasion Techniques</p>\n            </div>\n            <div class=\"layer-box layer-soul\">\n              <h3>Soul</h3>\n              <h4>Soul</h4>\n              <p><strong>Why does it resonate?</strong></p>\n              <p style=\"margin-top: 8px; font-size: 13px;\">Target Audience, Trigger Scenario<br>Reward Type, Conflict Type, Emotional Arc</p>\n            </div>\n            <div class=\"layer-box layer-meat\">\n              <h3>Meat</h3>\n              <h4>Meat</h4>\n              <p><strong>How is it presented?</strong></p>\n              <p style=\"margin-top: 8px; font-size: 13px;\">Visuals, Audio, Pacing<br>Subtitles, Effects, Duration</p>\n            </div>\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"script-box presenter-only\">\n            <div class=\"script-label\">📢 Presenter Script</div>\n            <div class=\"script-content\">\n              <strong style=\"color: #FFB74D;\">Bone</strong> answers the question \"How is it structured?\" What is the content's skeleton? What strategy is used to persuade?<br><br>\n              <strong style=\"color: #BA68C8;\">Soul</strong> answers \"Why does it resonate?\" What emotion does it trigger? What reward does it offer? What psychological tension does it resolve?<br><br>\n              <strong style=\"color: #81C784;\">Meat</strong> answers \"What does it look and sound like?\" What visuals, pacing, and audio are used?\n            </div>\n          </div>\n        ",
+      "notes": "The first official reveal of the BMS framework. Help participants form an overall impression."
+    },
+    "M01-3-order": {
+      "section": "3️⃣ Cognitive Reframing",
+      "title": "Why the Order Is Bone → Soul → Meat",
+      "studentContent": "\n          <div class=\"slide-body\">\n            <ul style=\"font-size: 20px;\">\n              <li><strong style=\"color: #FFB74D;\">1. Bone First:</strong> Without structure, emotion and visuals are unfocused</li>\n              <li><strong style=\"color: #BA68C8;\">2. Soul Second:</strong> Only after understanding the structure can you grasp the emotional design of each section</li>\n              <li><strong style=\"color: #81C784;\">3. Meat Last:</strong> Visuals serve the structure and emotion</li>\n            </ul>\n            <div class=\"info-box\" style=\"margin-top: 30px;\">\n              <strong>⚠️ Common Misconception:</strong> Many people want to learn \"how to make it look good\" first, but \"looking good\" is only meaningful when there's a clear structural objective.\n            </div>\n          </div>\n        ",
+      "notes": "Explain the logic behind the learning sequence. Correct the misconception of \"learn filming techniques first.\""
+    },
+    "M01-3-closing": {
+      "section": "3️⃣ Cognitive Reframing",
+      "title": "The Cognitive Shift",
+      "studentContent": "\n          <div style=\"text-align: center; padding: 30px 0;\">\n            <div style=\"font-size: 20px; color: var(--text-secondary); margin-bottom: 30px;\">\n              The next time you see a video, don't ask:\n            </div>\n            <div style=\"font-size: 24px; color: #f44336; text-decoration: line-through; margin-bottom: 30px;\">\n              \"Is this video good or bad?\"\n            </div>\n            <div style=\"font-size: 20px; color: var(--text-secondary); margin-bottom: 20px;\">\n              Instead, ask:\n            </div>\n            <div style=\"font-size: 28px; color: var(--accent);\">\n              \"What is this video's <strong>Bone</strong>? Its <strong>Soul</strong>? Its <strong>Meat</strong>?\"\n            </div>\n          </div>\n        ",
+      "presenterContent": "\n          <div class=\"tip-box presenter-only\">\n            <strong>🎯 Cognitive Shift Check:</strong> Participants should shift from \"Is it good or bad?\" → \"What is the Bone / Soul / Meat?\"\n          </div>\n        ",
+      "notes": "Module wrap-up. Make sure participants have completed the cognitive shift before continuing."
+    },
+    "M01-end": {
+      "section": "End",
+      "title": "Module 01 Complete ✓",
+      "subtitle": "Up Next: Module 02 Bone System",
+      "description": "5-minute break",
+      "notes": "M01 complete. After a short break, proceed to M02 Bone System — the most important module of the entire training."
+    }
+  }
+}

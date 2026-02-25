@@ -1,0 +1,179 @@
+{
+  "slides": {
+    "M06-1-title": {
+      "section": "1️⃣ Framework Review",
+      "title": "M06 Comprehensive Practice & Real-World Application",
+      "subtitle": "Analyze, Design, and Discuss Content Using Framework Language",
+      "description": "Day 2 Afternoon | 90 Minutes",
+      "notes": "The capstone comprehensive practice session. Core task: analyze videos using BMS framework + group design content plans."
+    },
+    "M06-1-review": {
+      "section": "1️⃣ Framework Review",
+      "title": "Bone-Meat-Soul Three-Layer Architecture Review",
+      "studentContent": "<div class=\"grid-3\"><div class=\"card\" style=\"border-left: 4px solid #FFB74D;\"><h3 style=\"color:#FFB74D;\">🦴 Bone Layer</h3><p><strong>Defines Video Structure</strong></p><ul style=\"font-size:13px;margin-top:8px;\"><li><strong>Section</strong> — Building blocks, each with a specific psychological function</li><li><strong>Skeleton</strong> — Structural framework, how Sections are combined</li><li><strong>Strategy</strong> — Persuasion techniques, L0/L1/L2 three-tier system</li></ul></div><div class=\"card\" style=\"border-left: 4px solid #BA68C8;\"><h3 style=\"color:#BA68C8;\">👻 Soul Layer</h3><p><strong>Explains Why It Works</strong></p><ul style=\"font-size:13px;margin-top:8px;\"><li>Target Audience target_audience</li><li>Trigger Scenario trigger_scenario</li><li>Conflict Type conflict_type</li><li>Reward Type reward_type</li><li>Emotion Arc emotion_arc</li></ul></div><div class=\"card\" style=\"border-left: 4px solid #81C784;\"><h3 style=\"color:#81C784;\">🥩 Meat Layer</h3><p><strong>Defines How It's Presented</strong></p><ul style=\"font-size:13px;margin-top:8px;\"><li>Visual Style visual_style</li><li>Pacing Control pacing</li><li>Voice Design voice_type</li><li>Visual Elements text_overlay</li></ul></div></div><div class=\"highlight-box\" style=\"margin-top:20px;text-align:center;\"><strong>All three layers work together — none can be missing.</strong></div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Presenter Script</div><div class=\"script-content\">Welcome back. Next up is the most important hands-on session of the two-day training — the comprehensive practice.<br><br>We've finished learning all three layers of Bone-Meat-Soul. Now it's time to test what you've learned — we're going to do the reverse: break down existing videos and identify their Bone, Meat, and Soul.<br><br>Let's start with a quick review of the three-layer architecture.</div></div>",
+      "notes": "Quick review of the three layers to activate memory — not a re-lecture. Don't drag on too long."
+    },
+    "M06-1-goal": {
+      "section": "1️⃣ Framework Review",
+      "title": "Core Objective of This Module",
+      "studentContent": "<div class=\"comparison-box\"><div class=\"comparison-before\"><div class=\"comparison-label\">❌ Previous Discussion Style</div><ul style=\"margin-top:12px;font-size:16px;list-style:none;padding:0;\"><li style=\"padding:6px 0;\">\"This one's pretty good\"</li><li style=\"padding:6px 0;\">\"This doesn't work\"</li><li style=\"padding:6px 0;\">\"It's not engaging enough\"</li></ul></div><div class=\"comparison-after\"><div class=\"comparison-label\">✅ Framework Language Discussion</div><ul style=\"margin-top:12px;font-size:15px;list-style:none;padding:0;\"><li style=\"padding:6px 0;\">\"The Skeleton is HPVC, HOOK section uses SUSPENSE strategy\"</li><li style=\"padding:6px 0;\">\"The Soul layer's conflict_type isn't clear enough\"</li><li style=\"padding:6px 0;\">\"Meat's pacing should be adjusted to high\"</li></ul></div></div><div class=\"highlight-box\" style=\"margin-top:20px;text-align:center;font-size:20px;\"><strong>Analyze content, design content, and discuss content using framework language</strong><br><span style=\"font-size:14px;color:var(--text-secondary);\">Not just filling out forms, but truly internalizing this way of thinking</span></div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Presenter Script</div><div class=\"script-content\">Before, when you saw a video, you might just say \"this is good\" or \"this doesn't work.\" But now it's different — you should be able to say \"Its Skeleton is HPVC, the HOOK section uses SUSPENSE strategy, but the Soul layer's conflict_type isn't clear enough.\"<br><br>That's discussing problems using framework language. In this module, our core objective is — <strong>Analyze content, design content, and discuss content using framework language</strong>.</div></div>",
+      "notes": "Emphasize that 'discussing with framework language' is the core goal of this module — not just filling out forms."
+    },
+    "M06-2-title": {
+      "section": "2️⃣ Video Analysis",
+      "title": "Part 2",
+      "subtitle": "Video Playback + Independent Analysis",
+      "description": "⏱ 0:10 - 0:20 | 10 Minutes",
+      "notes": "Play pre-selected practice videos; participants independently fill out analysis forms."
+    },
+    "M06-2-rules": {
+      "section": "2️⃣ Video Analysis",
+      "title": "Analysis Rules",
+      "studentContent": "<div class=\"highlight-box\" style=\"font-size:20px;\"><strong>Video Analysis Exercise</strong></div><div style=\"margin-top:20px;\"><div class=\"card\" style=\"margin-bottom:16px;border-left:4px solid var(--accent);\"><h3>📋 Analysis Steps</h3><ol style=\"font-size:16px;margin-top:12px;padding-left:20px;\"><li style=\"margin-bottom:8px;\">First watch: <strong>Just watch</strong>, feel the overall impression</li><li style=\"margin-bottom:8px;\">Second watch: <strong>Watch and fill out the form</strong>, using the \"BMS Complete Analysis Form\"</li></ol></div><div class=\"card\" style=\"border-left:4px solid #FFB74D;\"><h3>🎯 Identify the Most Obvious Features First</h3><ul style=\"font-size:16px;margin-top:12px;\"><li>What <strong>Skeleton</strong> does this video use?</li><li>What type of <strong>Strategy</strong> does the HOOK section use?</li><li>Who is the Soul layer's target audience?</li></ul></div></div><div class=\"info-box\" style=\"margin-top:16px;\">⚠️ You don't need to fill in every field. Write down uncertain parts first — you can align during the group discussion later.</div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Presenter Script</div><div class=\"script-content\">OK, now let's do the first exercise — video analysis.<br><br>I'll play a video, and each of you will analyze it using the \"BMS Complete Analysis Form.\" First watch: just watch and feel the overall impression. Second watch: watch and fill out the form.<br><br>You don't need to fill in every field — identify the most obvious features first. You have 5 minutes to complete the analysis independently.</div></div>",
+      "notes": "Distribute the 'BMS Complete Analysis Form.' Video selection: moderately complex company video, recommended Tier A Skeleton (e.g., HPVC or HBVC)."
+    },
+    "M06-2-video": {
+      "section": "2️⃣ Video Analysis",
+      "title": "Watch the Video",
+      "studentContent": "<div class=\"video-placeholder\"><div class=\"icon\">🎬</div><div style=\"font-size:20px;color:white;margin-bottom:16px;\">Play Practice Video</div><div style=\"display:flex;gap:16px;justify-content:center;flex-wrap:wrap;\"><a href=\"/video-player.html?src=/videos/95c6ba719e05cfa46ee9439ba16d6a3281e3f50f_1770017078837.mp4&title=Practice Video A\" target=\"_blank\" style=\"display:inline-block;padding:14px 28px;background:linear-gradient(135deg,#FF7043,#FF8A65);color:white;text-decoration:none;border-radius:10px;font-size:18px;font-weight:600;\">▶ Video A</a><a href=\"/video-player.html?src=/videos/4bad7690df49e58e4b725a98a758690ba251d31f_1770017319924.mp4&title=Practice Video B\" target=\"_blank\" style=\"display:inline-block;padding:14px 28px;background:linear-gradient(135deg,#4CAF50,#66BB6A);color:white;text-decoration:none;border-radius:10px;font-size:18px;font-weight:600;\">▶ Video B</a></div><div style=\"color:var(--text-secondary);margin-top:16px;font-size:14px;\">First watch: feel the overall impression. Second watch: watch and fill out the form</div></div>",
+      "presenterContent": "<div class=\"tip-box presenter-only\"><strong>💡 Video Selection Tips:</strong><br>Choose moderately complex company videos with identifiable features but not too difficult. Recommend Tier A Skeletons (e.g., HPVC or HBVC) so participants can quickly identify the structure.</div>",
+      "notes": "Play the video twice (~3 minutes), then participants independently fill out analysis forms for 5 minutes. Instructor and assistants walk around observing but don't intervene."
+    },
+    "M06-2-writing": {
+      "section": "2️⃣ Video Analysis",
+      "title": "Independent Analysis",
+      "studentContent": "<div style=\"text-align:center;\"><div style=\"font-size:100px;margin-bottom:20px;\">📝</div><div style=\"font-size:22px;font-weight:bold;margin-bottom:16px;\">Fill Out the Analysis Form Independently</div><div style=\"font-size:16px;color:var(--text-secondary);\">Analyze the video you just watched using the BMS Complete Analysis Form</div></div>",
+      "presenterContent": "<div class=\"action-box presenter-only\"><strong>▶ Instructor Actions:</strong><ul style=\"margin-top:8px;\"><li>Walk around observing participants' analysis directions</li><li>Don't intervene, but note typical situations</li><li>Give a 1-minute warning: \"One minute left\"</li></ul></div>",
+      "notes": "5-minute independent analysis. Instructor and assistants walk around, observe analysis directions, don't intervene but note typical situations."
+    },
+    "M06-3-title": {
+      "section": "3️⃣ Group Discussion",
+      "title": "Part 3",
+      "subtitle": "Group Discussion",
+      "description": "⏱ 0:20 - 0:30 | 10 Minutes",
+      "notes": "Participants discuss analysis results in groups. Focus on whether they're using framework language."
+    },
+    "M06-3-tasks": {
+      "section": "3️⃣ Group Discussion",
+      "title": "Discussion Tasks",
+      "studentContent": "<div class=\"interactive-badge\">🤝 Group Discussion</div><div style=\"margin-top:16px;\"><div class=\"card\" style=\"margin-bottom:12px;border-left:4px solid #2196F3;\"><h3>1️⃣ Align Analysis Results</h3><p style=\"font-size:16px;margin-top:8px;\">What Skeleton did you identify? What Strategy did you choose? See if everyone got the same answers.</p></div><div class=\"card\" style=\"margin-bottom:12px;border-left:4px solid #FF9800;\"><h3>2️⃣ Discuss Differences</h3><p style=\"font-size:16px;margin-top:8px;\">If your judgments differ, discuss why.</p></div><div class=\"card\" style=\"border-left:4px solid #4CAF50;\"><h3>3️⃣ Identify Issues</h3><p style=\"font-size:16px;margin-top:8px;\">What are 1-2 areas where this video could be improved?</p></div></div><div class=\"warning-box\" style=\"margin-top:16px;\"><strong>⚠️ Use Framework Language!</strong><table style=\"width:100%;font-size:14px;margin-top:8px;\"><tr><td style=\"padding:6px;color:#f44336;\">❌ \"I think something's off here\"</td><td style=\"padding:6px;color:#4CAF50;\">✅ \"The HOOK Strategy should be PAIN, not SUSPENSE\"</td></tr><tr><td style=\"padding:6px;color:#f44336;\">❌ \"The opening isn't engaging enough\"</td><td style=\"padding:6px;color:#4CAF50;\">✅ \"The HOOK Strategy could switch to CONTRAST to enhance the contrast effect\"</td></tr></table></div>",
+      "presenterContent": "<div class=\"tip-box presenter-only\"><strong>💡 Observation Guide:</strong><ul style=\"margin-top:8px;\"><li>Focus on whether participants are using framework language</li><li>Hearing \"something feels off\" → Guide them to say \"Soul Profile's target_audience doesn't match the actual content\"</li><li>Hearing \"the pace is a bit slow\" → Guide them to say \"Meat Profile's pacing could be adjusted to medium\"</li></ul></div>",
+      "notes": "Groups of 4-5 discuss. Instructor and assistants walk around, guiding participants to use terminology when they hear 'feeling words.'"
+    },
+    "M06-4-title": {
+      "section": "4️⃣ Analysis Review",
+      "title": "Part 4",
+      "subtitle": "Analysis Review",
+      "description": "⏱ 0:30 - 0:40 | 10 Minutes",
+      "notes": "Ask 2-3 groups to share analysis results; instructor provides review demonstration."
+    },
+    "M06-4-sharing": {
+      "section": "4️⃣ Analysis Review",
+      "title": "Group Sharing",
+      "studentContent": "<div class=\"interactive-badge\">🤝 Group Sharing</div><div class=\"highlight-box\" style=\"margin-top:16px;font-size:18px;\">Each group has 1-2 minutes to share core findings:<ol style=\"margin-top:12px;padding-left:20px;\"><li style=\"margin-bottom:8px;\">What is this video's <strong>Skeleton</strong>?</li><li style=\"margin-bottom:8px;\">What <strong>Strategy</strong> does each Section use?</li><li>What <strong>issues</strong> did you find?</li></ol></div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Presenter Script</div><div class=\"script-content\">OK, time's up. Let's hear some groups' analysis results.<br><br>Who wants to go first? Use 1-2 minutes to share your core findings: What's the video's Skeleton? What Strategy does each Section use? What issues did you find?</div></div>",
+      "notes": "Ask 2-3 groups to quickly share their analysis results."
+    },
+    "M06-4-demo": {
+      "section": "4️⃣ Analysis Review",
+      "title": "Instructor Review Demonstration",
+      "studentContent": "<div class=\"highlight-box\"><h3>💡 Review Demo: \"Feeling Words\" → \"Framework Language\"</h3></div><table style=\"width:100%;border-collapse:collapse;font-size:16px;margin-top:16px;\"><tr style=\"background:rgba(255,255,255,0.1);\"><th style=\"padding:14px;text-align:left;border-bottom:1px solid #444;\">Review Dimension</th><th style=\"padding:14px;text-align:left;border-bottom:1px solid #444;\">Demo Script</th></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;color:#4CAF50;\"><strong>Acknowledge Strengths</strong></td><td style=\"padding:14px;border-bottom:1px solid #333;\">\"You identified that the HOOK uses SUSPENSE strategy — very accurate!\"</td></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;color:#FF9800;\"><strong>Point Out Gaps</strong></td><td style=\"padding:14px;border-bottom:1px solid #333;\">\"Meat Profile and Soul don't quite match — Soul targets young women, but pacing is set to low\"</td></tr><tr><td style=\"padding:14px;color:#2196F3;\"><strong>Transform Vocabulary</strong></td><td style=\"padding:14px;\">\"The pace is a bit slow\" → \"Meat Profile's pacing could be adjusted to medium\"</td></tr></table><div class=\"info-box\" style=\"margin-top:16px;\"><strong>This is the thinking mode you'll be practicing next —</strong> transforming \"feeling words\" into \"framework language.\"</div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Presenter Script</div><div class=\"script-content\">Great work. Let me add some review comments.<br><br>You identified that the HOOK section uses SUSPENSE strategy — very accurate. SUSPENSE belongs to the HAND group, and its core psychological mechanism is creating information gaps that make viewers \"want to know the answer.\"<br><br>But there's something worth noting — Meat Profile and Soul don't quite match. The Soul layer defines the target audience as young women, but the video's pacing is set to low, which means a slower pace. Young audiences usually need a faster rhythm.<br><br>Notice what I just did — I demonstrated transforming \"feeling words\" into \"framework language.\" This is the thinking mode you'll be practicing next.</div></div>",
+      "notes": "Key demonstration: how to transform 'feeling words' into 'framework language.' Acknowledge strengths first, then point out gaps."
+    },
+    "M06-5-title": {
+      "section": "5️⃣ Hands-On Design",
+      "title": "Part 5",
+      "subtitle": "Hands-On Design",
+      "description": "⏱ 0:40 - 0:55 | 15 Minutes",
+      "notes": "Each group receives a product info packet and completes Skeleton + Strategy design."
+    },
+    "M06-5-task": {
+      "section": "5️⃣ Hands-On Design",
+      "title": "Design Task",
+      "studentContent": "<div class=\"interactive-badge\">🤝 Group Hands-On</div><div class=\"highlight-box\" style=\"margin-top:16px;\"><strong>Each group gets a product. Complete the following in 15 minutes:</strong></div><div style=\"margin-top:16px;\"><div class=\"card\" style=\"margin-bottom:12px;border-left:4px solid #FFB74D;\"><h3>1️⃣ Choose a Skeleton Type</h3><p style=\"font-size:16px;margin-top:8px;\">What skeleton fits your product? HPVC? HBVC? HPRVC? Or another one?</p></div><div class=\"card\" style=\"border-left:4px solid #2196F3;\"><h3>2️⃣ Design Strategy for Each Section</h3><p style=\"font-size:16px;margin-top:8px;\">What's the L0 group? Which L1 strategy? How does L2 execute specifically?<br><strong style=\"color:var(--accent);\">Remember, every choice needs a reason!</strong></p></div></div><div class=\"info-box\" style=\"margin-top:16px;\">💡 Use the quick reference guide to help with decisions. Focus on discussing \"why\" you chose it, not just \"what\" you chose.</div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Presenter Script</div><div class=\"script-content\">Great, you've finished analyzing others' videos. Now it's your turn to design!<br><br>Each group will get a product. Complete the following in 15 minutes: First, choose a Skeleton type; Second, design Strategy for each Section (L0/L1/L2). Remember, every choice needs a reason!</div></div><div class=\"tip-box presenter-only\"><strong>💡 Observation Tips:</strong><ul style=\"margin-top:8px;\"><li>Watch whether groups are discussing \"why\" instead of just \"what\"</li><li>Guide with questions: \"Does your product need to build trust first? Or can you show results directly?\"</li><li>Don't give answers directly — let participants reason using framework language</li></ul></div>",
+      "notes": "Distribute product info packets to each group. Instructor walks around using questions to guide thinking — don't give direct answers."
+    },
+    "M06-5-scoring": {
+      "section": "5️⃣ Hands-On Design",
+      "title": "Scoring Reference",
+      "studentContent": "<table style=\"width:100%;border-collapse:collapse;font-size:16px;\"><tr style=\"background:rgba(255,255,255,0.1);\"><th style=\"padding:14px;text-align:left;border-bottom:1px solid #444;\">Dimension</th><th style=\"padding:14px;text-align:center;border-bottom:1px solid #444;\">Weight</th><th style=\"padding:14px;text-align:left;border-bottom:1px solid #444;\">Scoring Criteria</th></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\"><strong style=\"color:#FFB74D;\">🦴 Bone Design</strong></td><td style=\"padding:14px;text-align:center;border-bottom:1px solid #333;font-size:20px;font-weight:bold;\">30 pts</td><td style=\"padding:14px;border-bottom:1px solid #333;\">Reasonable Skeleton selection + appropriate Strategy pairing for each Section</td></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\"><strong style=\"color:#BA68C8;\">👻 Soul Design</strong></td><td style=\"padding:14px;text-align:center;border-bottom:1px solid #333;font-size:20px;font-weight:bold;\">25 pts</td><td style=\"padding:14px;border-bottom:1px solid #333;\">Complete and specific SoulProfile with clear target audience</td></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\"><strong style=\"color:#81C784;\">🥩 Meat Design</strong></td><td style=\"padding:14px;text-align:center;border-bottom:1px solid #333;font-size:20px;font-weight:bold;\">20 pts</td><td style=\"padding:14px;border-bottom:1px solid #333;\">MeatProfile matches Bone/Soul</td></tr><tr><td style=\"padding:14px;\"><strong style=\"color:var(--accent);\">💡 Design Logic</strong></td><td style=\"padding:14px;text-align:center;font-size:20px;font-weight:bold;\">25 pts</td><td style=\"padding:14px;\">Can explain the reasoning behind each choice using framework language</td></tr></table>",
+      "presenterContent": "<div class=\"tip-box presenter-only\"><strong>💡 Scoring Tips:</strong> The scoring reference is for instructor reference only — no need to score item by item in class. The key is whether participants can clearly explain \"why.\"</div>",
+      "notes": "Scoring criteria is for reference only. The core is whether participants can explain their choices using framework language."
+    },
+    "M06-6-title": {
+      "section": "6️⃣ Quick Presentations",
+      "title": "Part 6",
+      "subtitle": "Quick Presentations",
+      "description": "⏱ 0:55 - 1:10 | 15 Minutes",
+      "notes": "Each group sends a representative to present, 2 minutes per group."
+    },
+    "M06-6-present": {
+      "section": "6️⃣ Quick Presentations",
+      "title": "Presentation Points",
+      "studentContent": "<div class=\"highlight-box\" style=\"font-size:18px;\"><strong>Each group has 2 minutes to present. Focus on three things:</strong></div><div style=\"margin-top:20px;\"><div class=\"card\" style=\"margin-bottom:12px;border-left:4px solid #FFB74D;\"><h3>1️⃣ What Skeleton did you choose? Why?</h3></div><div class=\"card\" style=\"margin-bottom:12px;border-left:4px solid #2196F3;\"><h3>2️⃣ What Strategy for each Section? Why this combination?</h3></div><div class=\"card\" style=\"border-left:4px solid #BA68C8;\"><h3>3️⃣ How did you define the Soul layer? How does it work with the Bone choices?</h3></div></div><div class=\"info-box\" style=\"margin-top:16px;\">💡 Other groups should listen carefully and ask questions using framework language.<br>For example: \"Why didn't you choose CONTRAST for the HOOK section?\" \"If the Soul layer's audience changes, should the Strategy change too?\"</div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Presenter Script</div><div class=\"script-content\">OK, time's up! Each group, send a representative to present your design in 2 minutes.<br><br>Focus on three things: What Skeleton did you choose? Why? What Strategy for each Section? Why this combination? How did you define the Soul layer? How does it work with the Bone choices?<br><br>Other groups, listen carefully and feel free to ask questions using framework language.</div></div><div class=\"tip-box presenter-only\"><strong>💡 Review Tips:</strong><ul style=\"margin-top:8px;\"><li>Acknowledge strengths first, then point out areas for optimization</li><li>Use framework language reviews as demonstration</li><li>Encourage other groups to ask questions using framework language</li></ul></div>",
+      "notes": "2 minutes per group presentation. Instructor reviews each group, encourages other groups to ask questions using framework language."
+    },
+    "M06-6-diagnosis": {
+      "section": "6️⃣ Quick Presentations",
+      "title": "Common Issue Diagnosis",
+      "studentContent": "<table style=\"width:100%;border-collapse:collapse;font-size:15px;\"><tr style=\"background:rgba(255,255,255,0.1);\"><th style=\"padding:14px;text-align:left;border-bottom:1px solid #444;\">Symptom</th><th style=\"padding:14px;text-align:left;border-bottom:1px solid #444;\">Diagnosis Direction</th></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\"><strong>HOOK not engaging enough</strong></td><td style=\"padding:14px;border-bottom:1px solid #333;\">Check HOOK section's Strategy L1 — recommend SUSPENSE, CONTRAST, PAIN, etc.</td></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\"><strong>Video logic doesn't flow</strong></td><td style=\"padding:14px;border-bottom:1px solid #333;\">Check Skeleton type — is the Section arrangement logical? Are transitions natural?</td></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\"><strong>Content doesn't match target users</strong></td><td style=\"padding:14px;border-bottom:1px solid #333;\">Check SoulProfile — is the target audience clear? Do language style and emotion arc match?</td></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\"><strong>CTA lacks power</strong></td><td style=\"padding:14px;border-bottom:1px solid #333;\">Check CTA section Strategy — recommend URGENCY (URGENCY_TIME / URGENCY_STOCK) to create urgency</td></tr><tr><td style=\"padding:14px;\"><strong>Visuals disconnected from content</strong></td><td style=\"padding:14px;\">Check MeatProfile alignment with Bone/Soul — do visual style and pacing serve the overall strategy?</td></tr></table>",
+      "presenterContent": "<div class=\"tip-box presenter-only\"><strong>💡 Teaching Tip:</strong> Reference this diagnosis table when reviewing each group's design. Use framework terminology to give specific improvement suggestions.</div>",
+      "notes": "Common issue diagnosis table. Helps instructors and participants quickly locate problems."
+    },
+    "M06-7-title": {
+      "section": "7️⃣ Wrap-Up",
+      "title": "Part 7",
+      "subtitle": "Wrap-Up",
+      "description": "⏱ 1:10 - 1:20 | 10 Minutes",
+      "notes": "Review BMS framework, emphasize framework value."
+    },
+    "M06-7-summary": {
+      "section": "7️⃣ Wrap-Up",
+      "title": "BMS Framework Summary",
+      "studentContent": "<div class=\"three-layer\"><div class=\"layer-box layer-bone\"><h3>Bone</h3><h4>骨</h4><p><strong>Defines Structure</strong></p><p style=\"margin-top:8px;font-size:13px;\">Section building blocks<br>Skeleton structural framework<br>Strategy persuasion techniques</p></div><div class=\"layer-box layer-soul\"><h3>Soul</h3><h4>魂</h4><p><strong>Explains Why It Works</strong></p><p style=\"margin-top:8px;font-size:13px;\">Target Audience, Trigger Scenario<br>Reward Type, Conflict Type, Emotion Arc</p></div><div class=\"layer-box layer-meat\"><h3>Meat</h3><h4>肉</h4><p><strong>Defines How It's Presented</strong></p><p style=\"margin-top:8px;font-size:13px;\">Visual Style, Voice Design<br>Pacing Control, Visual Elements</p></div></div><div style=\"text-align:center;padding:30px 0;\"><div style=\"font-size:20px;color:var(--text-secondary);margin-bottom:20px;\">You've learned a way of thinking —</div><div style=\"font-size:28px;color:var(--accent);font-weight:bold;\">Analyze content, design content, and discuss content using framework language</div></div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Presenter Script</div><div class=\"script-content\">Over these two days of training, we've covered the entire Bone-Meat-Soul framework.<br><br>The BMS framework — Bone defines structure, including Section, Skeleton, and Strategy at three levels; Soul explains why it works, defining target audience and emotion arc; Meat defines how it's presented, specifying visual style and production standards. All three layers work together — none can be missing.<br><br>But more importantly, you've learned a way of thinking — analyze content, design content, and discuss content using framework language.</div></div>",
+      "notes": "Framework summary. Emphasize that the shift in thinking is more important than memorizing terminology."
+    },
+    "M06-7-before-after": {
+      "section": "7️⃣ Wrap-Up",
+      "title": "Before vs After Training",
+      "studentContent": "<div class=\"comparison-box\"><div class=\"comparison-before\"><div class=\"comparison-label\">❌ Before Training</div><div style=\"font-size:24px;text-align:center;padding:20px;\">\"This video is pretty good\"<br>\"That one doesn't work\"</div></div><div class=\"comparison-after\"><div class=\"comparison-label\">✅ After Training</div><div style=\"font-size:18px;padding:20px;\">\"This video uses an HPVC skeleton,<br>the HOOK section uses SUSPENSE strategy,<br>but the CTA section lacks URGENCY<br>to drive action\"</div></div></div><div class=\"highlight-box\" style=\"margin-top:20px;text-align:center;font-size:22px;\"><strong>That's progress!</strong></div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Presenter Script</div><div class=\"script-content\">Before the training, when you saw a video you might have said \"this is pretty good\" or \"that doesn't work.\" Now? You can say \"this video uses an HPVC skeleton, the HOOK section uses SUSPENSE strategy, but the CTA section lacks URGENCY to drive action.\"<br><br>That's progress!</div></div>",
+      "notes": "Use Before/After comparison to let participants visually feel their progress."
+    },
+    "M06-7-action": {
+      "section": "7️⃣ Wrap-Up",
+      "title": "Three Things to Do When You Get Back",
+      "studentContent": "<div style=\"margin-top:10px;\"><div class=\"card\" style=\"margin-bottom:16px;border-left:4px solid #2196F3;\"><h3>1️⃣ Analyze Existing Videos</h3><p style=\"font-size:16px;margin-top:8px;\">Do a complete BMS analysis of your company's existing videos using the analysis form you learned today</p></div><div class=\"card\" style=\"margin-bottom:16px;border-left:4px solid #4CAF50;\"><h3>2️⃣ Framework-First Design</h3><p style=\"font-size:16px;margin-top:8px;\">Next time you create a new video, design with the framework first, then write the script</p></div><div class=\"card\" style=\"border-left:4px solid #FF9800;\"><h3>3️⃣ Unify Team Language</h3><p style=\"font-size:16px;margin-top:8px;\">When your team discusses content, try using framework language — you'll find it's much more efficient</p></div></div>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Presenter Script</div><div class=\"script-content\">When you get back, I recommend doing three things:<br><br>First, do a complete BMS analysis of your company's existing videos using the analysis form you learned today;<br><br>Second, next time you create a new video, design with the framework first, then write the script;<br><br>Third, when your team discusses content, try using framework language — you'll find it's much more efficient.</div></div>",
+      "notes": "Three action recommendations to help participants continue applying after the training."
+    },
+    "M06-8-title": {
+      "section": "8️⃣ Q&A + Group Photo",
+      "title": "Part 8",
+      "subtitle": "Q&A + Group Photo",
+      "description": "⏱ 1:20 - 1:30 | 10 Minutes",
+      "notes": "Open Q&A session."
+    },
+    "M06-8-qa": {
+      "section": "8️⃣ Q&A + Group Photo",
+      "title": "Common Questions",
+      "studentContent": "<div class=\"interactive-badge\">❓ Q&A Session</div><table style=\"width:100%;border-collapse:collapse;font-size:15px;margin-top:16px;\"><tr style=\"background:rgba(255,255,255,0.1);\"><th style=\"padding:14px;text-align:left;border-bottom:1px solid #444;\">Participant Question</th><th style=\"padding:14px;text-align:left;border-bottom:1px solid #444;\">Suggested Response</th></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\">What if my analysis differs from others?</td><td style=\"padding:14px;border-bottom:1px solid #333;\">That's normal! That's exactly the value of discussion. The key is discussing with framework language, not \"I think\"</td></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\">What if there's not enough time?</td><td style=\"padding:14px;border-bottom:1px solid #333;\">Done is better than perfect. Complete the most important parts first, and continue with details after class</td></tr><tr><td style=\"padding:14px;border-bottom:1px solid #333;\">I'm not sure if my choice is correct?</td><td style=\"padding:14px;border-bottom:1px solid #333;\">The framework doesn't have one right answer — the key is being able to clearly explain \"why\" you made that choice</td></tr><tr><td style=\"padding:14px;\">How do I use this when I get back?</td><td style=\"padding:14px;\">Start by analyzing existing videos — first break them down with the framework, then try designing new content using the framework</td></tr></table>",
+      "presenterContent": "<div class=\"script-box presenter-only\"><div class=\"script-label\">📢 Presenter Script</div><div class=\"script-content\">Let's save the last 10 minutes for questions. About the BMS framework, about practical application — any question is welcome.</div></div>",
+      "notes": "Open Q&A. Refer to this table for common questions."
+    },
+    "M06-end": {
+      "section": "End",
+      "title": "Training Complete ✓",
+      "subtitle": "Thank you for your participation and dedication over two days!",
+      "description": "Create better content with the BMS Framework",
+      "notes": "Group photo, training ends. Inform about follow-up support channels and resources."
+    }
+  }
+}

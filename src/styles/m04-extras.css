@@ -1,0 +1,101 @@
+/* M04-specific CSS classes */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 16px;
+}
+.card h3 { color: var(--accent); font-size: 16px; margin-bottom: 8px; }
+.card p { font-size: 13px; color: var(--text-secondary); }
+
+.option-item {
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 6px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.option-item .name { color: var(--accent); font-weight: 600; min-width: 120px; }
+.option-item .desc { font-size: 12px; color: var(--text-secondary); }
+
+.formula-box {
+  background: linear-gradient(135deg, rgba(76,175,80,0.2), rgba(139,195,74,0.1));
+  border: 2px solid var(--accent);
+  border-radius: 16px;
+  padding: 24px 32px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 16px 0;
+}
+
+.example-box {
+  background: rgba(255,152,0,0.1);
+  border: 1px solid rgba(255,152,0,0.3);
+  border-radius: 10px;
+  padding: 14px;
+  margin: 10px 0;
+}
+.example-box .label {
+  font-size: 11px;
+  color: #FF9800;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 11px;
+  margin: 2px;
+}
+.tag.green { background: rgba(76,175,80,0.2); color: #81C784; }
+.tag.blue { background: rgba(33,150,243,0.2); color: #64B5F6; }
+.tag.orange { background: rgba(255,152,0,0.2); color: #FFB74D; }
+.tag.purple { background: rgba(156,39,176,0.2); color: #BA68C8; }
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.comparison-table th,
+.comparison-table td {
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  text-align: left;
+}
+.comparison-table th {
+  background: rgba(76,175,80,0.2);
+  color: var(--accent);
+}
+
+/* M04 presenter notes */
+.presenter-notes {
+  background: #1a1a1a;
+  border-top: 1px solid #333;
+  padding: 16px 24px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+.presenter-notes h3 { font-size: 12px; color: var(--accent); margin-bottom: 8px; }
+.presenter-notes p { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+.presenter-notes.hidden { display: none; }
+
+/* M04 keyboard hint */
+.keyboard-hint {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 11px;
+  color: var(--text-secondary);
+  background: rgba(0,0,0,0.5);
+  padding: 8px 12px;
+  border-radius: 6px;
+}
